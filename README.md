@@ -10,4 +10,5 @@ Edson Fagner,
 Eliana Maria,
 Lucas Limas,
 Kimberlly Ferraz,
+Paulo Andrade,
 Wenderson Leonardo.
