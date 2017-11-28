@@ -5,9 +5,9 @@ e-mail: health.ufrpe@gmail.com
 https://healthufrpe.wixsite.com/home
 
 Equipe:
-Caroline Gomes
-Edson Fagner
-Eliana Maria
-Lucas Limas
-Kimberlly Ferraz
+Caroline Gomes,
+Edson Fagner,
+Eliana Maria,
+Lucas Limas,
+Kimberlly Ferraz,
 Wenderson Leonardo.
