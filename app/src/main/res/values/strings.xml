@@ -13,4 +13,14 @@
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."
     </string>
+    <string name="titulo_tela_cadastro">Cadastro</string>
+    <string name="link_esqueceu_senha">Esqueceu a senha?</string>
+    <string name="button_voltar">Voltar</string>
+    <string name="button_entrar">Entrar</string>
+    <string name="prompt_senha">Senha</string>
+    <string name="prompt_nome">Nome</string>
+    <string name="prompt_cpf">CPF</string>
+    <string name="prompt_data">dd/mm/aaaa</string>
+    <string name="button_cadastrar">Cadastrar</string>
+    <string name="button_cancelar">Cancelar</string>
 </resources>

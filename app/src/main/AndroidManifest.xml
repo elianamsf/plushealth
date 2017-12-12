@@ -23,6 +23,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".usuario.gui.SignUpActivity"
+            android:label="@string/titulo_tela_cadastro"
+            android:theme="@style/AppTheme">
+        </activity>
     </application>
 
 </manifest>

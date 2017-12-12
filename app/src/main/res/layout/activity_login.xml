@@ -59,7 +59,8 @@
                     android:imeOptions="actionUnspecified"
                     android:inputType="textPassword"
                     android:maxLines="1"
-                    android:singleLine="true" />
+                    android:singleLine="true"
+                    tools:ignore="InvalidImeActionId" />
 
             </android.support.design.widget.TextInputLayout>
 
@@ -69,20 +70,20 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:text="Entrar"
+                android:text="@string/button_entrar"
                 android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/link_senha"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Esqueceu a senha?" />
+                android:text="@string/link_esqueceu_senha" />
 
             <Button
                 android:id="@+id/bt_voltar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Voltar" />
+                android:text="@string/button_voltar" />
 
         </LinearLayout>
     </ScrollView>
