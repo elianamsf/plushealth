@@ -4,61 +4,100 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:gravity="center_horizontal"
     tools:context="com.maishealth.maishealth.usuario.gui.SignUpActivity">
 
 
-    <AutoCompleteTextView
-        android:id="@+id/edtEmail"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/prompt_email" />
+        android:layout_height="match_parent">
 
-    <AutoCompleteTextView
-        android:id="@+id/edtSenha"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/prompt_senha" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-    <AutoCompleteTextView
-        android:id="@+id/edtNome"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/prompt_nome" />
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="292dp"
+                android:layout_height="110dp"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/logo_health" />
 
-    <EditText
-        android:id="@+id/edtCpf"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="@string/prompt_cpf"
-        android:inputType="number" />
+            <AutoCompleteTextView
+                android:id="@+id/edtEmail3"
+                android:layout_width="380dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:hint="@string/prompt_email" />
 
-    <EditText
-        android:id="@+id/edtNasc"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="@string/prompt_data"
-        android:inputType="date" />
+            <AutoCompleteTextView
+                android:id="@+id/edtSenha3"
+                android:layout_width="380dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:hint="@string/prompt_senha" />
 
-    <Spinner
-        android:id="@+id/spnSexo"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+            <AutoCompleteTextView
+                android:id="@+id/edtNome3"
+                android:layout_width="380dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:hint="@string/prompt_nome" />
 
-    <Button
-        android:id="@+id/btnCadastrar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="@string/button_cadastrar"
-        android:textStyle="bold" />
+            <EditText
+                android:id="@+id/edtCpf3"
+                android:layout_width="380dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:ems="10"
+                android:hint="@string/prompt_cpf"
+                android:inputType="number" />
 
-    <Button
-        android:id="@+id/btnCancelar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="voltarTelaLogin"
-        android:text="@string/button_cancelar" />
+            <EditText
+                android:id="@+id/edtNasc3"
+                android:layout_width="380dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:ems="10"
+                android:hint="@string/prompt_data"
+                android:inputType="date" />
+
+            <Spinner
+                android:id="@+id/spnSexo3"
+                android:layout_width="380dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_horizontal" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="50dp">
+
+                <Button
+                    android:id="@+id/btnCancelar3"
+                    android:layout_width="125dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:onClick="voltarTelaLogin"
+                    android:text="@string/button_cancelar"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btnCadastrar3"
+                    android:layout_width="125dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="16dp"
+                    android:layout_weight="1"
+                    android:text="@string/button_cadastrar"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
 </LinearLayout>

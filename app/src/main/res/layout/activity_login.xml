@@ -87,6 +87,7 @@
                 android:layout_height="50dp"
                 android:onClick="telaCadastro"
                 android:text="Cadastro"
+                android:textStyle="bold"
                 android:layout_marginTop="5dp" />
 
             <TextView
@@ -102,6 +103,7 @@
                 android:layout_width="180dp"
                 android:layout_height="50dp"
                 android:text="@string/button_voltar"
+                android:textStyle="bold"
                 android:layout_gravity="center_horizontal|bottom"
                 android:layout_marginTop="20dp" />
 
