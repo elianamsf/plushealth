@@ -4,7 +4,6 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper; // Cria banco de dados
 
-import com.maishealth.maishealth.infra.provider.SearchableProvider;
 
 
 /**
