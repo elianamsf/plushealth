@@ -4,7 +4,6 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper; // Cria banco de dados
 
-import com.maishealth.maishealth.infra.provider.SearchableProvider;
 
 
 /**
@@ -87,7 +86,7 @@ class DataBase extends SQLiteOpenHelper {
     //Atualização da tabela
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion){
-        SearchableProvider.limparHistorico(context);
+        
 
         String query1 = "DROP TABLE IF EXISTS " + TABELA_PESSOA;
         db.execSQL(query1);
