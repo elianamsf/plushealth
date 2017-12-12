@@ -1,4 +1,5 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -29,6 +30,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="292dp"
+                android:layout_height="110dp"
+                app:srcCompat="@drawable/logo_health"
+                android:layout_gravity="center_horizontal" />
 
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
@@ -68,29 +76,34 @@
                 android:id="@+id/email_sign_in_button"
 
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 android:layout_marginTop="16dp"
                 android:text="@string/button_entrar"
                 android:textStyle="bold" />
 
+            <Button
+                android:id="@+id/btn_cadastro"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:onClick="telaCadastro"
+                android:text="Cadastro"
+                android:layout_marginTop="5dp" />
+
             <TextView
                 android:id="@+id/link_senha"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1"
                 android:text="@string/link_esqueceu_senha" />
 
             <Button
                 android:id="@+id/bt_voltar"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/button_voltar" />
-
-            <Button
-                android:id="@+id/btn_cadastro"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Cadastro"
-                android:onClick="telaCadastro"/>
+                android:layout_width="180dp"
+                android:layout_height="50dp"
+                android:text="@string/button_voltar"
+                android:layout_gravity="center_horizontal|bottom"
+                android:layout_marginTop="20dp" />
 
         </LinearLayout>
     </ScrollView>
