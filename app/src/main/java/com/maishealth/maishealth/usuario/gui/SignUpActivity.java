@@ -1,5 +1,6 @@
 package com.maishealth.maishealth.usuario.gui;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -17,11 +18,11 @@ public class SignUpActivity extends AppCompatActivity {
     private Spinner spinner;
     private String[] listaSexo = {"Feminino", "Masculino", "Outros"};
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_signup);
-
+        setContentView(R.layout.activity_sign_up);
 
         //ArrayAdapter é usado para preparar a lista que será usada no Spinner
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, listaSexo);
@@ -43,5 +44,11 @@ public class SignUpActivity extends AppCompatActivity {
 
             }
         });
+    }
+
+    private void voltarTelaLogin(){
+        Intent intent = new Intent(this, LoginActivity.class);
+        startActivity(intent);
+        finish();
     }
 }
