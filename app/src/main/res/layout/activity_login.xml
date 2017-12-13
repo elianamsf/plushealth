@@ -33,10 +33,10 @@
 
             <ImageView
                 android:id="@+id/imageView"
-                android:layout_width="292dp"
-                android:layout_height="110dp"
-                app:srcCompat="@drawable/logo_health"
-                android:layout_gravity="center_horizontal" />
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                app:srcCompat="@drawable/logo_health" />
 
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
@@ -76,7 +76,7 @@
                 android:id="@+id/email_sign_in_button"
 
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="match_parent"
                 android:layout_marginTop="16dp"
                 android:text="@string/button_entrar"
                 android:textStyle="bold" />
@@ -84,11 +84,11 @@
             <Button
                 android:id="@+id/btn_cadastro"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
                 android:onClick="telaCadastro"
                 android:text="Cadastro"
-                android:textStyle="bold"
-                android:layout_marginTop="5dp" />
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/link_senha"

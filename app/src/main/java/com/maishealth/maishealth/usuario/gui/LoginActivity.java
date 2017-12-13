@@ -282,6 +282,12 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         mEmailView.setAdapter(adapter);
     }
 
+    public void telaCadastro(View view) {
+        Intent intent = new Intent(LoginActivity.this, SignUpActivity.class);
+        startActivity(intent);
+        finish();
+    }
+
 
     private interface ProfileQuery {
         String[] PROJECTION = {
@@ -348,12 +354,5 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             mAuthTask = null;
             showProgress(false);
         }
-
-        private void telaCadastro(){
-            Intent intent = new Intent(LoginActivity.this, SignUpActivity.class);
-            startActivity(intent);
-            finish();
-        }
     }
 }
-

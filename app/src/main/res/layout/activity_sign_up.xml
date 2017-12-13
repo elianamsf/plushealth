@@ -19,36 +19,36 @@
 
             <ImageView
                 android:id="@+id/imageView5"
-                android:layout_width="292dp"
-                android:layout_height="110dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_gravity="center"
                 app:srcCompat="@drawable/logo_health" />
 
             <AutoCompleteTextView
                 android:id="@+id/edtEmail3"
-                android:layout_width="380dp"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_gravity="center_horizontal"
                 android:hint="@string/prompt_email" />
 
             <AutoCompleteTextView
                 android:id="@+id/edtSenha3"
-                android:layout_width="380dp"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_gravity="center_horizontal"
                 android:hint="@string/prompt_senha" />
 
             <AutoCompleteTextView
                 android:id="@+id/edtNome3"
-                android:layout_width="380dp"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_gravity="center_horizontal"
                 android:hint="@string/prompt_nome" />
 
             <EditText
                 android:id="@+id/edtCpf3"
-                android:layout_width="380dp"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_gravity="center_horizontal"
                 android:ems="10"
                 android:hint="@string/prompt_cpf"
@@ -56,8 +56,8 @@
 
             <EditText
                 android:id="@+id/edtNasc3"
-                android:layout_width="380dp"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_gravity="center_horizontal"
                 android:ems="10"
                 android:hint="@string/prompt_data"
@@ -65,20 +65,20 @@
 
             <Spinner
                 android:id="@+id/spnSexo3"
-                android:layout_width="380dp"
-                android:layout_height="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_gravity="center_horizontal" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="horizontal"
-                android:layout_marginTop="50dp">
+                android:layout_marginTop="50dp"
+                android:orientation="horizontal">
 
                 <Button
                     android:id="@+id/btnCancelar3"
-                    android:layout_width="125dp"
-                    android:layout_height="50dp"
+                    android:layout_width="132dp"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="5dp"
                     android:layout_weight="1"
