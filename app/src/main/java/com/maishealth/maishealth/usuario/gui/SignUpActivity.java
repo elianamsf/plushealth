@@ -28,7 +28,7 @@ public class SignUpActivity extends AppCompatActivity {
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, listaSexo);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
-        spinner = (Spinner)findViewById(R.id.spnSexo);
+        spinner = (Spinner)findViewById(R.id.spnSexo3);
         spinner.setAdapter(adapter);
 
         //Metodo para quando um elemento do Spinner é selecionado()
