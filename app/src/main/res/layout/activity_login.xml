@@ -79,6 +79,7 @@
                 android:layout_height="match_parent"
                 android:layout_marginTop="16dp"
                 android:text="@string/button_entrar"
+                android:onClick="telaMenuPaciente"
                 android:textStyle="bold" />
 
             <Button

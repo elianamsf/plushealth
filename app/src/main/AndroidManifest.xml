@@ -23,7 +23,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".usuario.gui.SignUpActivity"></activity>
+        <activity android:name=".usuario.gui.SignUpActivity" />
+        <activity
+            android:name=".usuario.gui.MenuPaciente"
+            android:label="@string/title_activity_menu_paciente"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
