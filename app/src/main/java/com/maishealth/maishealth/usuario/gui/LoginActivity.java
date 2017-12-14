@@ -287,7 +287,6 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         startActivity(intent);
         finish();
     }
-
     public void telaMenuPaciente (View view) {
         Intent intent = new Intent( LoginActivity.this, MenuPaciente.class);
         startActivity(intent);
@@ -348,7 +347,12 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             showProgress(false);
 
             if (success) {
+                Intent intent = new Intent( LoginActivity.this, MenuPaciente.class);
+                startActivity(intent);
                 finish();
+
+                //finish();
+
             } else {
                 mPasswordView.setError(getString(R.string.error_incorrect_password));
                 mPasswordView.requestFocus();
