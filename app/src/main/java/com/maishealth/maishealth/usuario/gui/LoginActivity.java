@@ -293,13 +293,6 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         finish();
     }
 
-    public void telaMenuPaciente (View view) {
-        Intent intent = new Intent( LoginActivity.this, MenuPaciente.class);
-        startActivity(intent);
-        finish();
-    }
-
-
     private interface ProfileQuery {
         String[] PROJECTION = {
                 ContactsContract.CommonDataKinds.Email.ADDRESS,
