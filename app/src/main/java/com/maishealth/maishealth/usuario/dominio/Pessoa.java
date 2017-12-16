@@ -4,7 +4,7 @@ public class Pessoa {
     private long id;
     private String nome;
     private String sexo; //Será um ENUM
-    private String datanasc;
+    private String dataNasc;
     private String cpf; //talvez um long seja melhor
 
     public long getId() {
@@ -31,12 +31,12 @@ public class Pessoa {
         this.sexo = sexo;
     }
 
-    public String getDatanasc() {
-        return datanasc;
+    public String getDataNasc() {
+        return dataNasc;
     }
 
-    public void setDatanasc(String datanasc) {
-        this.datanasc = datanasc;
+    public void setDataNasc(String dataNasc) {
+        this.dataNasc = dataNasc;
     }
 
     public String getCpf() {

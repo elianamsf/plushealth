@@ -2,7 +2,7 @@ package com.maishealth.maishealth.usuario.dominio;
 
 public class Paciente {
     private long id;
-    private Usuario usuario;
+    private long idUsuario;
 
     public long getId() {
         return id;
@@ -12,11 +12,11 @@ public class Paciente {
         this.id = id;
     }
 
-    public Usuario getUsuario() {
-        return usuario;
+    public long getIdUsuario() {
+        return idUsuario;
     }
 
-    public void setUsuario(Usuario usuario) {
-        this.usuario = usuario;
+    public void setIdUsuario(long idUsuario) {
+        this.idUsuario = idUsuario;
     }
 }

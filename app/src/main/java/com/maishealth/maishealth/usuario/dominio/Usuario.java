@@ -4,7 +4,7 @@ public class Usuario {
     private long id;
     private String email;
     private String senha;
-    private Pessoa pessoa;
+    private long idPessoa;
 
     public long getId() {
         return id;
@@ -30,11 +30,11 @@ public class Usuario {
         this.senha = senha;
     }
 
-    public Pessoa getPessoa() {
-        return pessoa;
+    public long getIdPessoa() {
+        return idPessoa;
     }
 
-    public void setPessoa(Pessoa pessoa) {
-        this.pessoa = pessoa;
+    public void setIdPessoa(long idPessoa) {
+        this.idPessoa = idPessoa;
     }
 }

@@ -10,7 +10,7 @@ import android.database.sqlite.SQLiteOpenHelper; // Cria banco de dados
  * Classe responsável por criar tabelas e o banco de dados
  */
 
-class DataBase extends SQLiteOpenHelper {
+public class DataBase extends SQLiteOpenHelper {
 
     private static final int DATABASE_VERSION = 1;
     private static final String DATABASE_NAME = "dbmaishealth";
