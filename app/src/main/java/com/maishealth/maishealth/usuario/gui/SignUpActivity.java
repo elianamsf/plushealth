@@ -18,7 +18,6 @@ public class SignUpActivity extends AppCompatActivity {
     private Spinner spinner;
     private String[] listaSexo = {"Feminino", "Masculino", "Outros"};
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
