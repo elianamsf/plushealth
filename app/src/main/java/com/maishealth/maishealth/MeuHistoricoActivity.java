@@ -1,7 +1,11 @@
 package com.maishealth.maishealth;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+
+import com.maishealth.maishealth.usuario.gui.MenuPaciente2;
 
 public class MeuHistoricoActivity extends AppCompatActivity {
 
@@ -10,4 +14,11 @@ public class MeuHistoricoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_meu_historico);
     }
+    public void voltarMenuPacI(View view){
+        Intent intent= new Intent(MeuHistoricoActivity.this, MenuPaciente2.class);
+        startActivity(intent);
+        finish();
+
+    }
+
 }

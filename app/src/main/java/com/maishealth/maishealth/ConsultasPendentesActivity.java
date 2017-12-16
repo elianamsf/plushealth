@@ -1,7 +1,11 @@
 package com.maishealth.maishealth;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+
+import com.maishealth.maishealth.usuario.gui.MenuPaciente2;
 
 public class ConsultasPendentesActivity extends AppCompatActivity {
 
@@ -9,5 +13,10 @@ public class ConsultasPendentesActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_consultas_pendentes);
+    }
+    public void voltarMenuPac(View view){
+        Intent intent= new Intent(ConsultasPendentesActivity.this, MenuPaciente2.class);
+        startActivity(intent);
+        finish();
     }
 }

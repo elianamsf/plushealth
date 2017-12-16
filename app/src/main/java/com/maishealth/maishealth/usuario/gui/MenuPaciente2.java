@@ -5,6 +5,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+import com.maishealth.maishealth.AcharPostoActivity;
+import com.maishealth.maishealth.ConsultasPendentesActivity;
 import com.maishealth.maishealth.MarcaConsultaActivity;
 import com.maishealth.maishealth.MeuHistoricoActivity;
 import com.maishealth.maishealth.R;
@@ -25,6 +27,16 @@ public class MenuPaciente2 extends AppCompatActivity {
     }
     public void telaMeuHistorico(View view){
         Intent intent= new Intent(MenuPaciente2.this, MeuHistoricoActivity.class);
+        startActivity(intent);
+        finish();
+    }
+    public void telaConsultasPendentes(View view){
+        Intent intent= new Intent(MenuPaciente2.this, ConsultasPendentesActivity.class);
+        startActivity(intent);
+        finish();
+    }
+    public void telaAcharPosto(View view){
+        Intent intent=new Intent(MenuPaciente2.this, AcharPostoActivity.class);
         startActivity(intent);
         finish();
     }

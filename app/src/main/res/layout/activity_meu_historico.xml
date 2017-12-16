@@ -15,4 +15,13 @@
         android:textSize="25sp"
         tools:layout_editor_absoluteX="110dp"
         tools:layout_editor_absoluteY="100dp" />
+
+    <Button
+        android:id="@+id/btVoltarHist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Voltar"
+        android:onClick="voltarMenuPacI"
+        tools:layout_editor_absoluteX="148dp"
+        tools:layout_editor_absoluteY="404dp" />
 </android.support.constraint.ConstraintLayout>
