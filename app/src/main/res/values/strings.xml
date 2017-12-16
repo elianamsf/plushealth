@@ -24,4 +24,6 @@
     <string name="button_cadastrar">Cadastrar</string>
     <string name="button_cancelar">Cancelar</string>
     <string name="title_activity_menu_paciente">MenuPaciente</string>
+    <string name="dialogo_botao_ok">Ok</string>
+    <string name="dialogo_titulo_erro">Erro</string>
 </resources>
