@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.maishealth.maishealth.usuario.gui.MenuPaciente">
+    tools:context="com.maishealth.maishealth.TesteActivity">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -20,19 +20,7 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <include
-        layout="@layout/content_menu_paciente"
-        android:layout_width="357dp"
-        android:layout_height="439dp"
-        tools:layout_editor_absoluteX="27dp"
-        tools:layout_editor_absoluteY="128dp" />
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        app:srcCompat="@drawable/logo_health" />
+    <include layout="@layout/content_teste" />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"

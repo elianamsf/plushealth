@@ -288,7 +288,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         finish();
     }
     public void telaMenuPaciente (View view) {
-        Intent intent = new Intent( LoginActivity.this, MenuPaciente.class);
+        Intent intent = new Intent( LoginActivity.this, MenuPaciente2.class);
         startActivity(intent);
         finish();
     }
@@ -346,7 +346,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             showProgress(false);
 
             if (success) {
-                Intent intent = new Intent( LoginActivity.this, MenuPaciente.class);
+                Intent intent = new Intent( LoginActivity.this, MenuPaciente2.class);
                 startActivity(intent);
                 finish();
 

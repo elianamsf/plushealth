@@ -26,4 +26,10 @@
     <string name="title_activity_menu_paciente">MenuPaciente</string>
     <string name="dialogo_botao_ok">Ok</string>
     <string name="dialogo_titulo_erro">Erro</string>
+    <string name="title_activity_teste">TesteActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
 </resources>

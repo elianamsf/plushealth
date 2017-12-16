@@ -24,10 +24,11 @@
             </intent-filter>
         </activity>
         <activity android:name=".usuario.gui.SignUpActivity" />
-        <activity
-            android:name=".usuario.gui.MenuPaciente"
-            android:label="@string/title_activity_menu_paciente"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".usuario.gui.MenuPaciente2" />
+        <activity android:name=".MarcaConsultaActivity" />
+        <activity android:name=".MeuHistoricoActivity" />
+        <activity android:name=".ConsultasPendentesActivity" />
+        <activity android:name=".AcharPostoActivity"></activity>
     </application>
 
 </manifest>
