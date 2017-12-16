@@ -10,14 +10,14 @@ import com.maishealth.maishealth.usuario.dominio.Medico;
 
 public class MedicoDAO {
     private SQLiteDatabase liteDatabase;
-    private DataBase dataBase;
+    private DataBase dataBaseHelper;
 
     public MedicoDAO(Context context) {
-        dataBase = new DataBase(context);
+        dataBaseHelper = new DataBase(context);
     }
 
     public long inserirMedico(Medico medico){
-        liteDatabase = dataBase.getWritableDatabase();
+        liteDatabase = dataBaseHelper.getWritableDatabase();
         ContentValues values = new ContentValues();
 
         String tabela = DataBase.TABELA_MEDICO;
@@ -42,7 +42,7 @@ public class MedicoDAO {
     }
 
     public long atualizarMedico(Medico medico){
-        liteDatabase = dataBase.getWritableDatabase();
+        liteDatabase = dataBaseHelper.getWritableDatabase();
         ContentValues values = new ContentValues();
 
         String tabela = DataBase.TABELA_MEDICO;
@@ -98,14 +98,8 @@ public class MedicoDAO {
         return medico;
     }
 
-    public Medico getMedico(long id){
-        liteDatabase = dataBase.getReadableDatabase();
-
-        String query = "SELECT * FROM " + DataBase.TABELA_MEDICO +
-                " WHERE " + DataBase.ID_MEDICO + " LIKE ?";
-
-        String idString = Long.toString(id);
-        String[] argumentos = {idString};
+    public Medico getMedico(String query, String[] argumentos){
+        liteDatabase = dataBaseHelper.getReadableDatabase();
 
         Cursor cursor = liteDatabase.rawQuery(query, argumentos);
 
@@ -116,6 +110,18 @@ public class MedicoDAO {
         }
         cursor.close();
         liteDatabase.close();
+
+        return medico;
+    }
+
+    public Medico getMedico(long id){
+        String query = "SELECT * FROM " + DataBase.TABELA_MEDICO +
+                " WHERE " + DataBase.ID_MEDICO + " LIKE ?";
+
+        String idString = Long.toString(id);
+        String[] argumentos = {idString};
+
+        Medico medico = getMedico(query, argumentos);
 
         return medico;
     }

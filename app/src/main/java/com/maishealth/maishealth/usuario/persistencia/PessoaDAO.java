@@ -11,14 +11,14 @@ import com.maishealth.maishealth.usuario.dominio.Pessoa;
 
 public class PessoaDAO {
     private SQLiteDatabase liteDatabase;
-    private DataBase dataBase;
+    private DataBase dataBaseHelper;
 
     public PessoaDAO(Context context) {
-        dataBase = new DataBase(context);
+        dataBaseHelper = new DataBase(context);
     }
 
     public long inserirPessoa(Pessoa pessoa){
-        liteDatabase = dataBase.getWritableDatabase();
+        liteDatabase = dataBaseHelper.getWritableDatabase();
         ContentValues values = new ContentValues();
 
         String tabela = DataBase.TABELA_PESSOA;
@@ -47,7 +47,7 @@ public class PessoaDAO {
     }
 
     public long atualizarPessoa (Pessoa pessoa){
-        liteDatabase = dataBase.getWritableDatabase();
+        liteDatabase = dataBaseHelper.getWritableDatabase();
         ContentValues values = new ContentValues();
 
         String tabela = DataBase.TABELA_PESSOA;
@@ -112,14 +112,8 @@ public class PessoaDAO {
         return pessoa;
     }
 
-    public Pessoa getPessoa(long id){
-        liteDatabase = dataBase.getReadableDatabase();
-
-        String query = "SELECT * FROM " + DataBase.TABELA_PESSOA +
-                " WHERE " + DataBase.ID_PESSOA + " LIKE ?";
-
-        String idString = Long.toString(id);
-        String[] argumentos = {idString};
+    public Pessoa getPessoa(String query, String[] argumentos){
+        liteDatabase = dataBaseHelper.getReadableDatabase();
 
         Cursor cursor = liteDatabase.rawQuery(query, argumentos);
 
@@ -131,6 +125,18 @@ public class PessoaDAO {
 
         cursor.close();
         liteDatabase.close();
+
+        return pessoa;
+    }
+
+    public Pessoa getPessoa(long id){
+        String query = "SELECT * FROM " + DataBase.TABELA_PESSOA +
+                " WHERE " + DataBase.ID_PESSOA + " LIKE ?";
+
+        String idString = Long.toString(id);
+        String[] argumentos = {idString};
+
+        Pessoa pessoa = getPessoa(query, argumentos);
 
         return pessoa;
     }

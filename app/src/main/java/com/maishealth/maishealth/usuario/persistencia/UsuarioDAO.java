@@ -10,14 +10,14 @@ import com.maishealth.maishealth.usuario.dominio.Usuario;
 
 public class UsuarioDAO {
     private SQLiteDatabase liteDatabase;
-    private DataBase dataBase;
+    private DataBase dataBaseHelper;
 
     public UsuarioDAO(Context context) {
-        dataBase = new DataBase(context);
+        dataBaseHelper = new DataBase(context);
     }
 
     public long inserirUsuário(Usuario usuario){
-        liteDatabase = dataBase.getWritableDatabase();
+        liteDatabase = dataBaseHelper.getWritableDatabase();
         ContentValues values = new ContentValues();
 
         String tabela = DataBase.TABELA_USUARIO;
@@ -42,7 +42,7 @@ public class UsuarioDAO {
     }
 
     public long atualizarUsuario(Usuario usuario){
-        liteDatabase = dataBase.getWritableDatabase();
+        liteDatabase = dataBaseHelper.getWritableDatabase();
         ContentValues values = new ContentValues();
 
         String tabela = DataBase.TABELA_USUARIO;
@@ -93,14 +93,8 @@ public class UsuarioDAO {
         return usuario;
     }
 
-    public Usuario getUsuario(long id){
-        liteDatabase = dataBase.getReadableDatabase();
-
-        String query = "SELECT * FROM " + DataBase.TABELA_USUARIO +
-                " WHERE " + DataBase.ID_USUARIO + " LIKE ?";
-
-        String idString = Long.toString(id);
-        String[] argumentos = {idString};
+    public Usuario getUsuario(String query, String[] argumentos){
+        liteDatabase = dataBaseHelper.getReadableDatabase();
 
         Cursor cursor = liteDatabase.rawQuery(query, argumentos);
 
@@ -111,6 +105,31 @@ public class UsuarioDAO {
         }
         cursor.close();
         liteDatabase.close();
+
+        return usuario;
+    }
+
+    public Usuario getUsuario(long id){
+        String query = "SELECT * FROM " + DataBase.TABELA_USUARIO +
+                " WHERE " + DataBase.ID_USUARIO + " LIKE ?";
+
+        String idString = Long.toString(id);
+        String[] argumentos = {idString};
+
+        Usuario usuario = getUsuario(query, argumentos);
+
+        return usuario;
+    }
+
+    public Usuario getUsuarioByEmail(String email){
+        liteDatabase = dataBaseHelper.getReadableDatabase();
+
+        String query = "SELECT * FROM " + DataBase.TABELA_USUARIO +
+                " WHERE " + DataBase.USUARIO_EMAIL + " LIKE ?";
+
+        String[] argumentos = {email};
+
+        Usuario usuario = getUsuario(query, argumentos);
 
         return usuario;
 

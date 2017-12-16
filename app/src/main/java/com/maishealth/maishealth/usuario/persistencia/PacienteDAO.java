@@ -10,14 +10,14 @@ import com.maishealth.maishealth.usuario.dominio.Paciente;
 
 public class PacienteDAO {
     private SQLiteDatabase liteDatabase;
-    private DataBase dataBase;
+    private DataBase dataBaseHelper;
 
     public PacienteDAO(Context context) {
-        dataBase = new DataBase(context);
+        dataBaseHelper = new DataBase(context);
     }
 
     public long inserirPaciente(Paciente paciente){
-        liteDatabase = dataBase.getWritableDatabase();
+        liteDatabase = dataBaseHelper.getWritableDatabase();
         ContentValues values = new ContentValues();
 
         String tabela = DataBase.TABELA_PACIENTE;
@@ -35,7 +35,7 @@ public class PacienteDAO {
     }
 
     public long atualizarPaciente(Paciente paciente){
-        liteDatabase = dataBase.getWritableDatabase();
+        liteDatabase = dataBaseHelper.getWritableDatabase();
         ContentValues values = new ContentValues();
 
         String tabela = DataBase.TABELA_PACIENTE;
@@ -72,14 +72,8 @@ public class PacienteDAO {
         return paciente;
     }
 
-    public Paciente getPaciente(long id){
-        liteDatabase = dataBase.getReadableDatabase();
-
-        String query = "SELECT * FROM " + DataBase.TABELA_PACIENTE +
-                " WHERE " + DataBase.ID_PACIENTE + " LIKE ?";
-
-        String idString = Long.toString(id);
-        String[] argumentos = {idString};
+    public Paciente getPaciente(String query, String[] argumentos){
+        liteDatabase = dataBaseHelper.getReadableDatabase();
 
         Cursor cursor = liteDatabase.rawQuery(query, argumentos);
 
@@ -90,6 +84,18 @@ public class PacienteDAO {
         }
         cursor.close();
         liteDatabase.close();
+
+        return paciente;
+    }
+
+    public Paciente getPaciente(long id){
+        String query = "SELECT * FROM " + DataBase.TABELA_PACIENTE +
+                " WHERE " + DataBase.ID_PACIENTE + " LIKE ?";
+
+        String idString = Long.toString(id);
+        String[] argumentos = {idString};
+
+        Paciente paciente = getPaciente(query, argumentos);
 
         return paciente;
     }
