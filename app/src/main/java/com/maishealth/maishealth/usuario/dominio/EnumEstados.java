@@ -17,4 +17,14 @@ public enum EnumEstados {
     public String getValor() {
         return valor;
     }
+
+    public static String[] enumEstadosLista(){
+        EnumEstados[] listaEstados = EnumEstados.values();
+        String[] lista = new String[listaEstados.length];
+        for (int i =0; i<listaEstados.length;i++){
+            lista[i] = listaEstados[i].getValor();
+        }
+        return  lista;
+    }
+
 }
