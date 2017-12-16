@@ -12,9 +12,9 @@ import java.util.regex.Pattern;
  * Created by lucas on 16/12/17.
  */
 
-public class ValidaCadastroPaciente {
+public class ValidaCadastro {
     private int TAMANHO_SENHA = 6;
-    private int TAMANHO_CPF = 11;
+    private int TAMANHO_CPF = 14;
     private int TAMANHO_CRM = 6;
     private int TAMANHO_DATA = 10;
 
