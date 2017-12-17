@@ -16,6 +16,7 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".usuario.gui.LoginActivity"
+            android:screenOrientation="portrait"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,8 +24,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".usuario.gui.SignUpActivity" />
-        <activity android:name=".usuario.gui.MenuPaciente2" />
+        <activity
+            android:name=".usuario.gui.SignUpActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".usuario.gui.MenuPaciente2"
+            android:screenOrientation="portrait"/>
         <activity android:name=".MarcaConsultaActivity" />
         <activity android:name=".MeuHistoricoActivity" />
         <activity android:name=".ConsultasPendentesActivity" />

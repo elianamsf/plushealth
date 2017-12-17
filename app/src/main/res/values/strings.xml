@@ -38,6 +38,13 @@
 
 
     <!-- Strings related to MenuPaciente -->
+    <string name="textView2">Nome do paciente</string>
+    <string name="bt_marcar_cons">Marcar consulta</string>
+    <string name="btMeuHist">Meu histórico</string>
+    <string name="bt_cons_pend">Consultas pendentes</string>
+    <string name="bt_posto_prox">Posto mais próximo</string>
+    <string name="bt_sair_pac">Sair</string>
+
 
 
     <!-- Strings related to MenuMédico -->

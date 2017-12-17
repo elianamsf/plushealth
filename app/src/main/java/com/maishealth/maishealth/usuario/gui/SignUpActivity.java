@@ -65,7 +65,7 @@ public class SignUpActivity extends AppCompatActivity {
                     spinnerRegiao.setVisibility(View.VISIBLE);
 
                 } else {
-                    swUsuario.setText("Paciênte");
+                    swUsuario.setText("Paciente");
                     edtCrm.setVisibility(View.INVISIBLE);
                     edtRegiao.setVisibility(View.INVISIBLE);
                     spinnerRegiao.setVisibility(View.INVISIBLE);                }

@@ -117,6 +117,8 @@
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="5dp"
                     android:layout_weight="1"
+                    android:background="@color/colorButoes"
+                    android:textColor="@color/colorTextoBut"
                     android:onClick="voltarTelaLogin"
                     android:text="@string/button_cancelar"
                     android:textStyle="bold" />
@@ -129,6 +131,8 @@
                     android:layout_marginTop="16dp"
                     android:layout_weight="1"
                     android:onClick="validarCadatro"
+                    android:background="@color/colorButoes"
+                    android:textColor="@color/colorTextoBut"
                     android:text="@string/button_cadastrar"
                     android:textStyle="bold" />
             </LinearLayout>
