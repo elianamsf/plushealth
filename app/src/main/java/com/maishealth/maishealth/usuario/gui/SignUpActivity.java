@@ -7,8 +7,12 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
+import android.widget.CompoundButton;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.Spinner;
+import android.widget.Switch;
+import android.widget.TextView;
 
 import com.maishealth.maishealth.R;
 import com.maishealth.maishealth.infra.GuiUtil;
@@ -17,14 +21,40 @@ import com.maishealth.maishealth.usuario.negocio.ValidaCadastro;
 
 public class SignUpActivity extends AppCompatActivity {
     private AutoCompleteTextView edtEmail, edtSenha, edtNome;
-    private EditText edtCpf, edtNasc;
-    private Spinner spinner;
+    private EditText edtCpf, edtNasc, edtCrm;
+    private TextView edtRegiao;
+    private Spinner spinner, spinnerRegiao;
     private String[] listaSexo = {"Feminino", "Masculino", "Outros"};
+    private Switch swUsuario;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
+
+
+        swUsuario = (Switch) findViewById(R.id.swUsuario);
+        edtCrm = (EditText) findViewById(R.id.edtCRM3);
+        edtRegiao = (TextView) findViewById(R.id.textView7);
+        spinnerRegiao = (Spinner) findViewById(R.id.SpnRegiao3);
+
+        swUsuario.setChecked(false);
+        swUsuario.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean bChecked) {
+                if (bChecked) {
+                    swUsuario.setText("Medico");
+                    edtCrm.setVisibility(View.VISIBLE);
+                    edtRegiao.setVisibility(View.VISIBLE);
+                    spinnerRegiao.setVisibility(View.VISIBLE);
+
+                } else {
+                    swUsuario.setText("Paciênte");
+                    edtCrm.setVisibility(View.INVISIBLE);
+                    edtRegiao.setVisibility(View.INVISIBLE);
+                    spinnerRegiao.setVisibility(View.INVISIBLE);                }
+            }
+        });
 
         edtEmail = findViewById(R.id.edtEmail3);
         edtSenha = findViewById(R.id.edtSenha3);
@@ -54,6 +84,7 @@ public class SignUpActivity extends AppCompatActivity {
 
             }
         });
+
     }
 
     public void validarCadatro(View view){

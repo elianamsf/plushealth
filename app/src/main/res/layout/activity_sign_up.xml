@@ -36,6 +36,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Paciente"
+                android:textColorLink="#fa0202"
                 tools:text="Médico" />
 
             <AutoCompleteTextView
@@ -78,14 +79,6 @@
                 android:hint="@string/prompt_data"
                 android:inputType="date" />
 
-            <EditText
-                android:id="@+id/edtCRM3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="number"
-                android:visibility="invisible" />
-
             <Spinner
                 android:id="@+id/spnSexo3"
                 android:layout_width="match_parent"
@@ -97,13 +90,24 @@
                 android:layout_width="match_parent"
                 android:layout_height="37dp"
                 android:layout_weight="1"
-                android:text="Região:"
-                android:visibility="invisible" />
+                android:text="@string/regiao"
+                android:textColor="@color/cardview_dark_background"
+                android:visibility="invisible"
+                tools:text="@string/regiao" />
 
             <Spinner
                 android:id="@+id/SpnRegiao3"
                 android:layout_width="match_parent"
                 android:layout_height="46dp"
+                android:visibility="invisible" />
+
+            <EditText
+                android:id="@+id/edtCRM3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="CRM"
+                android:inputType="number"
                 android:visibility="invisible" />
 
             <LinearLayout
