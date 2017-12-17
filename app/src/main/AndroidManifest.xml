@@ -28,7 +28,8 @@
         <activity android:name=".MarcaConsultaActivity" />
         <activity android:name=".MeuHistoricoActivity" />
         <activity android:name=".ConsultasPendentesActivity" />
-        <activity android:name=".AcharPostoActivity"></activity>
+        <activity android:name=".AcharPostoActivity" />
+        <activity android:name=".MenuMedicoActivity"></activity>
     </application>
 
 </manifest>
