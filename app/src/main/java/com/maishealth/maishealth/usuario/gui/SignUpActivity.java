@@ -26,6 +26,7 @@ public class SignUpActivity extends AppCompatActivity {
     private TextView edtRegiao;
     private Spinner spinner, spinnerRegiao;
     private String[] listaSexo = {"Feminino", "Masculino", "Outros"};
+    private String [] listaEstados = EnumEstados.enumEstadosLista();
     private Switch swUsuario;
 
     @Override
@@ -38,7 +39,7 @@ public class SignUpActivity extends AppCompatActivity {
         edtRegiao = (TextView) findViewById(R.id.textView7);
         spinnerRegiao = (Spinner) findViewById(R.id.SpnRegiao3);
 
-        spinnerRegiao.setAdapter(new ArrayAdapter<EnumEstados>(this, android.R.layout.simple_spinner_item, EnumEstados.values()));
+        spinnerRegiao.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item,listaEstados));
         spinnerRegiao.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener(){
 
             @Override
