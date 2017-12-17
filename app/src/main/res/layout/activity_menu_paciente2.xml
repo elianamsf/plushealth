@@ -8,8 +8,8 @@
 
     <Button
         android:id="@+id/btMeuHist"
-        android:layout_width="296dp"
-        android:layout_height="64dp"
+        android:layout_width="285dp"
+        android:layout_height="70dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
@@ -19,60 +19,62 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.443" />
+        app:layout_constraintTop_toBottomOf="@+id/btmarcarCons"
+        app:layout_constraintVertical_bias="0.032" />
 
     <Button
         android:id="@+id/btVoltar"
-        android:layout_width="97dp"
-        android:layout_height="50dp"
+        android:layout_width="98dp"
+        android:layout_height="58dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="Voltar"
+        android:text="SAIR"
+        android:onClick="SairPac"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.9" />
+        app:layout_constraintVertical_bias="0.941" />
 
     <Button
         android:id="@+id/btPostoProx"
-        android:layout_width="293dp"
-        android:layout_height="64dp"
+        android:layout_width="285dp"
+        android:layout_height="75dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:onClick="voltarParaMenuPac"
         android:text="Posto Mais Próximo"
-        android:onClick="telaAcharPosto"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btVoltar"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.752" />
+        app:layout_constraintTop_toBottomOf="@+id/btConsPend"
+        app:layout_constraintVertical_bias="0.416" />
 
     <Button
         android:id="@+id/btConsPend"
-        android:layout_width="300dp"
-        android:layout_height="66dp"
+        android:layout_width="286dp"
+        android:layout_height="75dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="Consultas Pendentes"
         android:onClick="telaConsultasPendentes"
+        android:text="Consultas Pendentes"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.597" />
+        app:layout_constraintTop_toBottomOf="@+id/btMeuHist"
+        app:layout_constraintVertical_bias="0.044" />
 
     <Button
         android:id="@+id/btmarcarCons"
-        android:layout_width="302dp"
-        android:layout_height="59dp"
+        android:layout_width="285dp"
+        android:layout_height="73dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
@@ -81,10 +83,9 @@
         android:text="Marcar Consulta"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.537"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.294" />
+        app:layout_constraintVertical_bias="0.221" />
 
     <TextView
         android:id="@+id/textView2"
@@ -95,10 +96,12 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="Nome do paciente"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintHorizontal_bias="0.563"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.112" />
+        app:layout_constraintVertical_bias="0.073" />
 </android.support.constraint.ConstraintLayout>

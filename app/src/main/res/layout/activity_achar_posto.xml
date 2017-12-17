@@ -15,4 +15,13 @@
         android:textSize="25sp"
         tools:layout_editor_absoluteX="96dp"
         tools:layout_editor_absoluteY="72dp" />
+
+    <Button
+        android:id="@+id/btVoltarPostoPPac"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Voltar"
+        android:onClick="voltarParaMenuPac"
+        tools:layout_editor_absoluteX="163dp"
+        tools:layout_editor_absoluteY="349dp" />
 </android.support.constraint.ConstraintLayout>

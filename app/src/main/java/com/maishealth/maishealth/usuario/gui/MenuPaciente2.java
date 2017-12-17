@@ -40,5 +40,8 @@ public class MenuPaciente2 extends AppCompatActivity {
         startActivity(intent);
         finish();
     }
+    public void SairPac(View view){
+        finish();
+    }
 
 }

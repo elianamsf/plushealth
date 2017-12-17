@@ -291,11 +291,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         Intent intent = new Intent( LoginActivity.this, MenuPaciente2.class);
         startActivity(intent);
         finish();
-    }
 
-    public void finalizaPrograma(View view){
-
-        finish();
     }
     private interface ProfileQuery {
         String[] PROJECTION = {
