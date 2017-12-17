@@ -17,6 +17,7 @@ import android.widget.TextView;
 import com.maishealth.maishealth.R;
 import com.maishealth.maishealth.infra.GuiUtil;
 import com.maishealth.maishealth.infra.Mask;
+import com.maishealth.maishealth.usuario.dominio.EnumEstados;
 import com.maishealth.maishealth.usuario.negocio.ValidaCadastro;
 
 public class SignUpActivity extends AppCompatActivity {
@@ -32,12 +33,26 @@ public class SignUpActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
 
-
         swUsuario = (Switch) findViewById(R.id.swUsuario);
         edtCrm = (EditText) findViewById(R.id.edtCRM3);
         edtRegiao = (TextView) findViewById(R.id.textView7);
         spinnerRegiao = (Spinner) findViewById(R.id.SpnRegiao3);
 
+        spinnerRegiao.setAdapter(new ArrayAdapter<EnumEstados>(this, android.R.layout.simple_spinner_item, EnumEstados.values()));
+        spinnerRegiao.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener(){
+
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+        // Checa se o switch usuário é medico ou paciente
+        // para setar visibilidade dos campos do cadastro do médico.
         swUsuario.setChecked(false);
         swUsuario.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
