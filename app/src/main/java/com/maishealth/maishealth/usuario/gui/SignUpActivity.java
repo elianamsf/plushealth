@@ -149,7 +149,7 @@ public class SignUpActivity extends AppCompatActivity {
         if(valido){
             Servicos servicos = new Servicos(getApplicationContext());
             try{
-                servicos.cadastrar(email, senha, nome, sexo, dataNasc, cpf);
+                servicos.cadastrarPaciente(email, senha, nome, sexo, dataNasc, cpf);
                 GuiUtil.myToast(this, "Cadastro realizado com sucesso");
             } catch (Exception e) {
                 GuiUtil.myToast(this, e);

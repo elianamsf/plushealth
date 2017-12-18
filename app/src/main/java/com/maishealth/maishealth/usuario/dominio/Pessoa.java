@@ -6,6 +6,7 @@ public class Pessoa {
     private String sexo; //Será um ENUM
     private String dataNasc;
     private String cpf; //talvez um long seja melhor
+    private long idUsuario;
 
     public long getId() {
         return id;
@@ -45,5 +46,13 @@ public class Pessoa {
 
     public void setCpf(String cpf) {
         this.cpf = cpf;
+    }
+
+    public long getIdUsuario() {
+        return idUsuario;
+    }
+
+    public void setIdUsuario(long idUsuario) {
+        this.idUsuario = idUsuario;
     }
 }

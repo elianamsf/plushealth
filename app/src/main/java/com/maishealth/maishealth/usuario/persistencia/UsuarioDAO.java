@@ -30,10 +30,6 @@ public class UsuarioDAO {
         String senha = usuario.getSenha();
         values.put(colunaSenha, senha);
 
-        String colunaIdPessoa = DataBase.ID_EST_PESSOA;
-        long idPessoa = usuario.getIdPessoa();
-        values.put(colunaIdPessoa, idPessoa);
-
         long id = liteDatabase.insert(tabela, null, values);
 
         liteDatabase.close();
@@ -66,7 +62,7 @@ public class UsuarioDAO {
         return id;
     }
 
-    public Usuario criarUsuario(Cursor cursor){
+    private Usuario criarUsuario(Cursor cursor){
         String colunaId = DataBase.ID_USUARIO;
         int indexColunaId = cursor.getColumnIndex(colunaId);
         long id = cursor.getInt(indexColunaId);
@@ -79,21 +75,16 @@ public class UsuarioDAO {
         int indexColunaSenha = cursor.getColumnIndex(colunaSenha);
         String senha = cursor.getString(indexColunaSenha);
 
-        String colunaIdPessoa = DataBase.ID_EST_PESSOA;
-        int indexColunaIdPessoa = cursor.getColumnIndex(colunaIdPessoa);
-        long idPessoa = cursor.getInt(indexColunaIdPessoa);
-
         Usuario usuario = new Usuario();
 
         usuario.setId(id);
         usuario.setEmail(email);
         usuario.setSenha(senha);
-        usuario.setIdPessoa(idPessoa);
 
         return usuario;
     }
 
-    public Usuario getUsuario(String query, String[] argumentos){
+    private Usuario getUsuario(String query, String[] argumentos){
         liteDatabase = dataBaseHelper.getReadableDatabase();
 
         Cursor cursor = liteDatabase.rawQuery(query, argumentos);

@@ -34,6 +34,10 @@ public class MedicoDAO {
         String especialidade = medico.getEspecialidade();
         values.put(colunaEspecialidade, especialidade);
 
+        String colunaIdUsuario = DataBase.ID_EST_USUARIO_ME;
+        long idUsuario = medico.getIdUsuario();
+        values.put(colunaIdUsuario, idUsuario);
+
         long id = liteDatabase.insert(tabela, null, values);
 
         liteDatabase.close();
@@ -70,7 +74,7 @@ public class MedicoDAO {
         return id;
     }
 
-    public Medico criarMedico(Cursor cursor){
+    private Medico criarMedico(Cursor cursor){
         String colunaID = DataBase.ID_MEDICO;
         int indexColunaID = cursor.getColumnIndex(colunaID);
         long id = cursor.getInt(indexColunaID);
@@ -83,10 +87,13 @@ public class MedicoDAO {
         int indexColunaEstado = cursor.getColumnIndex(colunaEstado);
         String estado = cursor.getString(indexColunaEstado);
 
-
         String colunaEspecialidade = DataBase.ESPECIALIDADE;
         int indexColunaEspecialidade = cursor.getColumnIndex(colunaEspecialidade);
         String especialidade = cursor.getString(indexColunaEspecialidade);
+
+        String colunaIdUsuario = DataBase.ID_EST_USUARIO_PE;
+        int indexColunaIdUsuario = cursor.getColumnIndex(colunaIdUsuario);
+        long idUsuario = cursor.getInt(indexColunaIdUsuario);
 
         Medico medico = new Medico();
 
@@ -94,11 +101,12 @@ public class MedicoDAO {
         medico.setCrm(crm);
         medico.setEstado(estado);
         medico.setEspecialidade(especialidade);
+        medico.setIdUsuario(idUsuario);
 
         return medico;
     }
 
-    public Medico getMedico(String query, String[] argumentos){
+    private Medico getMedico(String query, String[] argumentos){
         liteDatabase = dataBaseHelper.getReadableDatabase();
 
         Cursor cursor = liteDatabase.rawQuery(query, argumentos);

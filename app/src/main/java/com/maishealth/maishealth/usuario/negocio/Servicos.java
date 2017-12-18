@@ -18,7 +18,7 @@ public class Servicos {
         servicosUsuario = new ServicosUsuario(context);
     }
 
-    public void cadastrar(String email, String senha, String nome, String sexo, String dataNasc, String cpf) throws Exception {
+    public void cadastrarPaciente(String email, String senha, String nome, String sexo, String dataNasc, String cpf) throws Exception {
         Usuario verificarEmail = usuarioDAO.getUsuarioByEmail(email);
 
         if(verificarEmail != null){

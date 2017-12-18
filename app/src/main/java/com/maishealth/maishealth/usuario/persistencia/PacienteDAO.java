@@ -22,7 +22,7 @@ public class PacienteDAO {
 
         String tabela = DataBase.TABELA_PACIENTE;
 
-        String colunaIdUsuario = DataBase.ID_EST_USUARIO_P;
+        String colunaIdUsuario = DataBase.ID_EST_USUARIO_PA;
         long idUsuario = paciente.getIdUsuario();
         values.put(colunaIdUsuario, idUsuario);
 
@@ -40,7 +40,7 @@ public class PacienteDAO {
 
         String tabela = DataBase.TABELA_PACIENTE;
 
-        String colunaIdUsuario = DataBase.ID_EST_USUARIO_P;
+        String colunaIdUsuario = DataBase.ID_EST_USUARIO_PA;
         long idUsuario = paciente.getIdUsuario();
         values.put(colunaIdUsuario, idUsuario);
 
@@ -55,12 +55,12 @@ public class PacienteDAO {
         return id;
     }
 
-    public Paciente criarPaciente(Cursor cursor){
+    private Paciente criarPaciente(Cursor cursor){
         String colunaId = DataBase.ID_PACIENTE;
         int indexColunaId = cursor.getColumnIndex(colunaId);
         long id = cursor.getInt(indexColunaId);
 
-        String colunaIdUsuario = DataBase.ID_EST_USUARIO_P;
+        String colunaIdUsuario = DataBase.ID_EST_USUARIO_PA;
         int indexColunaIdUsuario = cursor.getColumnIndex(colunaIdUsuario);
         long idUsuario = cursor.getInt(indexColunaIdUsuario);
 
@@ -72,7 +72,7 @@ public class PacienteDAO {
         return paciente;
     }
 
-    public Paciente getPaciente(String query, String[] argumentos){
+    private Paciente getPaciente(String query, String[] argumentos){
         liteDatabase = dataBaseHelper.getReadableDatabase();
 
         Cursor cursor = liteDatabase.rawQuery(query, argumentos);

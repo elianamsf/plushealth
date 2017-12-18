@@ -39,6 +39,10 @@ public class PessoaDAO {
         String cpf = pessoa.getCpf();
         values.put(colunaCPF, cpf);
 
+        String colunaIdUsuario = DataBase.ID_EST_USUARIO_PE;
+        long idUsuario = pessoa.getIdUsuario();
+        values.put(colunaIdUsuario, idUsuario);
+
         long id = liteDatabase.insert(tabela, null, values);
 
         liteDatabase.close();
@@ -79,7 +83,7 @@ public class PessoaDAO {
         return id;
     }
 
-    public Pessoa criarPessoa(Cursor cursor){
+    private Pessoa criarPessoa(Cursor cursor){
 
         String colunaId = DataBase.ID_PESSOA;
         int indexColunaId = cursor.getColumnIndex(colunaId);
@@ -101,6 +105,10 @@ public class PessoaDAO {
         int indexColunaCPF = cursor.getColumnIndex(colunaCPF);
         String cpf = cursor.getString(indexColunaCPF);
 
+        String colunaIdUsuario = DataBase.ID_EST_USUARIO_PE;
+        int indexColunaIdUsuario = cursor.getColumnIndex(colunaIdUsuario);
+        long idUsuario = cursor.getInt(indexColunaIdUsuario);
+
         Pessoa pessoa =  new Pessoa();
 
         pessoa.setId(id);
@@ -108,11 +116,12 @@ public class PessoaDAO {
         pessoa.setSexo(sexo);
         pessoa.setDataNasc(dataNasc);
         pessoa.setCpf(cpf);
+        pessoa.setIdUsuario(idUsuario);
 
         return pessoa;
     }
 
-    public Pessoa getPessoa(String query, String[] argumentos){
+    private Pessoa getPessoa(String query, String[] argumentos){
         liteDatabase = dataBaseHelper.getReadableDatabase();
 
         Cursor cursor = liteDatabase.rawQuery(query, argumentos);

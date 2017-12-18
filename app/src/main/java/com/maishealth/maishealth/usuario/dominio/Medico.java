@@ -5,6 +5,7 @@ public class Medico {
     private String crm; //Talvez um int ou long seja melhor
     private String estado; //Será um ENUM
     private String especialidade; //Será um ENUM
+    private long idUsuario;
 
     public long getId() {
         return id;
@@ -36,5 +37,13 @@ public class Medico {
 
     public void setEspecialidade(String especialidade) {
         this.especialidade = especialidade;
+    }
+
+    public long getIdUsuario() {
+        return idUsuario;
+    }
+
+    public void setIdUsuario(long idUsuario) {
+        this.idUsuario = idUsuario;
     }
 }
