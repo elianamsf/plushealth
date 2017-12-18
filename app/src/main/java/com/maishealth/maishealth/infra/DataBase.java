@@ -81,12 +81,12 @@ public class DataBase extends SQLiteOpenHelper {
     //Atualização da tabela
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion){
-        String query1 = "DROP TABLE IF EXISTS " + TABELA_PESSOA;
+        String query1 = "DROP TABLE IF EXISTS " + TABELA_USUARIO;
         db.execSQL(query1);
 
-        String query2 = "DROP TABLE IF EXISTS " + TABELA_USUARIO;
+        String query2 = "DROP TABLE IF EXISTS " + TABELA_PESSOA;
         db.execSQL(query2);
-        
+
         String query3 = "DROP TABLE IF EXISTS " + TABELA_PACIENTE;
         db.execSQL(query3);
 
