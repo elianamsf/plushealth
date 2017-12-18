@@ -24,7 +24,7 @@ public class SignUpActivity extends AppCompatActivity {
     private AutoCompleteTextView edtEmail, edtSenha, edtNome;
     private EditText edtCpf, edtNasc, edtCrm;
     private TextView edtRegiao;
-    private Spinner spinner, spinnerRegiao;
+    private Spinner spinnerSexo, spinnerRegiao;
     private String[] listaSexo = {"Feminino", "Masculino", "Outros"};
     private String [] listaEstados = EnumEstados.enumEstadosLista();
     private Switch swUsuario;
@@ -39,7 +39,7 @@ public class SignUpActivity extends AppCompatActivity {
         edtRegiao = (TextView) findViewById(R.id.textView7);
         spinnerRegiao = (Spinner) findViewById(R.id.SpnRegiao3);
 
-        spinnerRegiao.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item,listaEstados));
+        spinnerRegiao.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, listaEstados));
         spinnerRegiao.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener(){
 
             @Override
@@ -84,11 +84,11 @@ public class SignUpActivity extends AppCompatActivity {
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, listaSexo);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
-        spinner = (Spinner)findViewById(R.id.spnSexo3);
-        spinner.setAdapter(adapter);
+        spinnerSexo = (Spinner)findViewById(R.id.spnSexo3);
+        spinnerSexo.setAdapter(adapter);
 
         //Metodo para quando um elemento do Spinner é selecionado()
-        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener(){
+        spinnerSexo.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener(){
 
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -107,9 +107,11 @@ public class SignUpActivity extends AppCompatActivity {
         String email    = edtEmail.getText().toString();
         String senha    = edtSenha.getText().toString();
         String nome     = edtNome.getText().toString();
-        String sexo     = (String) spinner.getSelectedItem();
+        String sexo     = (String) spinnerSexo.getSelectedItem();
         String cpf      = edtCpf.getText().toString();
         String dataNasc = edtNasc.getText().toString();
+        String estado     = (String) spinnerRegiao.getSelectedItem();
+
 
         ValidaCadastro validaCadastro = new ValidaCadastro();
         boolean valido = true;
