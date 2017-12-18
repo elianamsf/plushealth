@@ -1,15 +1,14 @@
 package com.maishealth.maishealth.usuario.gui;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.CompoundButton;
 import android.widget.EditText;
-import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.Switch;
 import android.widget.TextView;
@@ -18,6 +17,7 @@ import com.maishealth.maishealth.R;
 import com.maishealth.maishealth.infra.GuiUtil;
 import com.maishealth.maishealth.infra.Mask;
 import com.maishealth.maishealth.usuario.dominio.EnumEstados;
+import com.maishealth.maishealth.usuario.negocio.Servicos;
 import com.maishealth.maishealth.usuario.negocio.ValidaCadastro;
 
 public class SignUpActivity extends AppCompatActivity {
@@ -107,6 +107,7 @@ public class SignUpActivity extends AppCompatActivity {
         String email    = edtEmail.getText().toString();
         String senha    = edtSenha.getText().toString();
         String nome     = edtNome.getText().toString();
+        String sexo     = (String) spinner.getSelectedItem();
         String cpf      = edtCpf.getText().toString();
         String dataNasc = edtNasc.getText().toString();
 
@@ -144,7 +145,13 @@ public class SignUpActivity extends AppCompatActivity {
         }
 
         if(valido){
-            GuiUtil.myToast(this, "Cadastro realizado com sucesso");
+            Servicos servicos = new Servicos(getApplicationContext());
+            try{
+                servicos.cadastrar(email, senha, nome, sexo, dataNasc, cpf);
+                GuiUtil.myToast(this, "Cadastro realizado com sucesso");
+            } catch (Exception e) {
+                GuiUtil.myToast(this, e);
+            }
         }
     }
 
