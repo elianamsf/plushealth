@@ -24,20 +24,21 @@ public class Servicos {
         if(verificarEmail != null){
             throw new Exception("Email já cadastrado");
         } else {
+            Usuario usuario = new Usuario();
+            usuario.setEmail(email);
+            usuario.setSenha(senha);
+
+            long idUsuario = servicosUsuario.cadastrarUsuario(usuario);
+
             Pessoa pessoa = new Pessoa();
             pessoa.setNome(nome);
             pessoa.setSexo(sexo);
             pessoa.setDataNasc(dataNasc);
             pessoa.setCpf(cpf);
+            pessoa.setIdUsuario(idUsuario);
 
-            long idPessoa = servicosPessoa.cadastrarPessoa(pessoa);
+            servicosPessoa.cadastrarPessoa(pessoa);
 
-            Usuario usuario = new Usuario();
-            usuario.setEmail(email);
-            usuario.setSenha(senha);
-            usuario.setIdPessoa(idPessoa);
-
-            long idUsuario = servicosUsuario.cadastrarUsuario(usuario);
 
         }
     }
