@@ -22,7 +22,7 @@ public class Servicos {
         Usuario verificarEmail = usuarioDAO.getUsuarioByEmail(email);
 
         if(verificarEmail != null){
-            throw new Exception("Email ou Nick já cadastrado");
+            throw new Exception("Email já cadastrado");
         } else {
             Pessoa pessoa = new Pessoa();
             pessoa.setNome(nome);
