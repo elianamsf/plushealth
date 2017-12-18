@@ -17,4 +17,11 @@ public class ServicosPaciente {
 
         return idPaciente;
     }
+
+    public long cadastrarPaciente(long idUsuario) {
+        Paciente paciente = new Paciente();
+        paciente.setIdUsuario(idUsuario);
+
+        return cadastrarPaciente(paciente);
+    }
 }

@@ -17,4 +17,14 @@ public class ServicosMedico {
 
         return idMedico;
     }
+
+    public long cadastrarMedico(String crm, String estado, String especialidade, long idUsuario) {
+        Medico medico = new Medico();
+        medico.setCrm(crm);
+        medico.setEstado(estado);
+        medico.setEspecialidade(especialidade);
+        medico.setIdUsuario(idUsuario);
+
+        return cadastrarMedico(medico);
+    }
 }

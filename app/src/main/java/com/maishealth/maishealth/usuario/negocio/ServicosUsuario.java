@@ -16,4 +16,13 @@ public class ServicosUsuario {
 
         return idUsuario;
     }
+
+    public long cadastrarUsuario(String email, String senha) {
+        Usuario usuario = new Usuario();
+        usuario.setEmail(email);
+        usuario.setSenha(senha);
+
+        return cadastrarUsuario(usuario);
+    }
+
 }

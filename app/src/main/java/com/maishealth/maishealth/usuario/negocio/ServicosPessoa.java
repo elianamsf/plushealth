@@ -18,4 +18,15 @@ public class ServicosPessoa {
 
         return idPessoa;
     }
+
+    public long cadastrarPessoa(String nome, String sexo, String dataNasc, String cpf, long idUsuario) {
+        Pessoa pessoa = new Pessoa();
+        pessoa.setNome(nome);
+        pessoa.setSexo(sexo);
+        pessoa.setDataNasc(dataNasc);
+        pessoa.setCpf(cpf);
+        pessoa.setIdUsuario(idUsuario);
+
+        return cadastrarPessoa(pessoa);
+    }
 }

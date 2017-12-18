@@ -4,18 +4,12 @@ import android.text.TextUtils;
 import android.util.Patterns;
 
 import com.maishealth.maishealth.infra.FormataData;
-import com.maishealth.maishealth.usuario.gui.SignUpActivity;
-
-import java.util.regex.Pattern;
-
-/**
- * Created by lucas on 16/12/17.
- */
 
 public class ValidaCadastro {
     private int TAMANHO_SENHA = 6;
     private int TAMANHO_CPF = 14;
-    private int TAMANHO_CRM = 6;
+    private int TAMANHO_CRM_MIN = 5;
+    private int TAMANHO_CRM_MAX = 13;
     private int TAMANHO_DATA = 10;
 
     public boolean isCampoVazio(String texto){
@@ -46,7 +40,7 @@ public class ValidaCadastro {
         if (isCampoVazio(texto)){
             return false;
         }else{
-            return texto.length()==TAMANHO_CRM;
+            return (texto.length() >= TAMANHO_CRM_MIN && texto.length()<= TAMANHO_CRM_MAX);
         }
 
     }

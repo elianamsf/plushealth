@@ -11,7 +11,7 @@ import android.database.sqlite.SQLiteOpenHelper; // Cria banco de dados
  */
 
 public class DataBase extends SQLiteOpenHelper {
-    private static final int DATABASE_VERSION = 1;
+    private static final int DATABASE_VERSION = 2;
     private static final String DATABASE_NAME = "dbmaishealth";
 
     //TABELA PESSOA
