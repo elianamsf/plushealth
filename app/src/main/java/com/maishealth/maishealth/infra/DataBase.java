@@ -58,7 +58,7 @@ public class DataBase extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("CREATE TABLE " + TABELA_USUARIO + " (" +
                 ID_USUARIO + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                USUARIO_EMAIL + " TEXT NOT NULL, " +
+                USUARIO_EMAIL + " TEXT NOT NULL UNIQUE, " +
                 USUARIO_SENHA + " TEXT NOT NULL, " +
                 ID_EST_PESSOA + "INTEGER);");
                 
