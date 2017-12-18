@@ -21,7 +21,7 @@ public class Servicos {
     public void cadastrar(String email, String senha, String nome, String sexo, String dataNasc, String cpf) throws Exception {
         Usuario verificarEmail = usuarioDAO.getUsuarioByEmail(email);
 
-        if(verificarEmail == null){
+        if(verificarEmail != null){
             throw new Exception("Email ou Nick já cadastrado");
         } else {
             Pessoa pessoa = new Pessoa();
