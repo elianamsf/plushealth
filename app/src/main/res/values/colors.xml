@@ -5,5 +5,7 @@
     <color name="colorAccent">#212121</color>
     <color name="colorButoes">#393b49</color>
     <color name="colorTextoBut">#ffffff</color>
+    <color name="colorFundo">#ffffff</color>
+    <color name="colorTextoNormal">#0d0d0d</color>
 
 </resources>

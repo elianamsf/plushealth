@@ -98,7 +98,7 @@ public class SignUpActivity extends AppCompatActivity {
         });
     }
 
-    public void validarCadatro(View view){
+    public void validarCadastro(View view){
         String email    = edtEmail.getText().toString();
         String senha    = edtSenha.getText().toString();
         String nome     = edtNome.getText().toString();
