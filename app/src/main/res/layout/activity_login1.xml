@@ -9,8 +9,8 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="360dp"
-        android:layout_height="wrap_content"
+        android:layout_width="328dp"
+        android:layout_height="118dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
@@ -24,22 +24,23 @@
 
     <AutoCompleteTextView
         android:id="@+id/emailx"
-        android:layout_width="371dp"
-        android:layout_height="54dp"
+        android:layout_width="338dp"
+        android:layout_height="50dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:text="E-mail"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="192dp" />
+        tools:layout_editor_absoluteY="183dp" />
 
     <AutoCompleteTextView
         android:id="@+id/senhax"
-        android:layout_width="367dp"
-        android:layout_height="57dp"
+        android:layout_width="336dp"
+        android:layout_height="46dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="20dp"
         android:text="Senha"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -47,34 +48,32 @@
 
     <Button
         android:id="@+id/bt_entrar"
-        android:layout_width="360dp"
-        android:layout_height="60dp"
+        android:layout_width="350dp"
+        android:layout_height="61dp"
+        android:layout_marginBottom="12dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:background="@color/colorButoes"
         android:text="ENTRAR"
         android:textColor="@color/colorTextoBut"
+        app:layout_constraintBottom_toTopOf="@+id/bt_cadastro"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.052"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/senhax" />
 
     <Button
         android:id="@+id/bt_cadastro"
-        android:layout_width="360dp"
-        android:layout_height="60dp"
-        android:layout_marginBottom="8dp"
+        android:layout_width="350dp"
+        android:layout_height="64dp"
+        android:layout_marginBottom="48dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="20dp"
         android:background="@color/colorButoes"
         android:text="CADASTRO"
         android:textColor="@color/colorTextoBut"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bt_entrar"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintStart_toStartOf="parent" />
 
 </android.support.constraint.ConstraintLayout>
