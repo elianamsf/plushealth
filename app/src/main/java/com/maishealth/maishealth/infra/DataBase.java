@@ -11,7 +11,7 @@ import android.database.sqlite.SQLiteOpenHelper; // Cria banco de dados
  */
 
 public class DataBase extends SQLiteOpenHelper {
-    private static final int DATABASE_VERSION = 2;
+    private static final int DATABASE_VERSION = 3;
     private static final String DATABASE_NAME = "dbmaishealth";
 
     //TABELA PESSOA
@@ -66,12 +66,11 @@ public class DataBase extends SQLiteOpenHelper {
                 ID_EST_USUARIO_PE + " INTEGER);");
 
         db.execSQL("CREATE TABLE " + TABELA_PACIENTE + " (" +
-                ID_PACIENTE + " TEXT NOT NULL, " +
-                TABELA_HISTORICO + " TEXT NOT NULL, " + // ID da tabela, ainda não existe, tem criar no futuro.
+                ID_PACIENTE + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 ID_EST_USUARIO_PA + " INTEGER);");
     
         db.execSQL("CREATE TABLE " + TABELA_MEDICO + " (" +
-                ID_MEDICO + " TEXT NOT NULL, " +
+                ID_MEDICO + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 CRM + " TEXT NOT NULL, " +
                 ESTADO + " TEXT NOT NULL, " +
 				ESPECIALIDADE + " TEXT NOT NULL, " +
