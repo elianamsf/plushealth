@@ -15,7 +15,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".usuario.gui.LoginActivity"
+            android:name=".usuario.gui.Login1Activity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
@@ -37,7 +37,7 @@
         <activity android:name=".ConsultasPendentesActivity" />
         <activity android:name=".AcharPostoActivity" />
         <activity android:name=".MenuMedicoActivity" />
-        <activity android:name=".Login1Activity"></activity>
+        <activity android:name=".usuario.gui.LoginActivity"></activity>
     </application>
 
 </manifest>

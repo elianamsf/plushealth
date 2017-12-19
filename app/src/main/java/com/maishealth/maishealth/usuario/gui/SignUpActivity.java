@@ -175,7 +175,7 @@ public class SignUpActivity extends AppCompatActivity {
     }
 
     public void voltarTelaLogin(View view){
-        Intent intent = new Intent(this, LoginActivity.class);
+        Intent intent = new Intent(this, Login1Activity.class);
         startActivity(intent);
         finish();
     }

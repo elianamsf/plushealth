@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.maishealth.maishealth.Login1Activity">
+    tools:context="com.maishealth.maishealth.usuario.gui.Login1Activity">
 
 
     <ImageView
@@ -20,7 +20,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo_health" />
+        app:srcCompat="@drawable/logo_health"
+        />
 
     <AutoCompleteTextView
         android:id="@+id/emailx"
@@ -29,10 +30,13 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:text="E-mail"
+        android:maxLines="1"
+        app:layout_constraintBottom_toTopOf="@+id/senhax"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="183dp" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.117"
+        />
 
     <AutoCompleteTextView
         android:id="@+id/senhax"
@@ -42,9 +46,16 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="20dp"
         android:text="Senha"
+        android:maxLines="1"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toTopOf="@+id/bt_entrar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/emailx" />
+        app:layout_constraintTop_toBottomOf="@+id/emailx"
+        app:layout_constraintVertical_bias="0.117"
+
+
+        />
 
     <Button
         android:id="@+id/bt_entrar"
@@ -57,10 +68,15 @@
         android:background="@color/colorButoes"
         android:text="ENTRAR"
         android:textColor="@color/colorTextoBut"
+        android:onClick="validarLogin"
         app:layout_constraintBottom_toTopOf="@+id/bt_cadastro"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/senhax" />
+        app:layout_constraintTop_toBottomOf="@+id/senhax"
+
+
+
+        />
 
     <Button
         android:id="@+id/bt_cadastro"
@@ -72,8 +88,14 @@
         android:background="@color/colorButoes"
         android:text="CADASTRO"
         android:textColor="@color/colorTextoBut"
+        android:onClick="tela1Cadastro"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bt_entrar"
+        app:layout_constraintVertical_bias="0.117"
+
+
+        />
 
 </android.support.constraint.ConstraintLayout>

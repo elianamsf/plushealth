@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+import com.maishealth.maishealth.usuario.gui.Login1Activity;
 import com.maishealth.maishealth.usuario.gui.MenuPaciente2;
 
 public class AcharPostoActivity extends AppCompatActivity {
@@ -16,6 +17,11 @@ public class AcharPostoActivity extends AppCompatActivity {
     }
     public void voltarParaMenuPac(View view){
         Intent intent= new Intent(AcharPostoActivity.this, MenuPaciente2.class);
+        startActivity(intent);
+        finish();
+    }
+    public void testeLogin(View view){
+        Intent intent=new Intent(AcharPostoActivity.this,Login1Activity.class);
         startActivity(intent);
         finish();
     }

@@ -23,10 +23,12 @@ public class Servicos {
 
     public void cadastrarPaciente(String email, String senha, String nome, String sexo, String dataNasc, String cpf) throws Exception {
         Usuario verificarEmail = usuarioDAO.getUsuarioByEmail(email);
+        ///Usuario verificarCPF = usuarioDAO.getSenhaByEmail(email);
 
         if(verificarEmail != null){
             throw new Exception("Email já cadastrado");
         } else {
+
             long idUsuario = servicosUsuario.cadastrarUsuario(email, senha);
             servicosPessoa.cadastrarPessoa(nome, sexo, dataNasc, cpf, idUsuario);
             servicosPaciente.cadastrarPaciente(idUsuario);
@@ -46,3 +48,4 @@ public class Servicos {
         }
     }
 }
+

@@ -1,11 +1,13 @@
-package com.maishealth.maishealth;
+package com.maishealth.maishealth.usuario.gui;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.TextView;
 
+import com.maishealth.maishealth.R;
+import com.maishealth.maishealth.infra.GuiUtil;
 import com.maishealth.maishealth.usuario.negocio.ValidaLogin;
 
 public class Login1Activity extends AppCompatActivity {
@@ -38,5 +40,18 @@ public class Login1Activity extends AppCompatActivity {
             edtEmailLogin.setError("Email inválido");
             valido = false;
         }
+        if (valido==true){
+            //ajeitar aq verif no banco
+            GuiUtil.myToast(this,"email e senha válido");
+            Intent intent = new Intent( Login1Activity.this, MenuPaciente2.class);
+            startActivity(intent);
+            finish();
+        }
     }
+    public void tela1Cadastro(View view) {
+        Intent intent = new Intent(Login1Activity.this, SignUpActivity.class);
+        startActivity(intent);
+        finish();
+    }
+
 }

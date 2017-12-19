@@ -125,4 +125,13 @@ public class UsuarioDAO {
         return usuario;
 
     }
+    //public Usuario getSenhaByEmail(String email){
+        //liteDatabase = dataBaseHelper.getReadableDatabase();
+        //String query ="SELECT * FROM " +DataBase.TABELA_USUARIO +
+                //"WHERE" +DataBase.USUARIO_SENHA +" LIKE ?";
+
+        //String[] argumentos ={email};
+        //Usuario senha =getSenha(query,argumentos);
+        //return senha;
+    //}
 }
