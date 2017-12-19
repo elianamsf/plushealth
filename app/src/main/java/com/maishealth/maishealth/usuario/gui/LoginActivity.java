@@ -146,6 +146,13 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
      * If there are form errors (invalid email, missing fields, etc.), the
      * errors are presented and no actual login attempt is made.
      */
+
+    public  void validaLogin (View view) {
+        String email = mEmailView.getText().toString();
+        String senha = mPasswordView.getText().toString();
+
+    }
+
     private void attemptLogin() {
         if (mAuthTask != null) {
             return;

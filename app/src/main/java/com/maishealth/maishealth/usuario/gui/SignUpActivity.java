@@ -119,7 +119,7 @@ public class SignUpActivity extends AppCompatActivity {
             valido = false;
         }
 
-        if(!validaCadastro.isCrmValido(crm) && swUsuario.isChecked()){
+    if(!validaCadastro.isCrmValido(crm) && swUsuario.isChecked()){
             edtCrm.requestFocus();
             edtCrm.setError("CRM inválido.");
             valido = false;
@@ -159,6 +159,9 @@ public class SignUpActivity extends AppCompatActivity {
             Servicos servicos = new Servicos(getApplicationContext());
             try{
                 servicos.cadastrarPaciente(email, senha, nome, sexo, dataNasc, cpf);
+                Intent intent = new Intent(this, Login1Activity.class);
+                startActivity(intent);
+                finish();
                 GuiUtil.myToast(this, "Paciente cadastrado com sucesso");
             } catch (Exception e) {
                 GuiUtil.myToast(this, e);
@@ -167,6 +170,9 @@ public class SignUpActivity extends AppCompatActivity {
             Servicos servicos = new Servicos(getApplicationContext());
             try{
                 servicos.cadastrarMedico(email, senha, nome, sexo, dataNasc, cpf, crm, estado, especialidade);
+                Intent intent = new Intent(this, Login1Activity.class);
+                startActivity(intent);
+                finish();
                 GuiUtil.myToast(this, "Médico cadastrado com sucesso");
             } catch (Exception e) {
                 GuiUtil.myToast(this, e);

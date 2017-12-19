@@ -41,6 +41,8 @@ public class MenuPaciente2 extends AppCompatActivity {
         finish();
     }
     public void SairPac(View view){
+        Intent intent=new Intent(MenuPaciente2.this, Login1Activity.class);
+        startActivity(intent);
         finish();
     }
 

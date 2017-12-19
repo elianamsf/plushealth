@@ -54,4 +54,7 @@ public class Login1Activity extends AppCompatActivity {
         finish();
     }
 
+    public void fecharApp(View view){
+        finish();
+    }
 }
