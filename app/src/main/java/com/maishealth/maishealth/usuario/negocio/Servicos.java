@@ -18,7 +18,7 @@ public class Servicos {
 
     public Servicos(Context context) {
         usuarioDAO = new UsuarioDAO(context);
-        pessoaDAO = new PessoaDAO(context)
+        pessoaDAO = new PessoaDAO(context);
         servicosPessoa = new ServicosPessoa(context);
         servicosUsuario = new ServicosUsuario(context);
         servicosPaciente = new ServicosPaciente(context);
