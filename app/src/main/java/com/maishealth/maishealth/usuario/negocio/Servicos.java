@@ -2,7 +2,9 @@ package com.maishealth.maishealth.usuario.negocio;
 
 import android.content.Context;
 
+import com.maishealth.maishealth.usuario.dominio.Pessoa;
 import com.maishealth.maishealth.usuario.dominio.Usuario;
+import com.maishealth.maishealth.usuario.persistencia.PessoaDAO;
 import com.maishealth.maishealth.usuario.persistencia.UsuarioDAO;
 
 
@@ -23,9 +25,14 @@ public class Servicos {
 
     public void cadastrarPaciente(String email, String senha, String nome, String sexo, String dataNasc, String cpf) throws Exception {
         Usuario verificarEmail = usuarioDAO.getUsuarioByEmail(email);
-        if(verificarEmail != null){
+        Pessoa verificarCpf = PessoaDAO.getPessoaByCpf(cpf);
+
+        if(verificarEmail != null) {
             throw new Exception("Email já cadastrado");
-        } else {
+        }
+        if (verificarCpf != null) {
+                throw new Exception("Cpf já cadastrado");
+        }else{
 
             long idUsuario = servicosUsuario.cadastrarUsuario(email, senha);
             servicosPessoa.cadastrarPessoa(nome, sexo, dataNasc, cpf, idUsuario);
@@ -35,9 +42,13 @@ public class Servicos {
 
     public void cadastrarMedico(String email, String senha, String nome, String sexo, String dataNasc, String cpf, String crm, String estado, String especialidade) throws Exception {
         Usuario verificarEmail = usuarioDAO.getUsuarioByEmail(email);
+        Pessoa verificarCpf = PessoaDAO.getPessoaByCpf(cpf);
 
-        if(verificarEmail != null){
+        if(verificarEmail != null) {
             throw new Exception("Email já cadastrado");
+        }
+        if (verificarCpf != null) {
+            throw new Exception("Cpf já cadastrado");
         } else {
             long idUsuario = servicosUsuario.cadastrarUsuario(email, senha);
             servicosPessoa.cadastrarPessoa(nome, sexo, dataNasc, cpf, idUsuario);

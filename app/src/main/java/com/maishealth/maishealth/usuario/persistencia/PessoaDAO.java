@@ -10,8 +10,8 @@ import com.maishealth.maishealth.usuario.dominio.Pessoa;
 
 
 public class PessoaDAO {
-    private SQLiteDatabase liteDatabase;
-    private DataBase dataBaseHelper;
+    private static SQLiteDatabase liteDatabase;
+    private static DataBase dataBaseHelper;
 
     public PessoaDAO(Context context) {
         dataBaseHelper = new DataBase(context);
@@ -83,7 +83,7 @@ public class PessoaDAO {
         return id;
     }
 
-    private Pessoa criarPessoa(Cursor cursor){
+    private static Pessoa criarPessoa(Cursor cursor){
 
         String colunaId = DataBase.ID_PESSOA;
         int indexColunaId = cursor.getColumnIndex(colunaId);
@@ -121,7 +121,7 @@ public class PessoaDAO {
         return pessoa;
     }
 
-    private Pessoa getPessoa(String query, String[] argumentos){
+    private static Pessoa getPessoa(String query, String[] argumentos){
         liteDatabase = dataBaseHelper.getReadableDatabase();
 
         Cursor cursor = liteDatabase.rawQuery(query, argumentos);
@@ -149,4 +149,20 @@ public class PessoaDAO {
 
         return pessoa;
     }
+
+    public static Pessoa getPessoaByCpf(String cpf){
+        liteDatabase = dataBaseHelper.getReadableDatabase();
+
+        String query = "SELECT * FROM " + DataBase.TABELA_PESSOA +
+                " WHERE " + DataBase.CPF + " LIKE ?";
+
+        String[] argumentos = {cpf};
+
+        Pessoa pessoa = getPessoa(query, argumentos);
+
+        return pessoa;
+
+    }
+
+
 }
