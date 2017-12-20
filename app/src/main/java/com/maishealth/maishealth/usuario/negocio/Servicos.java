@@ -14,9 +14,11 @@ public class Servicos {
     private ServicosUsuario servicosUsuario;
     private ServicosPaciente servicosPaciente;
     private ServicosMedico servicosMedico;
+    private PessoaDAO pessoaDAO;
 
     public Servicos(Context context) {
         usuarioDAO = new UsuarioDAO(context);
+        pessoaDAO = new PessoaDAO(context)
         servicosPessoa = new ServicosPessoa(context);
         servicosUsuario = new ServicosUsuario(context);
         servicosPaciente = new ServicosPaciente(context);
@@ -25,7 +27,7 @@ public class Servicos {
 
     public void cadastrarPaciente(String email, String senha, String nome, String sexo, String dataNasc, String cpf) throws Exception {
         Usuario verificarEmail = usuarioDAO.getUsuarioByEmail(email);
-        Pessoa verificarCpf = PessoaDAO.getPessoaByCpf(cpf);
+        Pessoa verificarCpf = pessoaDAO.getPessoaByCpf(cpf);
 
         if(verificarEmail != null) {
             throw new Exception("Email já cadastrado");
@@ -42,7 +44,7 @@ public class Servicos {
 
     public void cadastrarMedico(String email, String senha, String nome, String sexo, String dataNasc, String cpf, String crm, String estado, String especialidade) throws Exception {
         Usuario verificarEmail = usuarioDAO.getUsuarioByEmail(email);
-        Pessoa verificarCpf = PessoaDAO.getPessoaByCpf(cpf);
+        Pessoa verificarCpf = pessoaDAO.getPessoaByCpf(cpf);
 
         if(verificarEmail != null) {
             throw new Exception("Email já cadastrado");
