@@ -25,8 +25,8 @@
 
     <AutoCompleteTextView
         android:id="@+id/emailx"
-        android:layout_width="338dp"
-        android:layout_height="50dp"
+        android:layout_width="324dp"
+        android:layout_height="57dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:hint="E-mail"
@@ -35,19 +35,18 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.117"
-        />
+        app:layout_constraintVertical_bias="0.117" />
 
     <AutoCompleteTextView
         android:id="@+id/senhax"
-        android:layout_width="336dp"
-        android:layout_height="46dp"
+        android:layout_width="325dp"
+        android:layout_height="41dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="20dp"
         android:hint="Senha"
-        android:maxLines="1"
         android:inputType="textPassword"
+        android:maxLines="1"
         app:layout_constraintBottom_toTopOf="@+id/bt_entrar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -59,29 +58,28 @@
 
     <Button
         android:id="@+id/bt_entrar"
-        android:layout_width="350dp"
-        android:layout_height="61dp"
+        android:layout_width="324dp"
+        android:layout_height="57dp"
         android:layout_marginBottom="12dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:background="@color/colorButoes"
+        android:onClick="validarLogin"
         android:text="ENTRAR"
         android:textColor="@color/colorTextoBut"
-        android:onClick="validarLogin"
         app:layout_constraintBottom_toTopOf="@+id/bt_cadastro"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/senhax"
 
 
-
         />
 
     <Button
         android:id="@+id/bt_cadastro"
-        android:layout_width="350dp"
-        android:layout_height="64dp"
+        android:layout_width="324dp"
+        android:layout_height="57dp"
         android:layout_marginBottom="48dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"

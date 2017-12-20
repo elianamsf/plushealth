@@ -23,12 +23,4 @@ public class ValidaLogin {
             return texto.length() >= TAMANHO_SENHA;
         }
     }
-    //public void verificarConta(String email, String senha) throws Exception {
-        //Usuario verificarEmail = usuarioDAO.getUsuarioByEmail(email);
-        //Usuario verificarSenha = usuarioDAO.getSenhaByEmail(email);
-
-
-        //if(verificarEmail != null){
-            //throw new Exception("Email já cadastrado");
-    //ADPTAR AQ BA
 }
