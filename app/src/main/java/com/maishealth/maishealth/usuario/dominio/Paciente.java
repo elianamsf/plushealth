@@ -3,6 +3,7 @@ package com.maishealth.maishealth.usuario.dominio;
 public class Paciente {
     private long id;
     private long idUsuario;
+    private String tipoSangue;
 
     public long getId() {
         return id;
@@ -18,5 +19,13 @@ public class Paciente {
 
     public void setIdUsuario(long idUsuario) {
         this.idUsuario = idUsuario;
+    }
+
+    public String getTipoSangue() {
+        return tipoSangue;
+    }
+
+    public void setTipoSangue(String tipoSangue) {
+        this.tipoSangue = tipoSangue;
     }
 }
