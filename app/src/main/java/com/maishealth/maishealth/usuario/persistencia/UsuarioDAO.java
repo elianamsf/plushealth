@@ -113,8 +113,6 @@ public class UsuarioDAO {
     }
 
     public Usuario getUsuarioByEmail(String email){
-        liteDatabase = dataBaseHelper.getReadableDatabase();
-
         String query = "SELECT * FROM " + DataBase.TABELA_USUARIO +
                 " WHERE " + DataBase.USUARIO_EMAIL + " LIKE ?";
 
