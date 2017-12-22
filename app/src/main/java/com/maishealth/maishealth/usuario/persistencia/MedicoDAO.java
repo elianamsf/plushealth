@@ -133,4 +133,16 @@ public class MedicoDAO {
 
         return medico;
     }
+
+    public Medico getMedicoByRegiaoCrm(String regiao, String crm){
+        String query = "SELECT * FROM " + DataBase.TABELA_MEDICO +
+                " WHERE " + DataBase.ESTADO + " LIKE ? AND " +
+                DataBase.CRM + " LIKE ?";
+
+        String[] argumentos = {regiao, crm};
+
+        Medico medico = getMedico(query, argumentos);
+
+        return medico;
+    }
 }
