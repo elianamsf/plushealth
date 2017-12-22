@@ -14,7 +14,7 @@ public enum EnumTipoSangue {
         return valor;
     }
 
-    public static String[] EnumTipoSangue(){
+    public static String[] enumTipoSangueLista(){
         EnumTipoSangue[] listaSangue = EnumTipoSangue.values();
         String[] lista = new String[listaSangue.length];
         for (int i =0; i<listaSangue.length;i++){
