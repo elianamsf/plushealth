@@ -68,8 +68,28 @@
                 android:hint="@string/prompt_data"
                 android:inputType="date" />
 
+            <TextView
+                android:id="@+id/lblSexo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/lblSexo" />
+
             <Spinner
                 android:id="@+id/spnSexo3"
+                android:layout_width="match_parent"
+                android:layout_height="39dp"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:id="@+id/lblTipoSangue"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/lblTipoSangue" />
+
+            <Spinner
+                android:id="@+id/spnTipoSangue3"
                 android:layout_width="match_parent"
                 android:layout_height="39dp"
                 android:layout_gravity="center_horizontal" />
@@ -79,8 +99,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center_horizontal"
-                android:text="@string/regiao"
                 android:visibility="invisible"
+                android:text="@string/regiao"
                 tools:text="@string/regiao" />
 
             <Spinner

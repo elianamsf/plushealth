@@ -16,15 +16,17 @@ import com.maishealth.maishealth.R;
 import com.maishealth.maishealth.infra.GuiUtil;
 import com.maishealth.maishealth.infra.Mask;
 import com.maishealth.maishealth.usuario.dominio.EnumEstados;
+import com.maishealth.maishealth.usuario.dominio.EnumTipoSangue;
 import com.maishealth.maishealth.usuario.negocio.Servicos;
 import com.maishealth.maishealth.usuario.negocio.ValidaCadastro;
 
 public class SignUpActivity extends AppCompatActivity {
     private EditText edtEmail, edtSenha, edtNome, edtCpf, edtNasc, edtCrm, edtEspec;
     private TextView edtRegiao;
-    private Spinner spinnerSexo, spinnerRegiao;
-    private String[] listaSexo = {"Feminino", "Masculino", "Outros"};
-    private String [] listaEstados = EnumEstados.enumEstadosLista();
+    private Spinner spinnerSexo, spinnerTipoSangue, spinnerRegiao;
+    private String[] listaSexo = {"Feminino", "Masculino"};
+    private String[] listaEstados = EnumEstados.enumEstadosLista();
+    private String[] listaTipoSangue = EnumTipoSangue.enumTipoSangueLista();
     private Switch swUsuario;
 
     @Override
@@ -82,13 +84,24 @@ public class SignUpActivity extends AppCompatActivity {
 
         //ArrayAdapter é usado para preparar a lista que será usada no Spinner
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, listaSexo);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
         spinnerSexo = (Spinner)findViewById(R.id.spnSexo3);
         spinnerSexo.setAdapter(adapter);
 
         //Metodo para quando um elemento do Spinner é selecionado()
         spinnerSexo.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener(){
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+            }
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+            }
+        });
+
+        ArrayAdapter<String> adapter2 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, listaTipoSangue);
+        spinnerTipoSangue = (Spinner)findViewById(R.id.spnTipoSangue3);
+        spinnerTipoSangue.setAdapter(adapter2);
+        spinnerTipoSangue.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener(){
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
             }
@@ -105,6 +118,7 @@ public class SignUpActivity extends AppCompatActivity {
         String sexo     = (String) spinnerSexo.getSelectedItem();
         String cpf      = edtCpf.getText().toString();
         String dataNasc = edtNasc.getText().toString();
+        String tipoSangue = (String) spinnerTipoSangue.getSelectedItem();
         String crm      = edtCrm.getText().toString();
         String estado     = (String) spinnerRegiao.getSelectedItem();
         String especialidade = edtEspec.getText().toString();
@@ -158,7 +172,7 @@ public class SignUpActivity extends AppCompatActivity {
         if(valido && !swUsuario.isChecked()){
             Servicos servicos = new Servicos(getApplicationContext());
             try{
-                servicos.cadastrarPaciente(email, senha, nome, sexo, dataNasc, cpf);
+                servicos.cadastrarPaciente(email, senha, nome, sexo, dataNasc, cpf, tipoSangue);
                 Intent intent = new Intent(this, Login1Activity.class);
                 startActivity(intent);
                 finish();
@@ -169,7 +183,7 @@ public class SignUpActivity extends AppCompatActivity {
         } else if(valido && swUsuario.isChecked()) {
             Servicos servicos = new Servicos(getApplicationContext());
             try{
-                servicos.cadastrarMedico(email, senha, nome, sexo, dataNasc, cpf, crm, estado, especialidade);
+                servicos.cadastrarMedico(email, senha, nome, sexo, dataNasc, cpf, tipoSangue, crm, estado, especialidade);
                 Intent intent = new Intent(this, Login1Activity.class);
                 startActivity(intent);
                 finish();
