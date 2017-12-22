@@ -26,6 +26,10 @@ public class PacienteDAO {
         long idUsuario = paciente.getIdUsuario();
         values.put(colunaIdUsuario, idUsuario);
 
+        String colunaTipoSangue = DataBase.PACIENTE_SANGUE;
+        String tipoSangue = paciente.getTipoSangue();
+        values.put(colunaTipoSangue, tipoSangue);
+
         long id = liteDatabase.insert(tabela, null, values);
 
         liteDatabase.close();
@@ -43,6 +47,10 @@ public class PacienteDAO {
         String colunaIdUsuario = DataBase.ID_EST_USUARIO_PA;
         long idUsuario = paciente.getIdUsuario();
         values.put(colunaIdUsuario, idUsuario);
+
+        String colunaTipoSangue = DataBase.PACIENTE_SANGUE;
+        String tipoSangue = paciente.getTipoSangue();
+        values.put(colunaTipoSangue, tipoSangue);
 
         String whereClause = DataBase.ID_PACIENTE + " = ?";
         String[] parametros = new String[1];
@@ -64,10 +72,15 @@ public class PacienteDAO {
         int indexColunaIdUsuario = cursor.getColumnIndex(colunaIdUsuario);
         long idUsuario = cursor.getInt(indexColunaIdUsuario);
 
+        String colunaTipoSangue = DataBase.PACIENTE_SANGUE;
+        int indexColunaTipoSangue = cursor.getColumnIndex(colunaTipoSangue);
+        String tipoSangue = cursor.getString(indexColunaTipoSangue);
+
         Paciente paciente = new Paciente();
 
         paciente.setId(id);
         paciente.setIdUsuario(idUsuario);
+        paciente.setTipoSangue(tipoSangue);
 
         return paciente;
     }

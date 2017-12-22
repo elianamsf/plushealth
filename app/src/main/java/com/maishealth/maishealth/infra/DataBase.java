@@ -9,7 +9,7 @@ import android.database.sqlite.SQLiteOpenHelper; // Cria banco de dados
  */
 
 public class DataBase extends SQLiteOpenHelper {
-    private static final int DATABASE_VERSION = 4;
+    private static final int DATABASE_VERSION = 5;
     private static final String DATABASE_NAME = "dbmaishealth";
 
     //TABELA PESSOA
@@ -30,6 +30,7 @@ public class DataBase extends SQLiteOpenHelper {
     //TABELA PACIENTE
     public static final String TABELA_PACIENTE = "paciente";
     public static final String ID_PACIENTE = "id_paciente";
+    public static final String PACIENTE_SANGUE = "tipo_sangue";
     public static final String ID_EST_USUARIO_PA = "id_est_usuario";
     
     //TABELA MEDICO
@@ -102,6 +103,7 @@ public class DataBase extends SQLiteOpenHelper {
 
         db.execSQL("CREATE TABLE " + TABELA_PACIENTE + " (" +
                 ID_PACIENTE + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                PACIENTE_SANGUE + " TEXT NOT NULL, " +
                 ID_EST_USUARIO_PA + " INTEGER);");
     
         db.execSQL("CREATE TABLE " + TABELA_MEDICO + " (" +
