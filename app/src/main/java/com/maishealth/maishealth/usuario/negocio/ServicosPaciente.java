@@ -18,9 +18,10 @@ public class ServicosPaciente {
         return idPaciente;
     }
 
-    public long cadastrarPaciente(long idUsuario) {
+    public long cadastrarPaciente(long idUsuario, String tipoSangue) {
         Paciente paciente = new Paciente();
         paciente.setIdUsuario(idUsuario);
+        paciente.setTipoSangue(tipoSangue);
 
         return cadastrarPaciente(paciente);
     }

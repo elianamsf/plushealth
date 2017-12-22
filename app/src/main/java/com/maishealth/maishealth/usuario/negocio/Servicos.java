@@ -25,7 +25,7 @@ public class Servicos {
         servicosMedico = new ServicosMedico(context);
     }
 
-    public void cadastrarPaciente(String email, String senha, String nome, String sexo, String dataNasc, String cpf) throws Exception {
+    public long cadastrarPaciente(String email, String senha, String nome, String sexo, String dataNasc, String cpf, String tipoSangue) throws Exception {
         Usuario verificarEmail = usuarioDAO.getUsuarioByEmail(email);
         Pessoa verificarCpf = pessoaDAO.getPessoaByCpf(cpf);
 
@@ -33,29 +33,23 @@ public class Servicos {
             throw new Exception("Email já cadastrado");
         }
         if (verificarCpf != null) {
-                throw new Exception("Cpf já cadastrado");
+                throw new Exception("CPF já cadastrado");
         }else{
 
             long idUsuario = servicosUsuario.cadastrarUsuario(email, senha);
             servicosPessoa.cadastrarPessoa(nome, sexo, dataNasc, cpf, idUsuario);
-            servicosPaciente.cadastrarPaciente(idUsuario);
+            servicosPaciente.cadastrarPaciente(idUsuario, tipoSangue);
+
+            return idUsuario;
         }
     }
 
-    public void cadastrarMedico(String email, String senha, String nome, String sexo, String dataNasc, String cpf, String crm, String estado, String especialidade) throws Exception {
-        Usuario verificarEmail = usuarioDAO.getUsuarioByEmail(email);
-        Pessoa verificarCpf = pessoaDAO.getPessoaByCpf(cpf);
-
-        if(verificarEmail != null) {
-            throw new Exception("Email já cadastrado");
-        }
-        if (verificarCpf != null) {
-            throw new Exception("Cpf já cadastrado");
-        } else {
-            long idUsuario = servicosUsuario.cadastrarUsuario(email, senha);
-            servicosPessoa.cadastrarPessoa(nome, sexo, dataNasc, cpf, idUsuario);
-            servicosPaciente.cadastrarPaciente(idUsuario);
+    public void cadastrarMedico(String email, String senha, String nome, String sexo, String dataNasc, String cpf, String tipoSangue, String crm, String estado, String especialidade) throws Exception {
+        try{
+            long idUsuario = this.cadastrarPaciente(email, senha, nome, sexo, dataNasc, cpf, tipoSangue);
             servicosMedico.cadastrarMedico(crm, estado, especialidade, idUsuario);
+        }catch (Exception e){
+            throw new Exception(e.getMessage());
         }
     }
 }
