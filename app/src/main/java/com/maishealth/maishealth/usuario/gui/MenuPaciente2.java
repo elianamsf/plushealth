@@ -5,10 +5,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-import com.maishealth.maishealth.AcharPostoActivity;
-import com.maishealth.maishealth.ConsultasPendentesActivity;
-import com.maishealth.maishealth.MarcaConsultaActivity;
-import com.maishealth.maishealth.MeuHistoricoActivity;
 import com.maishealth.maishealth.R;
 
 public class MenuPaciente2 extends AppCompatActivity {
