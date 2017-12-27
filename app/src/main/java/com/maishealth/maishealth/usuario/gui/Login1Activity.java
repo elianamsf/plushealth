@@ -53,6 +53,10 @@ public class Login1Activity extends AppCompatActivity {
         startActivity(intent);
         finish();
     }
+    public void acionarEmergencia(View view){
+        GuiUtil.myToast(this,"Em construção");
+
+    }
 
     public void fecharApp(View view){
         finish();
