@@ -111,18 +111,17 @@ public class SignUpActivity extends AppCompatActivity {
         });
     }
 
-    public void validarCadatro(View view){
-        String email    = edtEmail.getText().toString();
-        String senha    = edtSenha.getText().toString();
-        String nome     = edtNome.getText().toString();
-        String sexo     = (String) spinnerSexo.getSelectedItem();
-        String cpf      = edtCpf.getText().toString();
-        String dataNasc = edtNasc.getText().toString();
-        String tipoSangue = (String) spinnerTipoSangue.getSelectedItem();
-        String crm      = edtCrm.getText().toString();
-        String estado     = (String) spinnerRegiao.getSelectedItem();
-        String especialidade = edtEspec.getText().toString();
-
+    public void onClickCadastar(View view){
+        String email            = edtEmail.getText().toString();
+        String senha            = edtSenha.getText().toString();
+        String nome             = edtNome.getText().toString();
+        String sexo             = (String) spinnerSexo.getSelectedItem();
+        String cpf              = edtCpf.getText().toString();
+        String dataNasc         = edtNasc.getText().toString();
+        String tipoSangue       = (String) spinnerTipoSangue.getSelectedItem();
+        String crm              = edtCrm.getText().toString();
+        String estado           = (String) spinnerRegiao.getSelectedItem();
+        String especialidade    = edtEspec.getText().toString();
 
         ValidaCadastro validaCadastro = new ValidaCadastro();
         boolean valido = true;
@@ -133,7 +132,7 @@ public class SignUpActivity extends AppCompatActivity {
             valido = false;
         }
 
-    if(!validaCadastro.isCrmValido(crm) && swUsuario.isChecked()){
+        if(!validaCadastro.isCrmValido(crm) && swUsuario.isChecked()){
             edtCrm.requestFocus();
             edtCrm.setError("CRM inválido.");
             valido = false;
@@ -194,8 +193,18 @@ public class SignUpActivity extends AppCompatActivity {
         }
     }
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        this.mudarTela(Login1Activity.class);
+    }
+
     public void voltarTelaLogin(View view){
-        Intent intent = new Intent(this, Login1Activity.class);
+        this.mudarTela(Login1Activity.class);
+    }
+
+    public void mudarTela(Class tela){
+        Intent intent = new Intent(this, tela);
         startActivity(intent);
         finish();
     }
