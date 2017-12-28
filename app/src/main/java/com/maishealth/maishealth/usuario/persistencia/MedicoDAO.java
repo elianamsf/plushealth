@@ -145,4 +145,16 @@ public class MedicoDAO {
 
         return medico;
     }
+
+    public Medico getMedicoByIdUsuario(long idUsuario){
+        String query = "SELECT * FROM " + DataBase.TABELA_MEDICO +
+                " WHERE " + DataBase.ID_EST_USUARIO_ME + " LIKE ?";
+
+        String idString = Long.toString(idUsuario);
+        String[] argumentos = {idString};
+
+        Medico medico = getMedico(query, argumentos);
+
+        return medico;
+    }
 }

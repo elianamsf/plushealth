@@ -164,5 +164,15 @@ public class PessoaDAO {
 
     }
 
+    public Pessoa getPessoaByIdUsuario(long id){
+        String query = "SELECT * FROM " + DataBase.TABELA_PESSOA +
+                " WHERE " + DataBase.ID_EST_USUARIO_PE + " LIKE ?";
 
+        String idString = Long.toString(id);
+        String[] argumentos = {idString};
+
+        Pessoa pessoa = getPessoa(query, argumentos);
+
+        return pessoa;
+    }
 }

@@ -29,4 +29,10 @@ public class ServicosPessoa {
 
         return cadastrarPessoa(pessoa);
     }
+
+    public Pessoa searchPessoaByIdUsuario(long idUsuario){
+        Pessoa pessoa = pessoaDAO.getPessoaByIdUsuario(idUsuario);
+
+        return pessoa;
+    }
 }

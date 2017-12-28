@@ -6,6 +6,24 @@
     android:layout_height="match_parent"
     tools:context="com.maishealth.maishealth.usuario.gui.MenuMedicoActivity">
 
+    <TextView
+        android:id="@+id/lblNomeMedico"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/lbl_nome_do_medico"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toTopOf="@+id/bt_meucalend"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.598" />
+
     <Button
         android:id="@+id/bt_meucalend"
         android:layout_width="254dp"
@@ -14,7 +32,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="168dp"
         android:background="@color/colorButoes"
-        android:text="MEU CALENDÁRIO"
+        android:text="@string/btn_meu_calendario"
         android:textColor="@color/colorTextoBut"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -30,7 +48,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:background="@color/colorButoes"
-        android:text="MINHAS CONSULTAS"
+        android:text="@string/btn_minhas_consultas"
         android:textColor="@color/colorTextoBut"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -39,21 +57,21 @@
         app:layout_constraintTop_toBottomOf="@+id/bt_meucalend"
         app:layout_constraintVertical_bias="0.168" />
 
-    <TextView
-        android:id="@+id/textViewNomeMed"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
+    <Button
+        android:id="@+id/bt_sair_pac2"
+        android:layout_width="108dp"
+        android:layout_height="43dp"
+        android:layout_marginBottom="16dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="Nome do medico"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        android:textSize="22sp"
-        app:layout_constraintBottom_toTopOf="@+id/bt_meucalend"
+        android:background="@color/colorButoes"
+        android:onClick="onClickSair"
+        android:text="@string/btn_sair"
+        android:textColor="@color/colorTextoBut"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.598" />
+        app:layout_constraintTop_toBottomOf="@+id/bt_minhasconsultas" />
 </android.support.constraint.ConstraintLayout>
