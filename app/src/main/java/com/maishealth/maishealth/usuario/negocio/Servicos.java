@@ -1,6 +1,7 @@
 package com.maishealth.maishealth.usuario.negocio;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 
 import com.maishealth.maishealth.usuario.dominio.Medico;
 import com.maishealth.maishealth.usuario.dominio.Pessoa;
@@ -8,6 +9,12 @@ import com.maishealth.maishealth.usuario.dominio.Usuario;
 import com.maishealth.maishealth.usuario.persistencia.MedicoDAO;
 import com.maishealth.maishealth.usuario.persistencia.PessoaDAO;
 import com.maishealth.maishealth.usuario.persistencia.UsuarioDAO;
+
+import static com.maishealth.maishealth.infra.ConstantesSharedPreferences.ID_USER_PREFERENCES;
+import static com.maishealth.maishealth.infra.ConstantesSharedPreferences.IS_MEDICO_PREFERENCES;
+import static com.maishealth.maishealth.infra.ConstantesSharedPreferences.LOGIN_PREFERENCES;
+import static com.maishealth.maishealth.infra.ConstantesSharedPreferences.PASSWORD_PREFERENCES;
+import static com.maishealth.maishealth.infra.ConstantesSharedPreferences.TITLE_PREFERENCES;
 
 
 public class Servicos {
@@ -18,8 +25,10 @@ public class Servicos {
     private ServicosMedico servicosMedico;
     private PessoaDAO pessoaDAO;
     private MedicoDAO medicoDAO;
+    private SharedPreferences sharedPreferences;
 
     public Servicos(Context context) {
+        sharedPreferences = context.getSharedPreferences(TITLE_PREFERENCES, context.MODE_PRIVATE);
         usuarioDAO = new UsuarioDAO(context);
         pessoaDAO = new PessoaDAO(context);
         medicoDAO = new MedicoDAO(context);
@@ -53,7 +62,7 @@ public class Servicos {
         Medico verificarRegiaoCrm = medicoDAO.getMedicoByRegiaoCrm(estado, crm);
 
         if(verificarRegiaoCrm != null) {
-            throw new Exception(" Estado/CRM já cadastrado");
+            throw new Exception("CRM já cadastrado em "+estado);
         }
         try{
             long idUsuario = this.cadastrarPaciente(email, senha, nome, sexo, dataNasc, cpf, tipoSangue);
@@ -62,6 +71,25 @@ public class Servicos {
         }catch (Exception e){
             throw new Exception(e.getMessage());
         }
+    }
+
+    public void login(String email, String senha) throws Exception {
+        Usuario usuario = usuarioDAO.getUsuarioByEmail(email);
+
+        if(usuario == null){
+            throw new Exception("E-mail não cadastrado");
+        } else if(!senha.equals(usuario.getSenha())){
+            throw new Exception("E-mail ou Senha incorretos");
+        }
+        Medico medico = medicoDAO.getMedicoByIdUsuario(usuario.getId());
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+
+        editor.putLong(ID_USER_PREFERENCES, usuario.getId());
+        editor.putString(LOGIN_PREFERENCES, usuario.getEmail());
+        editor.putString(PASSWORD_PREFERENCES, usuario.getSenha());
+        editor.putBoolean(IS_MEDICO_PREFERENCES, medico != null);
+
+        editor.commit();
     }
 }
 

@@ -21,56 +21,48 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logo_health"
-        />
+        android:contentDescription="@string/img_logo" />
 
-    <AutoCompleteTextView
+    <EditText
         android:id="@+id/emailx"
-        android:layout_width="324dp"
-        android:layout_height="57dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:hint="E-mail"
-        android:maxLines="1"
-        app:layout_constraintBottom_toTopOf="@+id/senhax"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="@string/prompt_email"
+        android:inputType="textEmailAddress"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.117" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
-    <AutoCompleteTextView
+    <EditText
         android:id="@+id/senhax"
-        android:layout_width="325dp"
-        android:layout_height="41dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="20dp"
-        android:hint="Senha"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="@string/prompt_senha"
         android:inputType="textPassword"
-        android:maxLines="1"
-        app:layout_constraintBottom_toTopOf="@+id/bt_entrar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/emailx"
-        app:layout_constraintVertical_bias="0.117"
-
-
-        />
+        android:onClick="validarLogin"
+        app:layout_constraintEnd_toEndOf="@+id/emailx"
+        app:layout_constraintStart_toStartOf="@+id/emailx"
+        app:layout_constraintTop_toBottomOf="@+id/emailx" />
 
     <Button
         android:id="@+id/bt_entrar"
-        android:layout_width="319dp"
+        android:layout_width="0dp"
         android:layout_height="55dp"
         android:layout_marginBottom="12dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:background="@color/colorButoes"
         android:onClick="validarLogin"
-        android:text="ENTRAR"
+        android:text="@string/btn_entrar"
         android:textColor="@color/colorTextoBut"
         app:layout_constraintBottom_toTopOf="@+id/bt_cadastro"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/senhax"
+        app:layout_constraintStart_toStartOf="@+id/senhax"
         app:layout_constraintTop_toBottomOf="@+id/senhax"
 
 
@@ -78,39 +70,37 @@
 
     <Button
         android:id="@+id/bt_cadastro"
-        android:layout_width="319dp"
+        android:layout_width="0dp"
         android:layout_height="55dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
         android:background="@color/colorButoes"
         android:onClick="tela1Cadastro"
-        android:text="CADASTRO"
+        android:text="@string/btn_cadastro"
         android:textColor="@color/colorTextoBut"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.52"
-
-
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bt_entrar"
         app:layout_constraintBottom_toTopOf="@+id/bt_emerg"
-        />
+        app:layout_constraintEnd_toEndOf="@+id/bt_entrar"
+
+
+        app:layout_constraintHorizontal_bias="0.52"
+        app:layout_constraintStart_toStartOf="@+id/bt_entrar"
+        app:layout_constraintTop_toBottomOf="@+id/bt_entrar" />
 
     <ImageButton
         android:id="@+id/bt_emerg"
-        android:layout_width="100dp"
+        android:layout_width="wrap_content"
         android:layout_height="108dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginStart="128dp"
-        android:layout_marginTop="4dp"
 
+
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
         android:onClick="acionarEmergencia"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.016"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/bt_cadastro"
+        app:layout_constraintStart_toStartOf="@+id/bt_cadastro"
         app:layout_constraintTop_toBottomOf="@+id/bt_cadastro"
-        app:srcCompat="@drawable/bt_emerg" />
+        app:srcCompat="@drawable/bt_emerg"
+        android:contentDescription="@string/btn_emergencia" />
 
 </android.support.constraint.ConstraintLayout>

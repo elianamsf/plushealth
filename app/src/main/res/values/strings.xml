@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">+Health</string>
 
-    <!-- Strings related to login -->
+    <!-- Strings relatedlogarogin -->
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password (optional)</string>
     <string name="prompt_senha">Senha</string>
@@ -48,6 +48,18 @@
     <string name="bt_sair_pac">Sair</string>
     <string name="lblTipoSangue">Tipo Sanguíneo</string>
     <string name="lblSexo">Sexo Biológico</string>
+    <string name="btn_entrar">ENTRAR</string>
+    <string name="btn_cadastro">CADASTRO</string>
+    <string name="btn_emergencia">Botão de Emegência</string>
+    <string name="img_logo">Plus Health</string>
+    <string name="btn_marcar_consulta">Marcar Consulta</string>
+    <string name="btn_meu_historico">Meu Historico</string>
+    <string name="btn_consultas_pendentes">Consultas Pendentes</string>
+    <string name="btn_posto_mais_proximo">Posto Mais Próximo</string>
+    <string name="btn_sair">SAIR</string>
+    <string name="lbl_nome_do_medico">Nome do medico</string>
+    <string name="btn_meu_calendario">MEU CALENDÁRIO</string>
+    <string name="btn_minhas_consultas">MINHAS CONSULTAS</string>
 
 
     <!-- Strings related to MenuMédico -->

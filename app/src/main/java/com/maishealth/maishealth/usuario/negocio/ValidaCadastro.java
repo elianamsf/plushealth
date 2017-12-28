@@ -6,11 +6,11 @@ import android.util.Patterns;
 import com.maishealth.maishealth.infra.FormataData;
 
 public class ValidaCadastro {
-    private int TAMANHO_SENHA = 6;
-    private int TAMANHO_CPF = 14;
-    private int TAMANHO_CRM_MIN = 5;
-    private int TAMANHO_CRM_MAX = 13;
-    private int TAMANHO_DATA = 10;
+    private final int TAMANHO_SENHA = 6;
+    private final int TAMANHO_CPF = 14;
+    private final int TAMANHO_CRM_MIN = 5;
+    private final int TAMANHO_CRM_MAX = 13;
+    private final int TAMANHO_DATA = 10;
 
     public boolean isCampoVazio(String texto){
         return (texto.trim().isEmpty() || TextUtils.isEmpty(texto));
