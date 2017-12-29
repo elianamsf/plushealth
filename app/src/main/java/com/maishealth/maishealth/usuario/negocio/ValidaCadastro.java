@@ -20,28 +20,16 @@ public class ValidaCadastro {
         return (Patterns.EMAIL_ADDRESS.matcher(texto).matches());
     }
 
-    public boolean isSenhaValida(String texto){
-        if (isCampoVazio(texto)){
-            return false;
-        }else{
-            return texto.length()>=TAMANHO_SENHA;
-        }
+    public boolean isSenhaValida(String texto) {
+        return !isCampoVazio(texto) && texto.length() >= TAMANHO_SENHA;
     }
 
-    public boolean isCpfValida(String texto){
-        if (isCampoVazio(texto)){
-            return false;
-        }else{
-            return texto.length()==TAMANHO_CPF;
-        }
+    public boolean isCpfValida(String texto) {
+        return !isCampoVazio(texto) && texto.length() == TAMANHO_CPF;
     }
 
-    public  boolean isCrmValido (String texto){
-        if (isCampoVazio(texto)){
-            return false;
-        }else{
-            return (texto.length() >= TAMANHO_CRM_MIN && texto.length()<= TAMANHO_CRM_MAX);
-        }
+    public  boolean isCrmValido (String texto) {
+        return !isCampoVazio(texto) && (texto.length() >= TAMANHO_CRM_MIN && texto.length() <= TAMANHO_CRM_MAX);
 
     }
 

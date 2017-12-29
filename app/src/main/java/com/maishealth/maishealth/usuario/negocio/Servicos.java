@@ -1,5 +1,6 @@
 package com.maishealth.maishealth.usuario.negocio;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.SharedPreferences;
 
@@ -29,7 +30,7 @@ public class Servicos {
     private SharedPreferences sharedPreferences;
 
     public Servicos(Context context) {
-        sharedPreferences = context.getSharedPreferences(TITLE_PREFERENCES, context.MODE_PRIVATE);
+        sharedPreferences = context.getSharedPreferences(TITLE_PREFERENCES, Context.MODE_PRIVATE);
         usuarioDAO = new UsuarioDAO(context);
         pessoaDAO = new PessoaDAO(context);
         medicoDAO = new MedicoDAO(context);
@@ -75,6 +76,7 @@ public class Servicos {
         }
     }
 
+    @SuppressLint("ApplySharedPref")
     public void login(String email, String senha) throws Exception {
         Usuario usuario = usuarioDAO.getUsuarioByEmail(email);
 

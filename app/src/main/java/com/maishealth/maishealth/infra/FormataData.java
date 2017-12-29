@@ -1,19 +1,15 @@
 package com.maishealth.maishealth.infra;
+import android.annotation.SuppressLint;
 import android.util.Log;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-
-/**
- * Created by lucas on 16/12/17.
- */
-
-
     /**
      * Classe contém vários métodos que formatam datas que serão utilizadas em diferentes funcionalidades
      */
 
+    @SuppressLint("SimpleDateFormat")
     public class FormataData {
         private static final String DATA_POST_BANCO  = "yyyyMMddHHmmss";
         private static final String DATA_POST_GUI    = "dd/MM/yyyy HH:mm:ss";
@@ -107,6 +103,7 @@ import java.util.Date;
                 dataFormatada.parse(data);
                 return true;
             } catch (Exception e) {
+                Log.i("FormataData", e.getMessage());
             }
 
             dataFormatada = new SimpleDateFormat (DATA_COMUM_BANCO);
@@ -117,6 +114,7 @@ import java.util.Date;
                 dataFormatada.parse(data);
                 return true;
             } catch (Exception e) {
+                Log.i("FormataData", e.getMessage());
             }
 
             return false;
@@ -140,6 +138,7 @@ import java.util.Date;
                     return true;
                 }
             } catch (Exception e) {
+                Log.i("FormataData", e.getMessage());
             }
 
             dataFormatada = new SimpleDateFormat (DATA_COMUM_BANCO);
@@ -153,6 +152,7 @@ import java.util.Date;
                     return true;
                 }
             } catch (Exception e) {
+                Log.i("FormataData", e.getMessage());
             }
 
             return false;
