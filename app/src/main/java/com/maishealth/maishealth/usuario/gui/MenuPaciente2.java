@@ -1,5 +1,6 @@
 package com.maishealth.maishealth.usuario.gui;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
@@ -58,6 +59,7 @@ public class MenuPaciente2 extends AppCompatActivity {
         this.mudarTela(AcharPostoActivity.class);
     }
 
+    @SuppressLint("ApplySharedPref")
     public void onClickSair(View view){
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.clear();
