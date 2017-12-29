@@ -1,6 +1,6 @@
 package com.maishealth.maishealth.infra;
 
-public class ConstantesSharedPreferences {
+public class ConstanteSharedPreferences {
     public static final String TITLE_PREFERENCES        = "preferencias";
     public static final String LOGIN_PREFERENCES        = "login";
     public static final String PASSWORD_PREFERENCES     = "senha";

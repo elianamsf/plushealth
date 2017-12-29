@@ -12,13 +12,13 @@ import com.maishealth.maishealth.infra.GuiUtil;
 import com.maishealth.maishealth.usuario.negocio.Servicos;
 import com.maishealth.maishealth.usuario.negocio.ValidaCadastro;
 
-import static com.maishealth.maishealth.infra.ConstantesSharedPreferences.DEFAULT_IS_MEDICO_PREFERENCES;
-import static com.maishealth.maishealth.infra.ConstantesSharedPreferences.DEFAULT_LOGIN_PREFERENCES;
-import static com.maishealth.maishealth.infra.ConstantesSharedPreferences.DEFAULT_PASSWORD_PREFERENCES;
-import static com.maishealth.maishealth.infra.ConstantesSharedPreferences.IS_MEDICO_PREFERENCES;
-import static com.maishealth.maishealth.infra.ConstantesSharedPreferences.LOGIN_PREFERENCES;
-import static com.maishealth.maishealth.infra.ConstantesSharedPreferences.PASSWORD_PREFERENCES;
-import static com.maishealth.maishealth.infra.ConstantesSharedPreferences.TITLE_PREFERENCES;
+import static com.maishealth.maishealth.infra.ConstanteSharedPreferences.DEFAULT_IS_MEDICO_PREFERENCES;
+import static com.maishealth.maishealth.infra.ConstanteSharedPreferences.DEFAULT_LOGIN_PREFERENCES;
+import static com.maishealth.maishealth.infra.ConstanteSharedPreferences.DEFAULT_PASSWORD_PREFERENCES;
+import static com.maishealth.maishealth.infra.ConstanteSharedPreferences.IS_MEDICO_PREFERENCES;
+import static com.maishealth.maishealth.infra.ConstanteSharedPreferences.LOGIN_PREFERENCES;
+import static com.maishealth.maishealth.infra.ConstanteSharedPreferences.PASSWORD_PREFERENCES;
+import static com.maishealth.maishealth.infra.ConstanteSharedPreferences.TITLE_PREFERENCES;
 
 public class Login1Activity extends AppCompatActivity {
     private EditText edtEmailLogin, edtSenhaLogin;

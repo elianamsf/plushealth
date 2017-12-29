@@ -3,6 +3,7 @@ package com.maishealth.maishealth.usuario.negocio;
 import android.content.Context;
 import android.content.SharedPreferences;
 
+import com.maishealth.maishealth.infra.FormataData;
 import com.maishealth.maishealth.usuario.dominio.Medico;
 import com.maishealth.maishealth.usuario.dominio.Pessoa;
 import com.maishealth.maishealth.usuario.dominio.Usuario;
@@ -10,11 +11,11 @@ import com.maishealth.maishealth.usuario.persistencia.MedicoDAO;
 import com.maishealth.maishealth.usuario.persistencia.PessoaDAO;
 import com.maishealth.maishealth.usuario.persistencia.UsuarioDAO;
 
-import static com.maishealth.maishealth.infra.ConstantesSharedPreferences.ID_USER_PREFERENCES;
-import static com.maishealth.maishealth.infra.ConstantesSharedPreferences.IS_MEDICO_PREFERENCES;
-import static com.maishealth.maishealth.infra.ConstantesSharedPreferences.LOGIN_PREFERENCES;
-import static com.maishealth.maishealth.infra.ConstantesSharedPreferences.PASSWORD_PREFERENCES;
-import static com.maishealth.maishealth.infra.ConstantesSharedPreferences.TITLE_PREFERENCES;
+import static com.maishealth.maishealth.infra.ConstanteSharedPreferences.ID_USER_PREFERENCES;
+import static com.maishealth.maishealth.infra.ConstanteSharedPreferences.IS_MEDICO_PREFERENCES;
+import static com.maishealth.maishealth.infra.ConstanteSharedPreferences.LOGIN_PREFERENCES;
+import static com.maishealth.maishealth.infra.ConstanteSharedPreferences.PASSWORD_PREFERENCES;
+import static com.maishealth.maishealth.infra.ConstanteSharedPreferences.TITLE_PREFERENCES;
 
 
 public class Servicos {
@@ -42,6 +43,7 @@ public class Servicos {
     public long cadastrarPaciente(String email, String senha, String nome, String sexo, String dataNasc, String cpf, String tipoSangue) throws Exception {
         Usuario verificarEmail = usuarioDAO.getUsuarioByEmail(email);
         Pessoa verificarCpf = pessoaDAO.getPessoaByCpf(cpf);
+        dataNasc = FormataData.americano(dataNasc);
 
         if(verificarEmail != null) {
             throw new Exception("Email já cadastrado");

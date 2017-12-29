@@ -12,9 +12,9 @@ import com.maishealth.maishealth.R;
 import com.maishealth.maishealth.usuario.dominio.Pessoa;
 import com.maishealth.maishealth.usuario.negocio.ServicosPessoa;
 
-import static com.maishealth.maishealth.infra.ConstantesSharedPreferences.DEFAULT_ID_USER_PREFERENCES;
-import static com.maishealth.maishealth.infra.ConstantesSharedPreferences.ID_USER_PREFERENCES;
-import static com.maishealth.maishealth.infra.ConstantesSharedPreferences.TITLE_PREFERENCES;
+import static com.maishealth.maishealth.infra.ConstanteSharedPreferences.DEFAULT_ID_USER_PREFERENCES;
+import static com.maishealth.maishealth.infra.ConstanteSharedPreferences.ID_USER_PREFERENCES;
+import static com.maishealth.maishealth.infra.ConstanteSharedPreferences.TITLE_PREFERENCES;
 
 public class MenuPaciente2 extends AppCompatActivity {
     private TextView lblNomePaciente;
