@@ -133,15 +133,13 @@ public class ConsultaDAO {
         String query = "SELECT * FROM " + DataBase.TABELA_CONSULTA +
                         " WHERE " + DataBase.CONSULTA_DATA + " LIKE ?" +
                         " AND " + DataBase.ID_EST_PACIENTE_CON  + " LIKE ?" +
-                    " AND " + DataBase.ID_EST_MEDICO_CON  + " LIKE ?";;
+                    " AND " + DataBase.ID_EST_MEDICO_CON  + " LIKE ?";
 
         String idPacienteString = Long.toString(idPaciente);
         String idMedicoString = Long.toString(idMedico);
 
         String[] argumentos  = {data, idPacienteString, idMedicoString};
 
-        Consulta consulta = getConsulta(query, argumentos);
-
-        return consulta;
+        return this.getConsulta(query, argumentos);
     }
 }

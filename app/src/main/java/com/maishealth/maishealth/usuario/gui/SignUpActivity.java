@@ -24,9 +24,9 @@ public class SignUpActivity extends AppCompatActivity {
     private EditText edtEmail, edtSenha, edtNome, edtCpf, edtNasc, edtCrm, edtEspec;
     private TextView edtRegiao;
     private Spinner spinnerSexo, spinnerTipoSangue, spinnerRegiao;
-    private String[] listaSexo = {"Feminino", "Masculino"};
-    private String[] listaEstados = EnumEstados.enumEstadosLista();
-    private String[] listaTipoSangue = EnumTipoSangue.enumTipoSangueLista();
+    private final String[] listaSexo = {"Feminino", "Masculino"};
+    private final String[] listaEstados = EnumEstados.enumEstadosLista();
+    private final String[] listaTipoSangue = EnumTipoSangue.enumTipoSangueLista();
     private Switch swUsuario;
 
     @Override
@@ -66,14 +66,14 @@ public class SignUpActivity extends AppCompatActivity {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean bChecked) {
                 if (bChecked) {
-                    swUsuario.setText(R.string.swMedico);
+                    swUsuario.setText(R.string.switch_medico);
                     edtCrm.setVisibility(View.VISIBLE);
                     edtRegiao.setVisibility(View.VISIBLE);
                     spinnerRegiao.setVisibility(View.VISIBLE);
                     edtEspec.setVisibility(View.VISIBLE);
 
                 } else {
-                    swUsuario.setText(R.string.swPaciente);
+                    swUsuario.setText(R.string.switch_paciente);
                     edtCrm.setVisibility(View.INVISIBLE);
                     edtRegiao.setVisibility(View.INVISIBLE);
                     spinnerRegiao.setVisibility(View.INVISIBLE);

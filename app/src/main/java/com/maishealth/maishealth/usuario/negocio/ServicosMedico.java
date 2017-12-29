@@ -12,10 +12,8 @@ public class ServicosMedico {
         medicoDAO = new MedicoDAO(context);
     }
 
-    public long cadastrarMedico(Medico medico){
-        long idMedico = medicoDAO.inserirMedico(medico);
-
-        return idMedico;
+    private long cadastrarMedico(Medico medico){
+        return medicoDAO.inserirMedico(medico);
     }
 
     public long cadastrarMedico(String crm, String estado, String especialidade, long idUsuario) {

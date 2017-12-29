@@ -145,9 +145,7 @@ public class PessoaDAO {
         String idString = Long.toString(id);
         String[] argumentos = {idString};
 
-        Pessoa pessoa = getPessoa(query, argumentos);
-
-        return pessoa;
+        return this.getPessoa(query, argumentos);
     }
 
     public Pessoa getPessoaByCpf(String cpf){
@@ -158,9 +156,7 @@ public class PessoaDAO {
 
         String[] argumentos = {cpf};
 
-        Pessoa pessoa = getPessoa(query, argumentos);
-
-        return pessoa;
+        return this.getPessoa(query, argumentos);
 
     }
 
@@ -171,8 +167,6 @@ public class PessoaDAO {
         String idString = Long.toString(id);
         String[] argumentos = {idString};
 
-        Pessoa pessoa = getPessoa(query, argumentos);
-
-        return pessoa;
+        return this.getPessoa(query, argumentos);
     }
 }

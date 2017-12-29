@@ -129,9 +129,7 @@ public class MedicoDAO {
         String idString = Long.toString(id);
         String[] argumentos = {idString};
 
-        Medico medico = getMedico(query, argumentos);
-
-        return medico;
+        return this.getMedico(query, argumentos);
     }
 
     public Medico getMedicoByRegiaoCrm(String regiao, String crm){
@@ -141,9 +139,7 @@ public class MedicoDAO {
 
         String[] argumentos = {regiao, crm};
 
-        Medico medico = getMedico(query, argumentos);
-
-        return medico;
+        return this.getMedico(query, argumentos);
     }
 
     public Medico getMedicoByIdUsuario(long idUsuario){
@@ -153,8 +149,6 @@ public class MedicoDAO {
         String idString = Long.toString(idUsuario);
         String[] argumentos = {idString};
 
-        Medico medico = getMedico(query, argumentos);
-
-        return medico;
+        return this.getMedico(query, argumentos);
     }
 }

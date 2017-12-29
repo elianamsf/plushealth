@@ -94,9 +94,7 @@ public class MedicamentoDAO {
         String idString = Long.toString(id);
         String[] argumentos = {idString};
 
-        Medicamento medicamento = getMedicamento(query, argumentos);
-
-        return medicamento;
+        return this.getMedicamento(query, argumentos);
 
     }
 }

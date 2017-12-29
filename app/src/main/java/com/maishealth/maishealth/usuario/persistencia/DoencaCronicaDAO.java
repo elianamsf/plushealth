@@ -107,8 +107,6 @@ public class DoencaCronicaDAO {
         String idString = Long.toString(id);
         String[] argumentos = {idString};
 
-        DoencaCronica doencaCronica = getDoenca(query, argumentos);
-
-        return doencaCronica;
+        return this.getDoenca(query, argumentos);
     }
 }

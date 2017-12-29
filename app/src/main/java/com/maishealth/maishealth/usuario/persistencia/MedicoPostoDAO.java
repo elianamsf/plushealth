@@ -10,6 +10,7 @@ import com.maishealth.maishealth.usuario.dominio.Medico;
 
 import java.util.ArrayList;
 
+@SuppressWarnings("FieldCanBeLocal")
 public class MedicoPostoDAO {
     private SQLiteDatabase liteDatabase;
     private DataBase dataBaseHelper;

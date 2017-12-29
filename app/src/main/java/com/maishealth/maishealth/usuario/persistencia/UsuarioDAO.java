@@ -107,9 +107,7 @@ public class UsuarioDAO {
         String idString = Long.toString(id);
         String[] argumentos = {idString};
 
-        Usuario usuario = getUsuario(query, argumentos);
-
-        return usuario;
+        return this.getUsuario(query, argumentos);
     }
 
     public Usuario getUsuarioByEmail(String email){
@@ -118,9 +116,7 @@ public class UsuarioDAO {
 
         String[] argumentos = {email};
 
-        Usuario usuario = getUsuario(query, argumentos);
-
-        return usuario;
+        return this.getUsuario(query, argumentos);
 
     }
 }

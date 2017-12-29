@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
+    android:background="@color/colorFundo"
     tools:context="com.maishealth.maishealth.usuario.gui.MenuPaciente2">
 
     <ScrollView
@@ -14,7 +14,7 @@
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#FFFFFF"
+            android:background="@color/colorFundo"
             tools:context="com.maishealth.maishealth.usuario.gui.MenuPaciente2">
 
             <TextView
@@ -24,7 +24,7 @@
                 android:layout_marginEnd="8dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="36dp"
-                android:text="Nome do paciente"
+                android:text="@string/label_nome_do_paciente"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -40,7 +40,7 @@
                 android:layout_marginTop="16dp"
                 android:background="@color/colorButoes"
                 android:onClick="telaMarcarConsulta"
-                android:text="@string/btn_marcar_consulta"
+                android:text="@string/button_marcar_consulta"
                 android:textColor="@color/colorTextoBut"
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -54,7 +54,7 @@
                 android:layout_marginTop="8dp"
                 android:background="@color/colorButoes"
                 android:onClick="telaMeuHistorico"
-                android:text="@string/btn_meu_historico"
+                android:text="@string/button_meu_historico"
                 android:textColor="@color/colorTextoBut"
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="@+id/bt_marcar_cons"
@@ -68,7 +68,7 @@
                 android:layout_marginTop="8dp"
                 android:background="@color/colorButoes"
                 android:onClick="telaConsultasPendentes"
-                android:text="@string/btn_consultas_pendentes"
+                android:text="@string/button_consultas_pendentes"
                 android:textColor="@color/colorTextoBut"
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="@+id/btMeuHist"
@@ -82,7 +82,7 @@
                 android:layout_marginTop="8dp"
                 android:background="@color/colorButoes"
                 android:onClick="telaAcharPosto"
-                android:text="@string/btn_posto_mais_proximo"
+                android:text="@string/button_posto_mais_proximo"
                 android:textColor="@color/colorTextoBut"
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="@+id/bt_cons_pend"
@@ -99,7 +99,7 @@
                 android:layout_marginTop="8dp"
                 android:background="@color/colorButoes"
                 android:onClick="onClickSair"
-                android:text="@string/btn_sair"
+                android:text="@string/button_sair"
                 android:textColor="@color/colorTextoBut"
                 android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="parent"

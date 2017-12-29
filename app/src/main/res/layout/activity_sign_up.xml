@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -21,7 +20,7 @@
                 android:id="@+id/swUsuario"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Paciente"
+                android:text="@string/switch_paciente"
                 android:textColorLink="#fa0202"
                 tools:text="Médico" />
 
@@ -30,7 +29,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center_horizontal"
-                android:focusedByDefault="true"
                 android:hint="@string/prompt_email"
                 android:inputType="textEmailAddress" />
 
@@ -73,7 +71,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center_horizontal"
-                android:text="@string/lblSexo" />
+                android:text="@string/label_sexo" />
 
             <Spinner
                 android:id="@+id/spnSexo3"
@@ -86,7 +84,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center_horizontal"
-                android:text="@string/lblTipoSangue" />
+                android:text="@string/label_tipo_sangue" />
 
             <Spinner
                 android:id="@+id/spnTipoSangue3"
@@ -100,8 +98,8 @@
                 android:layout_height="match_parent"
                 android:layout_gravity="center_horizontal"
                 android:visibility="invisible"
-                android:text="@string/regiao"
-                tools:text="@string/regiao" />
+                android:text="@string/label_regiao"
+                tools:text="@string/label_regiao" />
 
             <Spinner
                 android:id="@+id/SpnRegiao3"
@@ -131,7 +129,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="50dp"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                style="?android:attr/buttonBarButtonStyle">
 
                 <Button
                     android:id="@+id/btnCancelar3"
@@ -144,7 +143,8 @@
                     android:onClick="voltarTelaLogin"
                     android:text="@string/button_cancelar"
                     android:textColor="@color/colorTextoBut"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    style="?android:attr/buttonBarButtonStyle"/>
 
                 <Button
                     android:id="@+id/btnCadastrar3"
@@ -157,7 +157,9 @@
                     android:onClick="onClickCadastrar"
                     android:text="@string/button_cadastrar"
                     android:textColor="@color/colorTextoBut"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    style="?android:attr/buttonBarButtonStyle"/>
+
             </LinearLayout>
 
         </LinearLayout>

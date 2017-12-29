@@ -11,10 +11,8 @@ public class ServicosUsuario {
         usuarioDAO = new UsuarioDAO(context);
     }
 
-    public long cadastrarUsuario(Usuario usuario){
-        long idUsuario = usuarioDAO.inserirUsuário(usuario);
-
-        return idUsuario;
+    private long cadastrarUsuario(Usuario usuario){
+        return usuarioDAO.inserirUsuário(usuario);
     }
 
     public long cadastrarUsuario(String email, String senha) {

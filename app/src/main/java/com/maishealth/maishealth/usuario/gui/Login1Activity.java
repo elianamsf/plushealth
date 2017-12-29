@@ -63,7 +63,7 @@ public class Login1Activity extends AppCompatActivity {
         }
     }
 
-    public void logar(String email, String senha){
+    private void logar(String email, String senha){
         Servicos servicos = new Servicos(getApplicationContext());
 
         try{

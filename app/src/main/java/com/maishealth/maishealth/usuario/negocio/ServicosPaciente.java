@@ -12,10 +12,8 @@ public class ServicosPaciente {
         pacienteDAO = new PacienteDAO(context);
     }
 
-    public long cadastrarPaciente(Paciente paciente){
-        long idPaciente = pacienteDAO.inserirPaciente(paciente);
-
-        return idPaciente;
+    private long cadastrarPaciente(Paciente paciente){
+        return pacienteDAO.inserirPaciente(paciente);
     }
 
     public long cadastrarPaciente(long idUsuario, String tipoSangue) {

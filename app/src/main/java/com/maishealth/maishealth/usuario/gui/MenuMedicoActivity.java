@@ -18,18 +18,16 @@ import static com.maishealth.maishealth.infra.ConstanteSharedPreferences.ID_USER
 import static com.maishealth.maishealth.infra.ConstanteSharedPreferences.TITLE_PREFERENCES;
 
 public class MenuMedicoActivity extends AppCompatActivity {
-    private TextView lblNomeMedico;
     private SharedPreferences sharedPreferences;
-    private ServicosPessoa servicosPessoa;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu_medico);
 
-        lblNomeMedico = findViewById(R.id.lblNomeMedico);
+        TextView lblNomeMedico = findViewById(R.id.lblNomeMedico);
 
-        servicosPessoa = new ServicosPessoa(getApplicationContext());
+        ServicosPessoa servicosPessoa = new ServicosPessoa(getApplicationContext());
         sharedPreferences = getSharedPreferences(TITLE_PREFERENCES, MODE_PRIVATE);
         long idUsuario = sharedPreferences.getLong(ID_USER_PREFERENCES, DEFAULT_ID_USER_PREFERENCES);
 
@@ -52,7 +50,7 @@ public class MenuMedicoActivity extends AppCompatActivity {
         this.mudarTela(Login1Activity.class);
     }
 
-    public void mudarTela(Class tela){
+    private void mudarTela(Class tela){
         Intent intent=new Intent(this, tela);
         startActivity(intent);
         finish();

@@ -108,8 +108,6 @@ public class PacienteDAO {
         String idString = Long.toString(id);
         String[] argumentos = {idString};
 
-        Paciente paciente = getPaciente(query, argumentos);
-
-        return paciente;
+        return this.getPaciente(query, argumentos);
     }
 }

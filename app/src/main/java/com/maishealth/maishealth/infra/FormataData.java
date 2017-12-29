@@ -9,6 +9,7 @@ import java.util.Date;
      * Classe contém vários métodos que formatam datas que serão utilizadas em diferentes funcionalidades
      */
 
+    @SuppressWarnings({"JavaDoc", "StringBufferReplaceableByString"})
     @SuppressLint("SimpleDateFormat")
     public class FormataData {
         private static final String DATA_POST_BANCO  = "yyyyMMddHHmmss";

@@ -4,7 +4,7 @@ public enum EnumTipoSangue {
     NAOSABE("Não sei"), APOSITIVO("A+"), ANEGATIVO("A-"), BPOSITIVO("B+"), BNEGATIVO("B-"),
     ABPOSITIVO("AB+"), ABNEGATIVO("AB-"), OPOSITIVO("O+"), ONEGATIVO("O-");
 
-    private String valor;
+    private final String valor;
 
     EnumTipoSangue(String valor) {
         this.valor = valor;

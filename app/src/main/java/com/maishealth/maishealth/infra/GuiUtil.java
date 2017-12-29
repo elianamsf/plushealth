@@ -9,7 +9,7 @@ import com.maishealth.maishealth.R;
 public class GuiUtil {
 
 
-    public static void myToast(Context context, String text, int time){
+    private static void myToast(Context context, String text, int time){
         Toast.makeText(context, text, time).show();
     }
 
@@ -33,11 +33,11 @@ public class GuiUtil {
         GuiUtil.myToast(context, e.getMessage(), Toast.LENGTH_SHORT);
     }
 
-    public static void myAlertDialog(Context context, String text, String titulo){
+    private static void myAlertDialog(Context context, String text, String titulo){
         AlertDialog.Builder dialogo = new AlertDialog.Builder(context);
         dialogo.setTitle(titulo);
         dialogo.setMessage(text);
-        dialogo.setNeutralButton(R.string.dialogo_botao_ok, null);
+        dialogo.setNeutralButton(R.string.dialog_botao_ok, null);
         dialogo.show();
     }
 
@@ -46,10 +46,10 @@ public class GuiUtil {
     }
 
     public static void myAlertDialog(Context context, Exception e){
-        GuiUtil.myAlertDialog(context, e.getMessage(), context.getString(R.string.dialogo_titulo_erro));
+        GuiUtil.myAlertDialog(context, e.getMessage(), context.getString(R.string.dialog_titulo_erro));
     }
 
     public static void myAlertDialog(Context context, String text){
-        GuiUtil.myAlertDialog(context, text, context.getString(R.string.dialogo_titulo_erro));
+        GuiUtil.myAlertDialog(context, text, context.getString(R.string.dialog_titulo_erro));
     }
 }

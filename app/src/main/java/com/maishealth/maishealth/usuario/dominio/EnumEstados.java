@@ -8,7 +8,7 @@ public enum EnumEstados {
     RIO_GRANDE_DO_SUL("RS"), RONDONIA("RO"), RORAIMA("RR"), SANTA_CATARINA("SC"), SAO_PAULO("SP"),
     SERGIPE("SE"), TOCANTINS("TO");
 
-    private String valor;
+    private final String valor;
 
     EnumEstados(String valor) {
         this.valor = valor;

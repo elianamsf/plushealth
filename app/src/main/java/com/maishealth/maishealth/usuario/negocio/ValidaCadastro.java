@@ -5,6 +5,7 @@ import android.util.Patterns;
 
 import com.maishealth.maishealth.infra.FormataData;
 
+@SuppressWarnings({"FieldCanBeLocal", "BooleanMethodIsAlwaysInverted"})
 public class ValidaCadastro {
     private final int TAMANHO_SENHA = 6;
     private final int TAMANHO_CPF = 14;

@@ -1,7 +1,54 @@
 <resources>
     <string name="app_name">+Health</string>
 
-    <!-- Strings relatedlogarogin -->
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="button_voltar">Voltar</string>
+    <string name="button_entrar">Entrar</string>
+    <string name="button_cadastrar">Cadastrar</string>
+    <string name="button_cancelar">Cancelar</string>
+    <string name="button_marcar_consulta">Marcar consulta</string>
+    <string name="button_meu_historico">Meu Histórico</string>
+    <string name="button_consultas_pendentes">Consultas Pendentes</string>
+    <string name="button_posto_proximo">Posto mais próximo</string>
+    <string name="button_sair">Sair</string>
+    <string name="button_cadastro">CADASTRO</string>
+    <string name="button_emergencia">Botão de Emegência</string>
+    <string name="button_posto_mais_proximo">Posto Mais Próximo</string>
+    <string name="button_meu_calendario">MEU CALENDÁRIO</string>
+    <string name="button_minhas_consultas">MINHAS CONSULTAS</string>
+    <string name="button_teste_login">TESTE LOGIN</string>
+
+    <string name="dialog_botao_ok">OK</string>
+    <string name="dialog_titulo_erro">Erro</string>
+
+    <string name="error_invalid_email">E-mail inválido</string>
+    <string name="error_invalid_password">Senha muito curta</string>
+    <string name="error_incorrect_password">Senha incorreta</string>
+    <string name="error_field_required">Esse campo é requerido</string>
+
+    <string name="image_logo">Plus Health</string>
+    <string name="image_logopadrao">LogoPadrão</string>
+
+    <string name="label_tipo_sangue">Tipo Sanguíneo</string>
+    <string name="label_sexo">Sexo Biológico</string>
+    <string name="label_nome_do_medico">Nome do medico</string>
+    <string name="label_android_studio">Android Studio</string>
+    <string name="label_android_studio_android_com">android.studio@android.com</string>
+    <string name="label_mapa_dos_postos">Mapa dos postos</string>
+    <string name="label_consultas_pendentes">Consultas pendentes</string>
+    <string name="label_marcar_consulta">Marcar consulta</string>
+    <string name="label_nome_do_paciente">Nome do paciente</string>
+    <string name="label_meu_historico">Meu historico</string>
+    <string name="label_regiao">Região:</string>
+    <string name="link_esqueceu_senha">Esqueceu a senha?</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="permission_rationale">"Contacts permissions are needed for providing email completions."</string>
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password (optional)</string>
     <string name="prompt_senha">Senha</string>
@@ -10,60 +57,19 @@
     <string name="prompt_data">dd/mm/aaaa</string>
     <string name="prompt_crm">CRM</string>
     <string name="prompt_especialidade">Especialidade</string>
-    <string name="action_sign_in">Sign in or register</string>
-    <string name="action_sign_in_short">Sign in</string>
-    <string name="error_invalid_email">E-mail inválido</string>
-    <string name="error_invalid_password">Senha muito curta</string>
-    <string name="error_incorrect_password">Senha incorreta</string>
-    <string name="error_field_required">Esse campo é requerido</string>
-    <string name="permission_rationale">"Contacts permissions are needed for providing email
-        completions."
-    </string>
-    <string name="titulo_tela_cadastro">Cadastro</string>
-    <string name="link_esqueceu_senha">Esqueceu a senha?</string>
-    <string name="button_voltar">Voltar</string>
-    <string name="button_entrar">Entrar</string>
-    <string name="button_cadastrar">Cadastrar</string>
-    <string name="button_cancelar">Cancelar</string>
+
+    <string name="switch_medico">Medico</string>
+    <string name="switch_paciente">Paciente</string>
+
+    <string name="title_tela_cadastro">Cadastro</string>
     <string name="title_activity_menu_paciente">MenuPaciente</string>
-    <string name="dialogo_botao_ok">Ok</string>
-    <string name="dialogo_titulo_erro">Erro</string>
     <string name="title_activity_teste">TesteActivity</string>
-
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
-
-    <string name="action_settings">Settings</string>
-    <string name="regiao">Região:</string>
-
-    <!-- Strings related to Cadastro -->
-
-
-    <!-- Strings related to MenuPaciente -->
-    <string name="textView2">Nome do paciente</string>
-    <string name="bt_marcar_cons">Marcar consulta</string>
-    <string name="btMeuHist">Meu histórico</string>
-    <string name="bt_cons_pend">Consultas pendentes</string>
-    <string name="bt_posto_prox">Posto mais próximo</string>
-    <string name="bt_sair_pac">Sair</string>
-    <string name="lblTipoSangue">Tipo Sanguíneo</string>
-    <string name="lblSexo">Sexo Biológico</string>
-    <string name="btn_entrar">ENTRAR</string>
-    <string name="btn_cadastro">CADASTRO</string>
-    <string name="btn_emergencia">Botão de Emegência</string>
-    <string name="img_logo">Plus Health</string>
-    <string name="btn_marcar_consulta">Marcar Consulta</string>
-    <string name="btn_meu_historico">Meu Historico</string>
-    <string name="btn_consultas_pendentes">Consultas Pendentes</string>
-    <string name="btn_posto_mais_proximo">Posto Mais Próximo</string>
-    <string name="btn_sair">SAIR</string>
-    <string name="lbl_nome_do_medico">Nome do medico</string>
-    <string name="btn_meu_calendario">MEU CALENDÁRIO</string>
-    <string name="btn_minhas_consultas">MINHAS CONSULTAS</string>
-    <string name="swMedico">Medico</string>
-    <string name="swPaciente">Paciente</string>
-
-
-    <!-- Strings related to MenuMédico -->
+    <string name="title_import">Import</string>
+    <string name="title_gallery">Gallery</string>
+    <string name="title_slideshow">Slideshow</string>
+    <string name="title_tools">Tools</string>
+    <string name="title_communicate">Communicate</string>
+    <string name="title_share">Share</string>
+    <string name="title_send">Send</string>
 
 </resources>

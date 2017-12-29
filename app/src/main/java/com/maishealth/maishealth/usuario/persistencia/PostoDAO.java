@@ -107,8 +107,6 @@ public class PostoDAO {
         String idString = Long.toString(id);
         String[] argumentos = {idString};
 
-        Posto posto = getPosto(query, argumentos);
-
-        return posto;
+        return this.getPosto(query, argumentos);
     }
 }

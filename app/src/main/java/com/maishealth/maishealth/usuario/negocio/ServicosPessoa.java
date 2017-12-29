@@ -13,10 +13,8 @@ public class ServicosPessoa {
         pessoaDAO = new PessoaDAO(context);
     }
 
-    public long cadastrarPessoa(Pessoa pessoa){
-        long idPessoa = pessoaDAO.inserirPessoa(pessoa);
-
-        return idPessoa;
+    private long cadastrarPessoa(Pessoa pessoa){
+        return pessoaDAO.inserirPessoa(pessoa);
     }
 
     public long cadastrarPessoa(String nome, String sexo, String dataNasc, String cpf, long idUsuario) {
@@ -31,8 +29,6 @@ public class ServicosPessoa {
     }
 
     public Pessoa searchPessoaByIdUsuario(long idUsuario){
-        Pessoa pessoa = pessoaDAO.getPessoaByIdUsuario(idUsuario);
-
-        return pessoa;
+        return pessoaDAO.getPessoaByIdUsuario(idUsuario);
     }
 }

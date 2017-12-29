@@ -10,6 +10,7 @@ import com.maishealth.maishealth.usuario.dominio.Medicamento;
 
 import java.util.ArrayList;
 
+@SuppressWarnings("FieldCanBeLocal")
 public class ConsultaMedicamentoDAO {
     private SQLiteDatabase liteDatabase;
     private DataBase dataBaseHelper;
