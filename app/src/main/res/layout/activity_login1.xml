@@ -27,7 +27,6 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:contentDescription="@string/image_logo"
-                app:layout_constraintBottom_toTopOf="@+id/emailx"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
@@ -70,13 +69,9 @@
                 android:onClick="validarLogin"
                 android:text="@string/button_entrar"
                 android:textColor="@color/colorTextoBut"
-                app:layout_constraintBottom_toTopOf="@+id/bt_cadastro"
                 app:layout_constraintEnd_toEndOf="@+id/senhax"
                 app:layout_constraintStart_toStartOf="@+id/senhax"
-                app:layout_constraintTop_toBottomOf="@+id/senhax"
-
-
-                />
+                app:layout_constraintTop_toBottomOf="@+id/senhax" />
 
             <Button
                 android:id="@+id/bt_cadastro"
@@ -87,11 +82,7 @@
                 android:onClick="tela1Cadastro"
                 android:text="@string/button_cadastro"
                 android:textColor="@color/colorTextoBut"
-                app:layout_constraintBottom_toTopOf="@+id/bt_emerg"
                 app:layout_constraintEnd_toEndOf="@+id/bt_entrar"
-
-
-                app:layout_constraintHorizontal_bias="0.52"
                 app:layout_constraintStart_toStartOf="@+id/bt_entrar"
                 app:layout_constraintTop_toBottomOf="@+id/bt_entrar" />
 
@@ -101,10 +92,8 @@
                 android:layout_height="108dp"
                 android:layout_marginBottom="8dp"
                 android:layout_marginEnd="8dp"
-
-
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="4dp"
+                android:layout_marginTop="8dp"
                 android:contentDescription="@string/button_emergencia"
                 android:onClick="acionarEmergencia"
                 app:layout_constraintBottom_toBottomOf="parent"
