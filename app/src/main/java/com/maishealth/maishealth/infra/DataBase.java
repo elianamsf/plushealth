@@ -4,12 +4,17 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper; // Cria banco de dados
 
+import static com.maishealth.maishealth.usuario.persistencia.ConstantePopularBanco.INSERIR_MEDICO;
+import static com.maishealth.maishealth.usuario.persistencia.ConstantePopularBanco.INSERIR_PACIENTE;
+import static com.maishealth.maishealth.usuario.persistencia.ConstantePopularBanco.INSERIR_PESSOA;
+import static com.maishealth.maishealth.usuario.persistencia.ConstantePopularBanco.INSERIR_USUARIO;
+
 /**
  * Classe responsável por criar tabelas e o banco de dados
  */
 
 public class DataBase extends SQLiteOpenHelper {
-    private static final int DATABASE_VERSION = 5;
+    private static final int DATABASE_VERSION = 6;
     private static final String DATABASE_NAME = "dbmaishealth";
 
     //TABELA PESSOA
@@ -145,6 +150,12 @@ public class DataBase extends SQLiteOpenHelper {
         db.execSQL("CREATE TABLE " + TABELA_CONSULTA_MEDICAMENTO + " (" +
                 ID_EST_CONSULTA_CON_MEM + " INTEGER, " +
                 ID_EST_MEDICAMENTO_CON_MEM + " INTEGER);");
+
+        db.execSQL(INSERIR_USUARIO);
+        db.execSQL(INSERIR_PESSOA);
+        db.execSQL(INSERIR_PACIENTE);
+        db.execSQL(INSERIR_MEDICO);
+
     }
 
     //Atualização da tabela
@@ -161,7 +172,28 @@ public class DataBase extends SQLiteOpenHelper {
 
         String query4 = "DROP TABLE IF EXISTS " + TABELA_MEDICO;
         db.execSQL(query4);
-        
+
+        String query5 = "DROP TABLE IF EXISTS " + TABELA_CONSULTA;
+        db.execSQL(query5);
+
+        String query6 = "DROP TABLE IF EXISTS " + TABELA_DOENCACRONICA;
+        db.execSQL(query6);
+
+        String query7 = "DROP TABLE IF EXISTS " + TABELA_MEDICAMENTO;
+        db.execSQL(query7);
+
+        String query8 = "DROP TABLE IF EXISTS " + TABELA_POSTO;
+        db.execSQL(query8);
+
+        String query9 = "DROP TABLE IF EXISTS " + TABELA_PACIENTE_DOENCA;
+        db.execSQL(query9);
+
+        String query10 = "DROP TABLE IF EXISTS " + TABELA_MEDICO_POSTO;
+        db.execSQL(query10);
+
+        String query11 = "DROP TABLE IF EXISTS " + TABELA_CONSULTA_MEDICAMENTO;
+        db.execSQL(query11);
+
         this.onCreate(db);
     }
 }
