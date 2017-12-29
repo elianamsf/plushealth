@@ -154,7 +154,7 @@
                     android:layout_margin="8dp"
                     android:layout_weight="1"
                     android:background="@color/colorButoes"
-                    android:onClick="onClickCadastar"
+                    android:onClick="onClickCadastrar"
                     android:text="@string/button_cadastrar"
                     android:textColor="@color/colorTextoBut"
                     android:textStyle="bold" />

@@ -111,7 +111,7 @@ public class SignUpActivity extends AppCompatActivity {
         });
     }
 
-    public void onClickCadastar(View view){
+    public void onClickCadastrar(View view){
         String email            = edtEmail.getText().toString();
         String senha            = edtSenha.getText().toString();
         String nome             = edtNome.getText().toString();
