@@ -60,6 +60,8 @@
     <string name="lbl_nome_do_medico">Nome do medico</string>
     <string name="btn_meu_calendario">MEU CALENDÁRIO</string>
     <string name="btn_minhas_consultas">MINHAS CONSULTAS</string>
+    <string name="swMedico">Medico</string>
+    <string name="swPaciente">Paciente</string>
 
 
     <!-- Strings related to MenuMédico -->

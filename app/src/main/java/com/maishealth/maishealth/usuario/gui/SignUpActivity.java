@@ -42,17 +42,17 @@ public class SignUpActivity extends AppCompatActivity {
         edtNasc = findViewById(R.id.edtNasc3);
         edtNasc.addTextChangedListener(Mask.insert("##/##/####", edtNasc));
         edtEspec = findViewById(R.id.edtEspec3);
-        swUsuario = (Switch) findViewById(R.id.swUsuario);
-        edtCrm = (EditText) findViewById(R.id.edtCRM3);
+        swUsuario = findViewById(R.id.swUsuario);
+        edtCrm = findViewById(R.id.edtCRM3);
         edtCrm.addTextChangedListener(Mask.insert("###.###.###.#", edtCrm));
-        edtRegiao = (TextView) findViewById(R.id.textView7);
+        edtRegiao = findViewById(R.id.textView7);
 
 
         // Checa se o switch usuário é medico ou paciente
         // para setar visibilidade dos campos do cadastro do médico.
         swUsuario.setChecked(false);
-        spinnerRegiao = (Spinner) findViewById(R.id.SpnRegiao3);
-        spinnerRegiao.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, listaEstados));
+        spinnerRegiao = findViewById(R.id.SpnRegiao3);
+        spinnerRegiao.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, listaEstados));
         spinnerRegiao.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener(){
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -66,14 +66,14 @@ public class SignUpActivity extends AppCompatActivity {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean bChecked) {
                 if (bChecked) {
-                    swUsuario.setText("Medico");
+                    swUsuario.setText(R.string.swMedico);
                     edtCrm.setVisibility(View.VISIBLE);
                     edtRegiao.setVisibility(View.VISIBLE);
                     spinnerRegiao.setVisibility(View.VISIBLE);
                     edtEspec.setVisibility(View.VISIBLE);
 
                 } else {
-                    swUsuario.setText("Paciente");
+                    swUsuario.setText(R.string.swPaciente);
                     edtCrm.setVisibility(View.INVISIBLE);
                     edtRegiao.setVisibility(View.INVISIBLE);
                     spinnerRegiao.setVisibility(View.INVISIBLE);
@@ -83,9 +83,9 @@ public class SignUpActivity extends AppCompatActivity {
         });
 
         //ArrayAdapter é usado para preparar a lista que será usada no Spinner
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, listaSexo);
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, listaSexo);
 
-        spinnerSexo = (Spinner)findViewById(R.id.spnSexo3);
+        spinnerSexo = findViewById(R.id.spnSexo3);
         spinnerSexo.setAdapter(adapter);
 
         //Metodo para quando um elemento do Spinner é selecionado()
@@ -98,8 +98,8 @@ public class SignUpActivity extends AppCompatActivity {
             }
         });
 
-        ArrayAdapter<String> adapter2 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, listaTipoSangue);
-        spinnerTipoSangue = (Spinner)findViewById(R.id.spnTipoSangue3);
+        ArrayAdapter<String> adapter2 = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, listaTipoSangue);
+        spinnerTipoSangue = findViewById(R.id.spnTipoSangue3);
         spinnerTipoSangue.setAdapter(adapter2);
         spinnerTipoSangue.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener(){
             @Override
