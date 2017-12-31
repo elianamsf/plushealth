@@ -72,4 +72,30 @@
     <string name="title_share">Share</string>
     <string name="title_send">Send</string>
 
+    <string name="Search">Pesquisar</string>
+    <string name="User">Usuário</string>
+    <string name="atualizar_perfil">Atualizar perfil</string>
+    <string name="button_atualizar_perfil_pac">Atualizar</string>
+    <string name="texto_nome_pac_atualiza">Nome</string>
+    <string name="texto_cpf_pac">CPF</string>
+    <string name="texto_tipo_Sang_Pac">Tipo sanguineo</string>
+    <string name="texto_ap_tipo_sang_pac">Seu tipo sanguineo</string>
+    <string name="texto_data_nasc_pac">Data de nascimento</string>
+    <string name="sexo_pac">Sexo</string>
+    <string name="prompt_nome_tela_Pac"></string>
+
+    <string name="prompt_nome_tela_med">Nome</string>
+    <string name="prompt_email_tela_med">Email</string>
+    <string name="prompt_senha_tela_med">Senha</string>
+    <string name="prompt_cpf_tela_med">CPF</string>
+    <string name="prompt_data_tela_med">Data nasc</string>
+    <string name="sexo_med">Sexo</string>
+    <string name="text_tipo_sangue_med">Tipo sanguineo</string>
+    <string name="prompt_crm_tela_med">CRM</string>
+    <string name="prompt_especialidade_tela_med">Especialidade</string>
+    <string name="button_cancelar_atual_med">Cancelar</string>
+    <string name="button_atualizar_perfil_med">Modificar</string>
+
+
+
 </resources>

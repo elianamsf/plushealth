@@ -9,6 +9,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
+import com.maishealth.maishealth.AtualizarPerfilActivity;
+import com.maishealth.maishealth.AtualizarPerfilPacActivity;
 import com.maishealth.maishealth.R;
 import com.maishealth.maishealth.usuario.dominio.Pessoa;
 import com.maishealth.maishealth.usuario.negocio.ServicosPessoa;
@@ -64,6 +66,9 @@ public class MenuPaciente2 extends AppCompatActivity {
         editor.commit();
 
         this.mudarTela(Login1Activity.class);
+    }
+    public void telaAtualizarPerfilPaciente(View view){this.mudarTela(AtualizarPerfilPacActivity.class);
+
     }
 
     private void mudarTela(Class tela){

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+
+
+    <item
+        android:id="@+id/action_search"
+        android:icon="@drawable/ic_search_24dp"
+        android:orderInCategory="200"
+        android:title="@string/Search"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_settings1"
+        android:orderInCategory="100"
+        android:title="@string/action_settings"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_user"
+        android:checkable="false"
+        android:enabled="false"
+        android:icon="@drawable/ic_person_24dp"
+        android:orderInCategory="300"
+        android:title="@string/User"
+        app:showAsAction="always" />
+    <item
+        android:orderInCategory="101"
+        android:title="Sair" />
+
+</menu>
