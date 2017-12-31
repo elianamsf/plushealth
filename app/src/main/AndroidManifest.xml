@@ -37,7 +37,6 @@
         <activity android:name=".usuario.gui.ConsultasPendentesActivity" />
         <activity android:name=".usuario.gui.AcharPostoActivity" />
         <activity android:name=".usuario.gui.MenuMedicoActivity" />
-        <activity android:name=".AtualizarPerfilActivity" />
         <activity android:name=".AtualizarPerfilPacActivity" />
         <activity android:name=".AtualizarPerfilMedicoActivity"></activity>
     </application>

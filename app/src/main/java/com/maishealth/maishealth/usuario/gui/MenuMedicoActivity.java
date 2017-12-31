@@ -9,7 +9,6 @@ import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
-import com.maishealth.maishealth.AtualizarPerfilActivity;
 import com.maishealth.maishealth.AtualizarPerfilMedicoActivity;
 import com.maishealth.maishealth.R;
 import com.maishealth.maishealth.usuario.dominio.Pessoa;
