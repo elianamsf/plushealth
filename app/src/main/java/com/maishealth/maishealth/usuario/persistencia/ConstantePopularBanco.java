@@ -48,7 +48,7 @@ public class ConstantePopularBanco {
             "('rivotril')," +
             "('Neosaldina')," +
             "('Dorflex')," +
-            "('Dorflex')," +
+            "('Diazepan')," +
             "('Lasartana');";
 
 }
