@@ -44,4 +44,11 @@ public class ConstantePopularBanco {
             "('111.103.',4,'SP','Cadiologia')," +
             "('111.104.',5,'BA','Cadiologia');";
 
+    public static final String INSERIR_MEDICAMENTO = "INSERT INTO 'medicamento' ('nome') VALUES" +
+            "('rivotril')," +
+            "('Neosaldina')," +
+            "('Dorflex')," +
+            "('Dorflex')," +
+            "('Lasartana');";
+
 }
