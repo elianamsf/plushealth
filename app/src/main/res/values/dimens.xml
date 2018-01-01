@@ -8,6 +8,25 @@
     <dimen name="marginLeft">8dp</dimen>
     <dimen name="marginRight">8dp</dimen>
     <dimen name="TextDimTop">5dp</dimen>
-
+    <dimen name="margin_start">16dp</dimen>
+    <dimen name="margin_end">16dp</dimen>
+    <dimen name="margin_top">16dp</dimen>
+    <dimen name="margin_bottom_mini_label">8dp</dimen>
+    <dimen name="margin_top_mini_label">16dp</dimen>
+    <dimen name="divider_left_and_right">8dp</dimen>
+    <dimen name="margin_start_divide">4dp</dimen>
+    <dimen name="margin_end_divide">4dp</dimen>
+    <dimen name="divider_thickness">0.5dp</dimen>
+    <dimen name="card_elevation">8dp</dimen>
+    <dimen name="card_padding">8dp</dimen>
+    <dimen name="card_border">3dp</dimen>
+    <dimen name="margin_top_logo">24dp</dimen>
+    <dimen name="margin_top_login">24dp</dimen>
+    <dimen name="margin_top_edittext">8dp</dimen>
+    <dimen name="margin_bottom">16dp</dimen>
+    <dimen name="margin_start_card">8dp</dimen>
+    <dimen name="margin_end_card">8dp</dimen>
+    <dimen name="margin_top_card">8dp</dimen>
+    <dimen name="margin_top_button">12dp</dimen>
 
 </resources>

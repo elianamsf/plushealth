@@ -7,5 +7,6 @@
     <color name="colorTextoBut">#ffffff</color>
     <color name="colorFundo">#ffffff</color>
     <color name="colorTextoNormal">#0d0d0d</color>
+    <color name="divider">#000</color>
 
 </resources>
