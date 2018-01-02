@@ -38,7 +38,35 @@
         <activity android:name=".usuario.gui.AcharPostoActivity" />
         <activity android:name=".usuario.gui.MenuMedicoActivity" />
         <activity android:name=".AtualizarPerfilPacActivity" />
-        <activity android:name=".AtualizarPerfilMedicoActivity"></activity>
+        <activity android:name=".AtualizarPerfilMedicoActivity" />
+        <activity android:name=".EscolherEspecialidade">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".EscolherDia">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".EscolherHora">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ConfirmarConsulta">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

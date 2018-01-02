@@ -96,7 +96,7 @@
     <string name="button_cancelar_atual_med">Cancelar</string>
     <string name="button_atualizar_perfil_med">Modificar</string>
     <string name="texto_atualizar_perfil_med">Atualizar Perfil</string>
-
+    <string name="title_activity_escolher_especialidade">EscolherEspecialidade</string>
 
 
 </resources>
