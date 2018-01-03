@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
+import com.maishealth.maishealth.MarcacaoSintomasPacActivity;
 import com.maishealth.maishealth.R;
 import com.maishealth.maishealth.usuario.dominio.Pessoa;
 import com.maishealth.maishealth.usuario.negocio.ServicosPessoa;
@@ -42,7 +43,7 @@ public class MenuPaciente2 extends AppCompatActivity {
     }
 
     public void telaMarcarConsulta(View view){
-        this.mudarTela(MarcaConsultaActivity.class);
+        this.mudarTela(MarcacaoSintomasPacActivity.class);
     }
 
     public void telaMeuHistorico(View view){

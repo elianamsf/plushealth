@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+import com.maishealth.maishealth.MarcacaoSintomasPacActivity;
 import com.maishealth.maishealth.R;
 
 public class AcharPostoActivity extends AppCompatActivity {
@@ -20,7 +21,7 @@ public class AcharPostoActivity extends AppCompatActivity {
         finish();
     }
     public void testeLogin(View view){
-        Intent intent=new Intent(AcharPostoActivity.this,Login1Activity.class);
+        Intent intent=new Intent(AcharPostoActivity.this,MarcacaoSintomasPacActivity.class);
         startActivity(intent);
         finish();
     }
