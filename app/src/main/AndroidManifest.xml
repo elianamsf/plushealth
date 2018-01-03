@@ -37,8 +37,9 @@
         <activity android:name=".usuario.gui.ConsultasPendentesActivity" />
         <activity android:name=".usuario.gui.AcharPostoActivity" />
         <activity android:name=".usuario.gui.MenuMedicoActivity" />
-        <activity android:name=".AtualizarPerfilPacActivity" />
-        <activity android:name=".AtualizarPerfilMedicoActivity" />
+        <activity android:name=".usuario.gui.AtualizarPerfilPacActivity" />
+        <activity android:name=".usuario.gui.AtualizarPerfilMedicoActivity"/>
+        <activity android:name=".MarcacaoSintomasPacActivity"/>
         <activity android:name=".EscolherEspecialidade">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

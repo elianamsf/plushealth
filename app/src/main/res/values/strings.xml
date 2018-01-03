@@ -97,6 +97,12 @@
     <string name="button_atualizar_perfil_med">Modificar</string>
     <string name="texto_atualizar_perfil_med">Atualizar Perfil</string>
     <string name="title_activity_escolher_especialidade">EscolherEspecialidade</string>
+    <string name="texto_sub_marc">Para marcar a consulta, primeiro informe seus sintomas</string>
+    <string name="textSintomas">Sintomas</string>
+    <string name="textMarcarSint">Marque aqui seus sintomas</string>
+    <string name="texto_outros_sint">Outros sintomas? Digite aqui</string>
+    <string name="button_marcar_sint">Marcar</string>
+    <string name="button_marc_voltar_menu">Voltar</string>
 
 
 </resources>

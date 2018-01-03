@@ -1,10 +1,12 @@
-package com.maishealth.maishealth;
+package com.maishealth.maishealth.usuario.gui;
+
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+import com.maishealth.maishealth.R;
 import com.maishealth.maishealth.usuario.gui.MenuPaciente2;
 
 public class AtualizarPerfilPacActivity extends AppCompatActivity {
