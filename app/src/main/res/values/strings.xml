@@ -103,6 +103,24 @@
     <string name="texto_outros_sint">Outros sintomas? Digite aqui</string>
     <string name="button_marcar_sint">Marcar</string>
     <string name="button_marc_voltar_menu">Voltar</string>
+    <string name="button_confirma_consulta">Confirma</string>
+    <string name="button_cancela_consulta">Cancela</string>
+    <string name="text_view_dia_marc_cons">Dia marcado para consulta</string>
+    <string name="text_dia_marc_cons">Preencher aqui dia da consulta</string>
+    <string name="text_view_nome_med_cons">Nome do médico</string>
+    <string name="text_nome_med_cons">Preencher aqui o nome do médico</string>
+    <string name="text_view_espec_med_cons">Especialidade</string>
+    <string name="text_view_posto_saude">Posto de saúde</string>
+    <string name="text_posto_cons">Preencher aqui o nome do posto da consulta</string>
+    <string name="text_view_end_cons">Endereço</string>
+    <string name="text_end_posto_cons">Preencher aqui o ender do posto da cons</string>
+    <string name="texto_esp_med_cons">Prencher aqui a espec do med da cons</string>
 
+    <string name="text_view_nome_pac_esc">Nome do paciente escolhido</string>
+    <string name="text_view_sint_ditos_antes">Sintomas ditos pelo paciente quando marcou a consulta</string>
+    <string name="text_view_atualiza_sint">Atualizações de sintomas/Observações:</string>
+    <string name="text_view_prog_cons">Prognóstico/Tratamento/Observações</string>
+    <string name="button_atualizar_cons">Atualizar</string>
+    <string name="voltar_da_cons_atual">Voltar</string>
 
 </resources>

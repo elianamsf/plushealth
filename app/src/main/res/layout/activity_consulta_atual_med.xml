@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.maishealth.maishealth.usuario.gui.ConsultaAtualMedActivity">
+
+    <TextView
+        android:id="@+id/textViewNomePacAtual"
+        android:layout_width="232dp"
+        android:layout_height="33dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/text_view_nome_pac_esc"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textViewTextoSint"
+        android:layout_width="288dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/text_view_sint_ditos_antes"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/textViewNomePacAtual"
+        app:layout_constraintStart_toStartOf="@+id/textViewNomePacAtual"
+        app:layout_constraintTop_toBottomOf="@+id/textViewNomePacAtual" />
+
+    <TextView
+        android:id="@+id/textViewAtualizaSint"
+        android:layout_width="290dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="64dp"
+        android:text="@string/text_view_atualiza_sint"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/textViewTextoSint"
+        app:layout_constraintStart_toStartOf="@+id/textViewTextoSint"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTextoSint" />
+
+    <TextView
+        android:id="@+id/textViewPrognostico"
+        android:layout_width="288dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/text_view_prog_cons"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/editAtualizaSint"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/editAtualizaSint"
+        app:layout_constraintTop_toBottomOf="@+id/editAtualizaSint" />
+
+    <EditText
+        android:id="@+id/editAtualizaSint"
+        android:layout_width="289dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:textColor="@android:color/black"
+        app:layout_constraintEnd_toEndOf="@+id/textViewAtualizaSint"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/textViewAtualizaSint"
+        app:layout_constraintTop_toBottomOf="@+id/textViewAtualizaSint" />
+
+    <EditText
+        android:id="@+id/editPrognostico"
+        android:layout_width="287dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:textColor="@android:color/black"
+        app:layout_constraintEnd_toEndOf="@+id/textViewPrognostico"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/textViewPrognostico"
+        app:layout_constraintTop_toBottomOf="@+id/textViewPrognostico" />
+
+    <EditText
+        android:id="@+id/editTextSintPacAntes"
+        android:layout_width="287dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:textColor="@android:color/black"
+        app:layout_constraintEnd_toEndOf="@+id/textViewTextoSint"
+        app:layout_constraintStart_toStartOf="@+id/textViewTextoSint"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTextoSint" />
+
+    <Button
+        android:id="@+id/buttonVoltarDaConsAtual"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="36dp"
+        android:background="@color/colorButoes"
+        android:text="@string/voltar_da_cons_atual"
+        android:textColor="@color/colorTextoBut"
+        app:layout_constraintStart_toStartOf="@+id/editPrognostico"
+        app:layout_constraintTop_toBottomOf="@+id/editPrognostico" />
+
+    <Button
+        android:id="@+id/buttonAtualizarCons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="168dp"
+        android:layout_marginTop="36dp"
+        android:background="@color/colorButoes"
+        android:text="@string/button_atualizar_cons"
+
+        android:textColor="@color/colorTextoBut"
+        app:layout_constraintStart_toStartOf="@+id/editPrognostico"
+        app:layout_constraintTop_toBottomOf="@+id/editPrognostico" />
+
+</android.support.constraint.ConstraintLayout>

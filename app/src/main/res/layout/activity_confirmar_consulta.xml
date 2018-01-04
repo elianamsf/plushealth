@@ -4,22 +4,168 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.maishealth.maishealth.ConfirmarConsulta">
+    tools:context="com.maishealth.maishealth.usuario.gui.ConfirmarConsulta">
+
 
     <Button
-        android:id="@+id/button11"
+        android:id="@+id/buttonConfCons"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="CONFIRMA"
-        tools:layout_editor_absoluteX="231dp"
-        tools:layout_editor_absoluteY="383dp" />
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/colorButoes"
+        android:text="@string/button_confirma_consulta"
+        android:textColor="@color/colorTextoBut"
+        app:layout_constraintEnd_toEndOf="@+id/textEndPostoMarc"
+        app:layout_constraintHorizontal_bias="0.955"
+        app:layout_constraintStart_toEndOf="@+id/textEndPostoMarc"
+        app:layout_constraintStart_toStartOf="@+id/textEndPostoMarc"
+        app:layout_constraintTop_toBottomOf="@+id/textEndPostoMarc" />
 
     <Button
-        android:id="@+id/button12"
+        android:id="@+id/buttonCancCons"
+        android:layout_width="89dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/colorButoes"
+        android:text="@string/button_cancela_consulta"
+        android:textColor="@color/colorTextoBut"
+        app:layout_constraintEnd_toEndOf="@+id/textEndPostoMarc"
+        app:layout_constraintHorizontal_bias="0.114"
+        app:layout_constraintStart_toStartOf="@+id/textEndPostoMarc"
+        app:layout_constraintTop_toBottomOf="@+id/textEndPostoMarc" />
+
+    <TextView
+        android:id="@+id/textViewDiaCons"
         android:layout_width="wrap_content"
-        android:layout_height="46dp"
-        android:text="CANCELA"
-        tools:layout_editor_absoluteX="68dp"
-        tools:layout_editor_absoluteY="383dp" />
+        android:layout_height="27dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+
+        android:layout_marginTop="32dp"
+        android:text="@string/text_view_dia_marc_cons"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textDiaMarc"
+            android:layout_width="241dp"
+            android:layout_height="32dp"
+            android:text="@string/text_dia_marc_cons"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            tools:layout_editor_absoluteX="39dp"
+            tools:layout_editor_absoluteY="43dp"
+            app:layout_constraintEnd_toEndOf="@+id/textViewDiaCons"
+            app:layout_constraintStart_toStartOf="@+id/textViewDiaCons"
+            app:layout_constraintTop_toBottomOf="@+id/textViewDiaCons"/>
+
+        <TextView
+            android:id="@+id/textViewNomeMed"
+            android:layout_width="137dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="12dp"
+            android:text="@string/text_view_nome_med_cons"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/textDiaMarc"
+            app:layout_constraintStart_toStartOf="@+id/textDiaMarc"
+            app:layout_constraintTop_toBottomOf="@+id/textDiaMarc" />
+
+    <TextView
+        android:id="@+id/textNomeMedMarc"
+        android:layout_width="236dp"
+        android:layout_height="49dp"
+        android:text="@string/text_nome_med_cons"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/textViewNomeMed"
+        app:layout_constraintStart_toStartOf="@+id/textViewNomeMed"
+        app:layout_constraintTop_toBottomOf="@+id/textViewNomeMed" />
+
+        <TextView
+            android:id="@+id/textViewEspCons"
+            android:layout_width="137dp"
+            android:layout_height="26dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/text_view_espec_med_cons"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/textNomeMedMarc"
+            app:layout_constraintHorizontal_bias="0.494"
+            app:layout_constraintStart_toStartOf="@+id/textNomeMedMarc"
+            app:layout_constraintTop_toBottomOf="@+id/textNomeMedMarc" />
+
+        <TextView
+            android:id="@+id/textViewPostoCons"
+            android:layout_width="137dp"
+            android:layout_height="21dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/text_view_posto_saude"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/textEspecMedMarc"
+            app:layout_constraintHorizontal_bias="0.51"
+            app:layout_constraintStart_toStartOf="@+id/textEspecMedMarc"
+            app:layout_constraintTop_toBottomOf="@+id/textEspecMedMarc" />
+
+    <TextView
+        android:id="@+id/textPostoMarc"
+        android:layout_width="232dp"
+        android:layout_height="44dp"
+        android:text="@string/text_posto_cons"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/textViewPostoCons"
+        app:layout_constraintStart_toStartOf="@+id/textViewPostoCons"
+        app:layout_constraintTop_toBottomOf="@+id/textViewPostoCons" />
+
+        <TextView
+            android:id="@+id/textViewEndCons"
+            android:layout_width="130dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/text_view_end_cons"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/textPostoMarc"
+            app:layout_constraintHorizontal_bias="0.49"
+            app:layout_constraintStart_toStartOf="@+id/textPostoMarc"
+            app:layout_constraintTop_toBottomOf="@+id/textPostoMarc" />
+
+        <TextView
+            android:id="@+id/textEndPostoMarc"
+            android:layout_width="229dp"
+            android:layout_height="72dp"
+            android:text="@string/text_end_posto_cons"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            tools:layout_editor_absoluteX="45dp"
+            tools:layout_editor_absoluteY="295dp"
+            app:layout_constraintEnd_toEndOf="@+id/textViewEndCons"
+            app:layout_constraintStart_toStartOf="@+id/textViewEndCons"
+            app:layout_constraintTop_toBottomOf="@+id/textViewEndCons" />
+
+    <TextView
+        android:id="@+id/textEspecMedMarc"
+        android:layout_width="233dp"
+        android:layout_height="44dp"
+        android:text="@string/texto_esp_med_cons"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/textViewEspCons"
+        app:layout_constraintStart_toStartOf="@+id/textViewEspCons"
+        app:layout_constraintTop_toBottomOf="@+id/textViewEspCons" />
+
+
 
 </android.support.constraint.ConstraintLayout>

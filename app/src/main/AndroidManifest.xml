@@ -32,18 +32,28 @@
         <activity
             android:name=".usuario.gui.MenuPaciente2"
             android:screenOrientation="portrait" />
-        <activity android:name=".usuario.gui.MarcaConsultaActivity" />
-        <activity android:name=".usuario.gui.MeuHistoricoActivity" />
+        <activity
+            android:name=".usuario.gui.MarcaConsultaActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".usuario.gui.MeuHistoricoActivity"
+            android:screenOrientation="portrait"/>
         <activity android:name=".usuario.gui.ConsultasPendentesActivity" />
         <activity android:name=".usuario.gui.AcharPostoActivity" />
-        <activity android:name=".usuario.gui.MenuMedicoActivity" />
+        <activity
+            android:name=".usuario.gui.MenuMedicoActivity"
+            android:screenOrientation="portrait"/>
         <activity android:name=".usuario.gui.AtualizarPerfilPacActivity" />
-        <activity android:name=".usuario.gui.AtualizarPerfilMedicoActivity"/>
-        <activity android:name=".MarcacaoSintomasPacActivity"/>
+        <activity android:name=".usuario.gui.AtualizarPerfilMedicoActivity" />
+        <activity
+            android:name=".usuario.gui.MarcacaoSintomasPacActivity"
+            android:screenOrientation="portrait"/>
         <activity android:name=".EscolherEspecialidade" />
         <activity android:name=".EscolherDia" />
         <activity android:name=".EscolherHora" />
-        <activity android:name=".ConfirmarConsulta" />
+        <activity android:name=".usuario.gui.ConfirmarConsulta" />
+        <activity android:name=".usuario.gui.ConsultasAnterioresPacActivity" />
+        <activity android:name=".usuario.gui.ConsultaAtualMedActivity"></activity>
     </application>
 
 </manifest>

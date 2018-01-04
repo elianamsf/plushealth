@@ -1,4 +1,4 @@
-package com.maishealth.maishealth;
+package com.maishealth.maishealth.usuario.gui;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -8,9 +8,9 @@ import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
+import com.maishealth.maishealth.R;
 import com.maishealth.maishealth.infra.GuiUtil;
 import com.maishealth.maishealth.usuario.dominio.Pessoa;
-import com.maishealth.maishealth.usuario.gui.MenuPaciente2;
 import com.maishealth.maishealth.usuario.negocio.ServicosPessoa;
 
 import static com.maishealth.maishealth.infra.ConstanteSharedPreferences.DEFAULT_ID_USER_PREFERENCES;

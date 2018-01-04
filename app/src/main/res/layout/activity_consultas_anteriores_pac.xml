@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.maishealth.maishealth.usuario.gui.ConsultasAnterioresPacActivity">
+
+    <TextView
+        android:id="@+id/textNomePacCons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nome do paciente"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="99dp"
+        tools:layout_editor_absoluteY="38dp" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Meu histórico"
+        android:textSize="22sp"
+        tools:layout_editor_absoluteX="74dp"
+        tools:layout_editor_absoluteY="98dp" />
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="344dp"
+        android:layout_height="367dp"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="136dp" />
+
+</android.support.constraint.ConstraintLayout>

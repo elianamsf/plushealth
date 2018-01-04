@@ -5,7 +5,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-import com.maishealth.maishealth.MarcacaoSintomasPacActivity;
 import com.maishealth.maishealth.R;
 
 public class AcharPostoActivity extends AppCompatActivity {
