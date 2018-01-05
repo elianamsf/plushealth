@@ -49,15 +49,16 @@ public class Login1Activity extends AppCompatActivity {
 
         if (!validaCadastro.isSenhaValida(senha)) {
             edtSenhaLogin.requestFocus();
-            edtSenhaLogin.setError("Senha deve ter 6 ou mais caracteres.");
+            edtSenhaLogin.setError(getString(R.string.error_invalid_password));
             valido = false;
         }
 
         if (!validaCadastro.isEmail(email)) {
             edtEmailLogin.requestFocus();
-            edtEmailLogin.setError("Email inválido");
+            edtEmailLogin.setError(getString(R.string.error_invalid_email));
             valido = false;
         }
+
         if (valido){
             this.logar(email, senha);
         }

@@ -24,7 +24,7 @@ public class SignUpActivity extends AppCompatActivity {
     private EditText edtEmail, edtSenha, edtNome, edtCpf, edtNasc, edtCrm, edtEspec;
     private TextView edtRegiao;
     private Spinner spinnerSexo, spinnerTipoSangue, spinnerRegiao;
-    private final String[] listaSexo = {"Feminino", "Masculino"};
+    private final String[] listaSexo = {getString(R.string.sexo_feminino), getString(R.string.sexo_masculino)};
     private final String[] listaEstados = EnumEstados.enumEstadosLista();
     private final String[] listaTipoSangue = EnumTipoSangue.enumTipoSangueLista();
     private Switch swUsuario;
@@ -128,43 +128,43 @@ public class SignUpActivity extends AppCompatActivity {
 
         if(validaCadastro.isCampoVazio(especialidade) && swUsuario.isChecked()){
             edtEspec.requestFocus();
-            edtEspec.setError("Especialidade inválida.");
+            edtEspec.setError(getString(R.string.error_invalid_spec));
             valido = false;
         }
 
         if(!validaCadastro.isCrmValido(crm) && swUsuario.isChecked()){
             edtCrm.requestFocus();
-            edtCrm.setError("CRM inválido.");
+            edtCrm.setError(getString(R.string.error_invalid_crm));
             valido = false;
         }
 
         if(!validaCadastro.isDataNascimento(dataNasc)){
             edtNasc.requestFocus();
-            edtNasc.setError("Data Inválida.");
+            edtNasc.setError(getString(R.string.error_invalid_date));
             valido = false;
         }
 
         if(!validaCadastro.isCpfValida(cpf)){
             edtCpf.requestFocus();
-            edtCpf.setError("CPF inválido.");
+            edtCpf.setError(getString(R.string.error_invalid_cpf));
             valido = false;
         }
 
         if(validaCadastro.isCampoVazio(nome)){
             edtNome.requestFocus();
-            edtNome.setError("Nome inválido.");
+            edtNome.setError(getString(R.string.error_invalid_name));
             valido = false;
         }
 
         if(!validaCadastro.isSenhaValida(senha)){
             edtSenha.requestFocus();
-            edtSenha.setError("Senha deve ter 6 ou mais caracteres.");
+            edtSenha.setError(getString(R.string.error_invalid_password));
             valido = false;
         }
 
         if(!validaCadastro.isEmail(email)){
             edtEmail.requestFocus();
-            edtEmail.setError("Email inválido");
+            edtEmail.setError(getString(R.string.error_invalid_email));
             valido = false;
         }
 
@@ -175,7 +175,7 @@ public class SignUpActivity extends AppCompatActivity {
                 Intent intent = new Intent(this, Login1Activity.class);
                 startActivity(intent);
                 finish();
-                GuiUtil.myToast(this, "Paciente cadastrado com sucesso");
+                GuiUtil.myToast(this, getString(R.string.prompt_paciente_cadastrado_sucesso));
             } catch (Exception e) {
                 GuiUtil.myToast(this, e);
             }
@@ -186,7 +186,7 @@ public class SignUpActivity extends AppCompatActivity {
                 Intent intent = new Intent(this, Login1Activity.class);
                 startActivity(intent);
                 finish();
-                GuiUtil.myToast(this, "Médico cadastrado com sucesso");
+                GuiUtil.myToast(this, getString(R.string.prompt_medico_cadastrado_sucesso));
             } catch (Exception e) {
                 GuiUtil.myToast(this, e);
             }
@@ -195,7 +195,6 @@ public class SignUpActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        super.onBackPressed();
         this.mudarTela(Login1Activity.class);
     }
 

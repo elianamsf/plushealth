@@ -4,6 +4,7 @@
     <string name="action_sign_in">Sign in or register</string>
     <string name="action_sign_in_short">Sign in</string>
     <string name="action_settings">Settings</string>
+    <string name="atualizar_perfil">Atualizar perfil</string>
 
     <string name="button_voltar">Voltar</string>
     <string name="button_entrar">Entrar</string>
@@ -20,14 +21,27 @@
     <string name="button_meu_calendario">MEU CALENDÁRIO</string>
     <string name="button_minhas_consultas">MINHAS CONSULTAS</string>
     <string name="button_teste_login">TESTE LOGIN</string>
+    <string name="button_cancelar_atual_med">Cancelar</string>
+    <string name="button_atualizar_perfil_med">Atualizar</string>
+    <string name="button_marcar_sint">Marcar</string>
+    <string name="button_marc_voltar_menu">Voltar</string>
+    <string name="button_confirma_consulta">Confirma</string>
+    <string name="button_cancela_consulta">Cancela</string>
+    <string name="button_atualizar_cons">Atualizar</string>
+    <string name="button_atualizar_perfil_pac">Atualizar</string>
 
     <string name="dialog_botao_ok">OK</string>
     <string name="dialog_titulo_erro">Erro</string>
 
-    <string name="error_invalid_email">E-mail inválido</string>
-    <string name="error_invalid_password">Senha muito curta</string>
-    <string name="error_incorrect_password">Senha incorreta</string>
     <string name="error_field_required">Esse campo é requerido</string>
+    <string name="error_invalid_cpf">CPF inválido.</string>
+    <string name="error_invalid_crm">CRM inválido.</string>
+    <string name="error_invalid_date">Data Inválida.</string>
+    <string name="error_invalid_email">E-mail inválido</string>
+    <string name="error_invalid_name">Nome inválido.</string>
+    <string name="error_invalid_password">"Senha deve ter 6 ou mais caracteres."</string>
+    <string name="error_invalid_spec">Especialidade inválida.</string>
+    <string name="error_incorrect_password">Senha incorreta</string>
 
     <string name="image_logo">Plus Health</string>
     <string name="image_logopadrao">LogoPadrão</string>
@@ -57,6 +71,18 @@
     <string name="prompt_data">dd/mm/aaaa</string>
     <string name="prompt_crm">CRM</string>
     <string name="prompt_especialidade">Especialidade</string>
+    <string name="prompt_nome_tela_Pac"></string>
+    <string name="prompt_nome_tela_med">Nome</string>
+    <string name="prompt_email_tela_med">Email</string>
+    <string name="prompt_senha_tela_med">Senha</string>
+    <string name="prompt_cpf_tela_med">CPF</string>
+    <string name="prompt_data_tela_med">Data nasc</string>
+    <string name="prompt_crm_tela_med">CRM</string>
+    <string name="prompt_especialidade_tela_med">Especialidade</string>
+    <string name="prompt_paciente_cadastrado_sucesso">Paciente cadastrado com sucesso</string>
+    <string name="prompt_medico_cadastrado_sucesso">Médico cadastrado com sucesso</string>
+    <string name="promt_nenhum_campo_preenchido_perfil_nao_atualizado">Nenhum campo preenchido para ser atualizado.</string>
+    <string name="prompt_dados_atualizados">Dados Atualizados</string>
 
     <string name="switch_medico">Medico</string>
     <string name="switch_paciente">Paciente</string>
@@ -73,38 +99,19 @@
     <string name="title_send">Send</string>
 
     <string name="Search">Pesquisar</string>
-    <string name="User">Usuário</string>
-    <string name="atualizar_perfil">Atualizar perfil</string>
-    <string name="button_atualizar_perfil_pac">Atualizar</string>
+    <string name="sexo_pac">Sexo</string>
+    <string name="sexo_med">Sexo</string>
+    <string name="sexo_feminino">Feminino</string>
+    <string name="sexo_masculino">Masculino</string>
+
     <string name="texto_nome_pac_atualiza">Nome</string>
     <string name="texto_cpf_pac">CPF</string>
     <string name="texto_tipo_Sang_Pac">Tipo sanguineo</string>
     <string name="texto_ap_tipo_sang_pac">Seu tipo sanguineo</string>
     <string name="texto_data_nasc_pac">Data de nascimento</string>
-    <string name="sexo_pac">Sexo</string>
-    <string name="prompt_nome_tela_Pac"></string>
-
-    <string name="prompt_nome_tela_med">Nome</string>
-    <string name="prompt_email_tela_med">Email</string>
-    <string name="prompt_senha_tela_med">Senha</string>
-    <string name="prompt_cpf_tela_med">CPF</string>
-    <string name="prompt_data_tela_med">Data nasc</string>
-    <string name="sexo_med">Sexo</string>
     <string name="text_tipo_sangue_med">Tipo sanguineo</string>
-    <string name="prompt_crm_tela_med">CRM</string>
-    <string name="prompt_especialidade_tela_med">Especialidade</string>
-    <string name="button_cancelar_atual_med">Cancelar</string>
-    <string name="button_atualizar_perfil_med">Modificar</string>
-    <string name="texto_atualizar_perfil_med">Atualizar Perfil</string>
-    <string name="title_activity_escolher_especialidade">EscolherEspecialidade</string>
-    <string name="texto_sub_marc">Para marcar a consulta, primeiro informe seus sintomas</string>
     <string name="textSintomas">Sintomas</string>
     <string name="textMarcarSint">Marque aqui seus sintomas</string>
-    <string name="texto_outros_sint">Outros sintomas? Digite aqui</string>
-    <string name="button_marcar_sint">Marcar</string>
-    <string name="button_marc_voltar_menu">Voltar</string>
-    <string name="button_confirma_consulta">Confirma</string>
-    <string name="button_cancela_consulta">Cancela</string>
     <string name="text_view_dia_marc_cons">Dia marcado para consulta</string>
     <string name="text_dia_marc_cons">Preencher aqui dia da consulta</string>
     <string name="text_view_nome_med_cons">Nome do médico</string>
@@ -114,13 +121,18 @@
     <string name="text_posto_cons">Preencher aqui o nome do posto da consulta</string>
     <string name="text_view_end_cons">Endereço</string>
     <string name="text_end_posto_cons">Preencher aqui o ender do posto da cons</string>
-    <string name="texto_esp_med_cons">Prencher aqui a espec do med da cons</string>
-
     <string name="text_view_nome_pac_esc">Nome do paciente escolhido</string>
     <string name="text_view_sint_ditos_antes">Sintomas ditos pelo paciente quando marcou a consulta</string>
     <string name="text_view_atualiza_sint">Atualizações de sintomas/Observações:</string>
     <string name="text_view_prog_cons">Prognóstico/Tratamento/Observações</string>
-    <string name="button_atualizar_cons">Atualizar</string>
+    <string name="texto_esp_med_cons">Prencher aqui a espec do med da cons</string>
+    <string name="texto_atualizar_perfil_med">Atualizar Perfil</string>
+    <string name="texto_outros_sint">Outros sintomas? Digite aqui</string>
+    <string name="texto_sub_marc">Para marcar a consulta, primeiro informe seus sintomas</string>
+    <string name="title_activity_escolher_especialidade">EscolherEspecialidade</string>
+
+    <string name="User">Usuário</string>
+
     <string name="voltar_da_cons_atual">Voltar</string>
 
 </resources>
