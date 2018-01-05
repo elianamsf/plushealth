@@ -134,7 +134,7 @@
                     android:layout_margin="8dp"
                     android:layout_weight="1"
                     android:background="@color/colorButoes"
-                    android:onClick="retornoTelaMedico"
+                    android:onClick="retornoMenuPrincipal"
                     android:text="@string/button_cancelar_atual_med"
                     android:textColor="@color/colorTextoBut"
                     android:textStyle="bold" />
@@ -148,7 +148,7 @@
                     android:layout_margin="8dp"
                     android:layout_weight="1"
                     android:background="@color/colorButoes"
-                    android:onClick="retornoTelaMedico"
+                    android:onClick="onClickAtualizarPerfil"
                     android:text="@string/button_atualizar_perfil_med"
                     android:textColor="@color/colorTextoBut"
                     android:textStyle="bold" />

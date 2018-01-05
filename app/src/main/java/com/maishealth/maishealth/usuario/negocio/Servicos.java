@@ -12,6 +12,7 @@ import com.maishealth.maishealth.usuario.persistencia.MedicoDAO;
 import com.maishealth.maishealth.usuario.persistencia.PessoaDAO;
 import com.maishealth.maishealth.usuario.persistencia.UsuarioDAO;
 
+import static com.maishealth.maishealth.infra.ConstanteSharedPreferences.DEFAULT_ID_USER_PREFERENCES;
 import static com.maishealth.maishealth.infra.ConstanteSharedPreferences.ID_USER_PREFERENCES;
 import static com.maishealth.maishealth.infra.ConstanteSharedPreferences.IS_MEDICO_PREFERENCES;
 import static com.maishealth.maishealth.infra.ConstanteSharedPreferences.LOGIN_PREFERENCES;
@@ -94,6 +95,33 @@ public class Servicos {
         editor.putBoolean(IS_MEDICO_PREFERENCES, medico != null);
 
         editor.commit();
+    }
+
+    @SuppressLint("ApplySharedPref")
+    public void atualizarPerfil(String email, String senha) throws Exception {
+        Usuario verificarEmail = usuarioDAO.getUsuarioByEmail(email);
+
+        if(verificarEmail != null) {
+            throw new Exception("Email já cadastrado");
+        } else {
+            Long idUsuario = sharedPreferences.getLong(ID_USER_PREFERENCES, DEFAULT_ID_USER_PREFERENCES);
+            SharedPreferences.Editor editor = sharedPreferences.edit();
+            Usuario usuario = usuarioDAO.getUsuario(idUsuario);
+
+            if(!email.equals("")){
+                usuario.setEmail(email);
+                editor.putString(LOGIN_PREFERENCES, usuario.getEmail());
+            }
+            if(!senha.equals("")){
+                usuario.setSenha(senha);
+                editor.putString(PASSWORD_PREFERENCES, usuario.getSenha());
+            }
+
+            usuarioDAO.atualizarUsuario(usuario);
+            editor.commit();
+        }
+
+
     }
 }
 
