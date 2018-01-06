@@ -90,7 +90,7 @@ public class DataBase extends SQLiteOpenHelper {
 
     //TABELA SINTOMA
     public static final String TABELA_SINTOMA = "sintoma";
-    public static final String  NOME_SINTOMA = "nome";
+    public static final String SINTOMA_NOME = "nome";
 
     //TABELE CONSULTA-SINTOMA
     public static final String TABELA_CONSULTA_SINTOMA = "consulta_sintoma";
@@ -134,7 +134,7 @@ public class DataBase extends SQLiteOpenHelper {
                 CONSULTA_DESCRICAO + " TEXT, " +
                 ID_EST_PACIENTE_CON + " INTEGER, " +
                 ID_EST_MEDICO_CON + " INTEGER, " +
-                CONSULTA_STATUS + " TEXT);");
+                CONSULTA_STATUS + " TEXT NOT NULL);");
 
         db.execSQL("CREATE TABLE " + TABELA_DOENCACRONICA + " (" +
                 ID_DOENCA + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
@@ -163,7 +163,7 @@ public class DataBase extends SQLiteOpenHelper {
                 ID_EST_MEDICAMENTO_CON_MEM + " INTEGER);");
 
         db.execSQL("CREATE TABLE " + TABELA_SINTOMA + " (" +
-                NOME_SINTOMA + " TEXT NOT NULL UNIQUE" +" );");
+                SINTOMA_NOME + " TEXT NOT NULL UNIQUE" +" );");
 
         db.execSQL("CREATE TABLE " + TABELA_CONSULTA_SINTOMA + "(" +
                 ID_EST_SINTOMA_CON_SIN + "INTEGER, " +
