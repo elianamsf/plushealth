@@ -1,10 +1,5 @@
 package com.maishealth.maishealth.usuario.persistencia;
 
-/**
- * Created by Eliana-DEV on 06/01/2018.
- */
-
-
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
@@ -22,25 +17,23 @@ public class SintomaDAO {
         dataBaseHelper = new DataBase(context);
     }
 
-    public long InserirSintoma (Sintoma sintoma){
+    public void InserirSintoma (Sintoma sintoma){
         liteDatabase = dataBaseHelper.getWritableDatabase();
         ContentValues values = new ContentValues();
 
         String tabela = DataBase.TABELA_SINTOMA;
 
-        String colunaNomeSintoma = DataBase.NOME_SINTOMA;
+        String colunaNomeSintoma = DataBase.SINTOMA_NOME;
         String nomeSintoma = sintoma.getSintoma();
         values.put (colunaNomeSintoma, nomeSintoma);
 
-        long id = liteDatabase.insert(tabela, null, values);
+        liteDatabase.insert(tabela, null, values);
 
         liteDatabase.close();
-
-        return id;
     }
 
     private Sintoma criarSintoma (Cursor cursor){
-     String colunaSintoma = DataBase.NOME_SINTOMA;
+     String colunaSintoma = DataBase.SINTOMA_NOME;
      int indexColunaSintoma = cursor.getColumnIndex(colunaSintoma);
      String nomeSintoma = cursor.getString(indexColunaSintoma);
 
@@ -49,7 +42,6 @@ public class SintomaDAO {
      sintoma.setSintoma(nomeSintoma);
 
      return sintoma;
-
     }
 
     public Sintoma getSintoma ( String query, String [] argumentos){
@@ -71,7 +63,7 @@ public class SintomaDAO {
 
     public Sintoma getSintoma (long id){
         String query = "SELECT * FROM " + DataBase.TABELA_SINTOMA +
-                " WHERE " + DataBase.NOME_SINTOMA + " LIKE ?";
+                " WHERE " + DataBase.SINTOMA_NOME + " LIKE ?";
 
         String idString = Long.toString(id);
 

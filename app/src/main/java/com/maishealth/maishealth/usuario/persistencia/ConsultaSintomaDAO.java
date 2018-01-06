@@ -1,8 +1,5 @@
 package com.maishealth.maishealth.usuario.persistencia;
 
-/**
- * Created by Eliana-DEV on 06/01/2018.
- */
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
@@ -27,7 +24,7 @@ public class ConsultaSintomaDAO {
         sintomaDAO = new SintomaDAO(context);
     }
 
-    public void inserirConsultaSintoma (long idConsultaComSintoma, long sintoma ){
+    public void inserirConsultaSintoma (long idConsultaComSintoma, String sintoma ){
         liteDatabase = dataBaseHelper.getWritableDatabase();
         ContentValues values = new ContentValues();
 
@@ -37,7 +34,7 @@ public class ConsultaSintomaDAO {
         values.put(colunaIdConsulta, idConsultaComSintoma);
 
         String colunaNomeSintomaComConsulta = DataBase.NOME_EST_SINTOMA_CON_SIN;
-        values.put(colunaIdConsulta, sintoma);
+        values.put(colunaNomeSintomaComConsulta, sintoma);
 
         liteDatabase.insert(tabela, null, values);
 
@@ -57,14 +54,13 @@ public class ConsultaSintomaDAO {
 
         Cursor cursor = liteDatabase.rawQuery(query, argumentos);
 
-        Sintoma sintoma;
-
         String colunaSintoma = DataBase.NOME_EST_SINTOMA_CON_SIN;
         int indexColunaSintoma = cursor.getColumnIndex(colunaSintoma);
 
         while (cursor.moveToNext()) {
-            long nomeSintoma = cursor.getInt(indexColunaSintoma);
-            sintoma = sintomaDAO.getSintoma(nomeSintoma);
+            String nomeSintoma = cursor.getString(indexColunaSintoma);
+            Sintoma sintoma = new Sintoma();
+            sintoma.setSintoma(nomeSintoma);
             listaSintomas.add(sintoma);
 
         }
@@ -73,5 +69,4 @@ public class ConsultaSintomaDAO {
 
         return listaSintomas;
     }
-
 }
