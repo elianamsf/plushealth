@@ -42,10 +42,6 @@ public class ConsultaDAO {
         String status = consulta.getStatus();
         values.put(colunaStatus, status);
 
-        String colunaIdConsulta = DataBase.ID_CONSULTA;
-        long idConsulta = consulta.getIdConsulta();
-        values.put(colunaIdConsulta, idConsulta);
-
         long id = liteDatabase.insert(tabela, null, values);
 
         liteDatabase.close();
@@ -67,16 +63,13 @@ public class ConsultaDAO {
         String status = consulta.getStatus();
         values.put(colunaStatus, status);
 
-        String whereClause =    DataBase.CONSULTA_DATA + " = ? AND " +
-                                DataBase.ID_EST_PACIENTE_CON + " = ? AND " +
-                                DataBase.ID_EST_MEDICO_CON + " = ? AND " +
-                                DataBase.ID_CONSULTA + " = ? ";
+        String colunaPaciente = DataBase.ID_EST_PACIENTE_CON;
+        long idPaciente = consulta.getIdPaciente();
+        values.put(colunaPaciente, idPaciente);
 
-        String[] parametros = new String[4];
-        parametros[0] = consulta.getData();
-        parametros[1] = String.valueOf(consulta.getIdPaciente());
-        parametros[2] = String.valueOf(consulta.getIdMedico());
-        parametros[3] = String.valueOf(consulta.getIdConsulta());
+        String whereClause = DataBase.ID_CONSULTA + " = ? ";
+        String[] parametros = new String[1];
+        parametros[0] = String.valueOf(consulta.getId());
 
         long id = liteDatabase.update(tabela, values, whereClause, parametros);
 
@@ -118,7 +111,7 @@ public class ConsultaDAO {
         consulta.setIdPaciente(idPaciente);
         consulta.setIdMedico(idMedico);
         consulta.setStatus(status);
-        consulta.setIdConsulta(idConsulta);
+        consulta.setId(idConsulta);
 
         return consulta;
     }
