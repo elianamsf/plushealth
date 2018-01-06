@@ -49,6 +49,7 @@ public class DataBase extends SQLiteOpenHelper {
 
     //TABELA CONSULTA
     public static final String TABELA_CONSULTA = "consulta";
+    public static final String ID_CONSULTA    = "id_consulta";
     public static final String CONSULTA_DATA = "data";
     public static final String CONSULTA_DESCRICAO = "descricao";
     public static final String ID_EST_PACIENTE_CON = "id_est_paciente";
@@ -87,6 +88,14 @@ public class DataBase extends SQLiteOpenHelper {
     public static final String ID_EST_CONSULTA_CON_MEM = "id_consulta";
     public static final String ID_EST_MEDICAMENTO_CON_MEM = "id_medicamento";
 
+    //TABELA SINTOMA
+    public static final String TABELA_SINTOMA = "sintoma";
+    public static final String  NOME_SINTOMA = "nome";
+
+    //TABELE CONSULTA-SINTOMA
+    public static final String TABELA_CONSULTA_SINTOMA = "consulta_sintoma";
+    public static final String ID_EST_SINTOMA_CON_SIN = "id_consulta";
+    public static final String NOME_EST_SINTOMA_CON_SIN = "sintoma_nome";
 
     public DataBase(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -120,6 +129,7 @@ public class DataBase extends SQLiteOpenHelper {
                 ID_EST_USUARIO_ME + " INTEGER);");
 
         db.execSQL("CREATE TABLE " + TABELA_CONSULTA + " (" +
+                ID_CONSULTA  + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 CONSULTA_DATA + " TEXT NOT NULL, " +
                 CONSULTA_DESCRICAO + " TEXT, " +
                 ID_EST_PACIENTE_CON + " INTEGER, " +
@@ -151,6 +161,15 @@ public class DataBase extends SQLiteOpenHelper {
         db.execSQL("CREATE TABLE " + TABELA_CONSULTA_MEDICAMENTO + " (" +
                 ID_EST_CONSULTA_CON_MEM + " INTEGER, " +
                 ID_EST_MEDICAMENTO_CON_MEM + " INTEGER);");
+
+        db.execSQL("CREATE TABLE " + TABELA_SINTOMA + " (" +
+                NOME_SINTOMA + " TEXT NOT NULL UNIQUE" +" );");
+
+        db.execSQL("CREATE TABLE " + TABELA_CONSULTA_SINTOMA + "(" +
+                ID_EST_SINTOMA_CON_SIN + "INTEGER, " +
+                NOME_EST_SINTOMA_CON_SIN + "TEXT NOT NULL);");
+
+
 
         db.execSQL(INSERIR_USUARIO);
         db.execSQL(INSERIR_PESSOA);
@@ -195,6 +214,12 @@ public class DataBase extends SQLiteOpenHelper {
 
         String query11 = "DROP TABLE IF EXISTS " + TABELA_CONSULTA_MEDICAMENTO;
         db.execSQL(query11);
+
+        String query12 = "DROP TABLE IF EXISTS " + TABELA_SINTOMA;
+        db.execSQL(query12);
+
+        String query13 = "DROP TABLE IF EXISTS " + TABELA_CONSULTA_SINTOMA;
+        db.execSQL(query13);
 
         this.onCreate(db);
     }

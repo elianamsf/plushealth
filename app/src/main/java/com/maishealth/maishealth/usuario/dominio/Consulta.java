@@ -7,6 +7,7 @@ public class Consulta {
     private long idPaciente;
     private long idMedico;
     private String status;
+    private String idConsulta;
 
     public String getData() {
         return data;
@@ -47,4 +48,8 @@ public class Consulta {
     public void setStatus(String status) {
         this.status = status;
     }
+
+    public String getIdConsulta() { return idConsulta;}
+
+    public void setIdConsulta(String idConsulta) { this.idConsulta = idConsulta; }
 }
