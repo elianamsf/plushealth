@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.maishealth.maishealth.ConsultaEscolhidaActivity"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="0dp">
+
+        <TextView
+            android:id="@+id/textViewNomePacConsEsc"
+            android:layout_width="232dp"
+            android:layout_height="33dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/text_view_nome_pac_esc"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textViewTextoSintConsEsc"
+        android:layout_width="288dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/text_view_sint_ditos_antes"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/textViewDiaConsEsc"
+        app:layout_constraintHorizontal_bias="0.481"
+        app:layout_constraintStart_toStartOf="@+id/textViewDiaConsEsc"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDiaConsEsc" />
+
+    <TextView
+        android:id="@+id/textViewProgConsEsc"
+        android:layout_width="290dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="64dp"
+        android:text="@string/text_view_prog_cons_esc"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/textViewTextoSintConsEsc"
+        app:layout_constraintStart_toStartOf="@+id/textViewTextoSintConsEsc"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTextoSintConsEsc" />
+
+    <TextView
+        android:id="@+id/textViewTratConsEsc"
+        android:layout_width="288dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/text_view_trat_cons_esc"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/TextViewProgConsEsc"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/TextViewProgConsEsc"
+        app:layout_constraintTop_toBottomOf="@+id/TextViewProgConsEsc" />
+
+        <TextView
+            android:id="@+id/TextViewProgConsEsc"
+            android:layout_width="289dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:textColor="@android:color/black"
+            app:layout_constraintEnd_toEndOf="@+id/textViewProgConsEsc"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/textViewProgConsEsc"
+            app:layout_constraintTop_toBottomOf="@+id/textViewProgConsEsc" />
+
+        <TextView
+            android:id="@+id/TextViewTratConsEsc"
+            android:layout_width="287dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
+            android:ems="10"
+            android:textColor="@android:color/black"
+            app:layout_constraintEnd_toEndOf="@+id/textViewTratConsEsc"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/textViewTratConsEsc"
+            app:layout_constraintTop_toBottomOf="@+id/textViewTratConsEsc" />
+
+    <TextView
+        android:id="@+id/textViewSintConsEsc"
+        android:layout_width="287dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:textColor="@android:color/black"
+        app:layout_constraintEnd_toEndOf="@+id/textViewTextoSintConsEsc"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/textViewTextoSintConsEsc"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTextoSintConsEsc" />
+
+    <Button
+        android:id="@+id/buttonVoltarDaConsEsc"
+        android:layout_width="113dp"
+        android:layout_height="53dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/colorButoes"
+        android:text="@string/voltar_da_cons_atual"
+        android:textColor="@color/colorTextoBut"
+        app:layout_constraintEnd_toEndOf="@+id/TextViewTratConsEsc"
+        app:layout_constraintHorizontal_bias="0.37"
+        app:layout_constraintStart_toStartOf="@+id/TextViewTratConsEsc"
+        app:layout_constraintTop_toBottomOf="@+id/TextViewTratConsEsc" />
+
+    <TextView
+        android:id="@+id/textViewDiaConsEsc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/text_view_dia_cons_esc"
+        android:textColor="@android:color/black"
+        app:layout_constraintEnd_toEndOf="@+id/textViewNomePacConsEsc"
+        app:layout_constraintStart_toStartOf="@+id/textViewNomePacConsEsc"
+        app:layout_constraintTop_toBottomOf="@+id/textViewNomePacConsEsc" />
+
+
+</android.support.constraint.ConstraintLayout>

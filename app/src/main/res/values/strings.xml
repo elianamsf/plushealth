@@ -134,5 +134,8 @@
     <string name="User">Usuário</string>
 
     <string name="voltar_da_cons_atual">Voltar</string>
+    <string name="text_view_prog_cons_esc">Diagnóstico</string>
+    <string name="text_view_trat_cons_esc">Tratamento</string>
+    <string name="text_view_dia_cons_esc">Dia 01/01/2018</string>
 
 </resources>

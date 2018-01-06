@@ -7,7 +7,7 @@
     tools:context="com.maishealth.maishealth.usuario.gui.ConsultaAtualMedActivity">
 
     <TextView
-        android:id="@+id/textViewNomePacAtual"
+        android:id="@+id/textViewNomePacConsEsc"
         android:layout_width="232dp"
         android:layout_height="33dp"
         android:layout_marginBottom="8dp"
@@ -24,67 +24,67 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/textViewTextoSint"
+        android:id="@+id/textViewTextoSintConsEsc"
         android:layout_width="288dp"
         android:layout_height="46dp"
         android:layout_marginTop="16dp"
         android:text="@string/text_view_sint_ditos_antes"
         android:textColor="@android:color/black"
         android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="@+id/textViewNomePacAtual"
-        app:layout_constraintStart_toStartOf="@+id/textViewNomePacAtual"
-        app:layout_constraintTop_toBottomOf="@+id/textViewNomePacAtual" />
+        app:layout_constraintEnd_toEndOf="@+id/textViewNomePacConsEsc"
+        app:layout_constraintStart_toStartOf="@+id/textViewNomePacConsEsc"
+        app:layout_constraintTop_toBottomOf="@+id/textViewNomePacConsEsc" />
 
     <TextView
-        android:id="@+id/textViewAtualizaSint"
+        android:id="@+id/textViewProgConsEsc"
         android:layout_width="290dp"
         android:layout_height="24dp"
         android:layout_marginTop="64dp"
         android:text="@string/text_view_atualiza_sint"
         android:textColor="@android:color/black"
         android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="@+id/textViewTextoSint"
-        app:layout_constraintStart_toStartOf="@+id/textViewTextoSint"
-        app:layout_constraintTop_toBottomOf="@+id/textViewTextoSint" />
+        app:layout_constraintEnd_toEndOf="@+id/textViewTextoSintConsEsc"
+        app:layout_constraintStart_toStartOf="@+id/textViewTextoSintConsEsc"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTextoSintConsEsc" />
 
     <TextView
-        android:id="@+id/textViewPrognostico"
+        android:id="@+id/textViewTratConsEsc"
         android:layout_width="288dp"
         android:layout_height="26dp"
         android:layout_marginTop="12dp"
         android:text="@string/text_view_prog_cons"
         android:textColor="@android:color/black"
         android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="@+id/editAtualizaSint"
+        app:layout_constraintEnd_toEndOf="@+id/TextViewProgConsEsc"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/editAtualizaSint"
-        app:layout_constraintTop_toBottomOf="@+id/editAtualizaSint" />
+        app:layout_constraintStart_toStartOf="@+id/TextViewProgConsEsc"
+        app:layout_constraintTop_toBottomOf="@+id/TextViewProgConsEsc" />
 
     <EditText
-        android:id="@+id/editAtualizaSint"
+        android:id="@+id/TextViewProgConsEsc"
         android:layout_width="289dp"
         android:layout_height="48dp"
         android:layout_marginTop="16dp"
         android:ems="10"
         android:inputType="textMultiLine"
         android:textColor="@android:color/black"
-        app:layout_constraintEnd_toEndOf="@+id/textViewAtualizaSint"
+        app:layout_constraintEnd_toEndOf="@+id/textViewProgConsEsc"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/textViewAtualizaSint"
-        app:layout_constraintTop_toBottomOf="@+id/textViewAtualizaSint" />
+        app:layout_constraintStart_toStartOf="@+id/textViewProgConsEsc"
+        app:layout_constraintTop_toBottomOf="@+id/textViewProgConsEsc" />
 
     <EditText
-        android:id="@+id/editPrognostico"
+        android:id="@+id/TextViewTratConsEsc"
         android:layout_width="287dp"
         android:layout_height="50dp"
         android:layout_marginTop="8dp"
         android:ems="10"
         android:inputType="textMultiLine"
         android:textColor="@android:color/black"
-        app:layout_constraintEnd_toEndOf="@+id/textViewPrognostico"
+        app:layout_constraintEnd_toEndOf="@+id/textViewTratConsEsc"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/textViewPrognostico"
-        app:layout_constraintTop_toBottomOf="@+id/textViewPrognostico" />
+        app:layout_constraintStart_toStartOf="@+id/textViewTratConsEsc"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTratConsEsc" />
 
     <EditText
         android:id="@+id/editTextSintPacAntes"
@@ -93,9 +93,9 @@
         android:ems="10"
         android:inputType="textMultiLine"
         android:textColor="@android:color/black"
-        app:layout_constraintEnd_toEndOf="@+id/textViewTextoSint"
-        app:layout_constraintStart_toStartOf="@+id/textViewTextoSint"
-        app:layout_constraintTop_toBottomOf="@+id/textViewTextoSint" />
+        app:layout_constraintEnd_toEndOf="@+id/textViewTextoSintConsEsc"
+        app:layout_constraintStart_toStartOf="@+id/textViewTextoSintConsEsc"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTextoSintConsEsc" />
 
     <Button
         android:id="@+id/buttonVoltarDaConsAtual"
@@ -106,8 +106,8 @@
         android:background="@color/colorButoes"
         android:text="@string/voltar_da_cons_atual"
         android:textColor="@color/colorTextoBut"
-        app:layout_constraintStart_toStartOf="@+id/editPrognostico"
-        app:layout_constraintTop_toBottomOf="@+id/editPrognostico" />
+        app:layout_constraintStart_toStartOf="@+id/TextViewTratConsEsc"
+        app:layout_constraintTop_toBottomOf="@+id/TextViewTratConsEsc" />
 
     <Button
         android:id="@+id/buttonAtualizarCons"
@@ -119,7 +119,7 @@
         android:text="@string/button_atualizar_cons"
 
         android:textColor="@color/colorTextoBut"
-        app:layout_constraintStart_toStartOf="@+id/editPrognostico"
-        app:layout_constraintTop_toBottomOf="@+id/editPrognostico" />
+        app:layout_constraintStart_toStartOf="@+id/TextViewTratConsEsc"
+        app:layout_constraintTop_toBottomOf="@+id/TextViewTratConsEsc" />
 
 </android.support.constraint.ConstraintLayout>
