@@ -24,7 +24,7 @@ public class SignUpActivity extends AppCompatActivity {
     private EditText edtEmail, edtSenha, edtNome, edtCpf, edtNasc, edtCrm, edtEspec;
     private TextView edtRegiao;
     private Spinner spinnerSexo, spinnerTipoSangue, spinnerRegiao;
-    private final String[] listaSexo = {getString(R.string.sexo_feminino), getString(R.string.sexo_masculino)};
+    private final String[] listaSexo = {"Feminino", "Masculino"};
     private final String[] listaEstados = EnumEstados.enumEstadosLista();
     private final String[] listaTipoSangue = EnumTipoSangue.enumTipoSangueLista();
     private Switch swUsuario;
