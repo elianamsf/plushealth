@@ -42,6 +42,10 @@ public class ConsultaDAO {
         String status = consulta.getStatus();
         values.put(colunaStatus, status);
 
+        String colunaIdConsulta = DataBase.ID_CONSULTA;
+        long idConsulta = consulta.getIdConsulta();
+        values.put(colunaIdConsulta, idConsulta);
+
         long id = liteDatabase.insert(tabela, null, values);
 
         liteDatabase.close();
@@ -65,12 +69,14 @@ public class ConsultaDAO {
 
         String whereClause =    DataBase.CONSULTA_DATA + " = ? AND " +
                                 DataBase.ID_EST_PACIENTE_CON + " = ? AND " +
-                                DataBase.ID_EST_MEDICO_CON + " = ?";
+                                DataBase.ID_EST_MEDICO_CON + " = ? AND " +
+                                DataBase.ID_CONSULTA + " = ? ";
 
-        String[] parametros = new String[3];
+        String[] parametros = new String[4];
         parametros[0] = consulta.getData();
         parametros[1] = String.valueOf(consulta.getIdPaciente());
         parametros[2] = String.valueOf(consulta.getIdMedico());
+        parametros[3] = String.valueOf(consulta.getIdConsulta());
 
         long id = liteDatabase.update(tabela, values, whereClause, parametros);
 
@@ -101,6 +107,10 @@ public class ConsultaDAO {
         int indexColunaStatus = cursor.getColumnIndex(colunaStatus);
         String status = cursor.getString(indexColunaStatus);
 
+        String colunaIdConsulta = DataBase.ID_CONSULTA;
+        int  indexColunaIdConsulta = cursor.getColumnIndex(colunaIdConsulta);
+        long idConsulta = cursor.getInt(indexColunaIdConsulta);
+
         Consulta consulta = new Consulta();
 
         consulta.setData(data);
@@ -108,6 +118,7 @@ public class ConsultaDAO {
         consulta.setIdPaciente(idPaciente);
         consulta.setIdMedico(idMedico);
         consulta.setStatus(status);
+        consulta.setIdConsulta(idConsulta);
 
         return consulta;
     }
@@ -129,16 +140,18 @@ public class ConsultaDAO {
         return consulta;
     }
 
-    public Consulta getConsulta(String data, long idPaciente, long idMedico){
+    public Consulta getConsulta(String data, long idPaciente, long idMedico, long idConsulta){
         String query = "SELECT * FROM " + DataBase.TABELA_CONSULTA +
                         " WHERE " + DataBase.CONSULTA_DATA + " LIKE ?" +
                         " AND " + DataBase.ID_EST_PACIENTE_CON  + " LIKE ?" +
-                    " AND " + DataBase.ID_EST_MEDICO_CON  + " LIKE ?";
+                    " AND " + DataBase.ID_EST_MEDICO_CON  + " LIKE ?" +
+                    " AND " + DataBase.ID_CONSULTA;
 
         String idPacienteString = Long.toString(idPaciente);
         String idMedicoString = Long.toString(idMedico);
+        String idConsultaString   = Long.toString(idConsulta);
 
-        String[] argumentos  = {data, idPacienteString, idMedicoString};
+        String[] argumentos  = {data, idPacienteString, idMedicoString, idConsultaString};
 
         return this.getConsulta(query, argumentos);
     }
