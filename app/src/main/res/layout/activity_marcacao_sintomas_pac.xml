@@ -13,8 +13,9 @@
         android:layout_height="160dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="12dp"
         app:layout_constraintEnd_toEndOf="@+id/textViewMarq"
+        app:layout_constraintHorizontal_bias="0.333"
         app:layout_constraintStart_toStartOf="@+id/textViewMarq"
         app:layout_constraintTop_toBottomOf="@+id/textViewMarq">
 
@@ -31,7 +32,7 @@
                 android:checked="false"
                 android:clickable="true"
                 android:gravity="left|center_vertical"
-                android:hint="Febre " />
+                android:hint="@string/febre" />
 
             <CheckedTextView
                 android:id="@+id/sintoma_dor_de_cabeca"
@@ -41,7 +42,7 @@
                 android:checked="false"
                 android:clickable="true"
                 android:gravity="left|center_vertical"
-                android:hint="Dores de cabeça "
+                android:hint="@string/dores_de_cabeca"
                 android:textColor="@android:color/black" />
 
             <CheckedTextView
@@ -52,7 +53,7 @@
                 android:checked="false"
                 android:clickable="true"
                 android:gravity="left|center_vertical"
-                android:hint="Enjoo" />
+                android:hint="@string/enjoo" />
 
             <CheckedTextView
                 android:id="@+id/sintoma_coceira"
@@ -62,7 +63,7 @@
                 android:checked="false"
                 android:clickable="true"
                 android:gravity="left|center_vertical"
-                android:hint="Coceira" />
+                android:hint="@string/coceira" />
 
             <CheckedTextView
                 android:id="@+id/sintoma_bolhas"
@@ -71,8 +72,8 @@
                 android:checkMark="?android:attr/listChoiceIndicatorMultiple"
                 android:checked="false"
                 android:clickable="true"
-                android:gravity="left|center_vertical"
-                android:hint="Bolhas" />
+                android:gravity="start|center_vertical"
+                android:hint="@string/bolhas" />
 
             <CheckedTextView
                 android:id="@+id/sintoma_dor_abdominal"
@@ -81,8 +82,8 @@
                 android:checkMark="?android:attr/listChoiceIndicatorMultiple"
                 android:checked="false"
                 android:clickable="true"
-                android:gravity="left|center_vertical"
-                android:hint="Dor abdominal" />
+                android:gravity="start|center_vertical"
+                android:hint="@string/dor_abdominal" />
 
             <CheckedTextView
                 android:id="@+id/sintoma_ardencia_olho"
@@ -91,8 +92,8 @@
                 android:checkMark="?android:attr/listChoiceIndicatorMultiple"
                 android:checked="false"
                 android:clickable="true"
-                android:gravity="left|center_vertical"
-                android:hint="Ardência nos olhos" />
+                android:gravity="start|center_vertical"
+                android:hint="@string/ardencia_nos_olhos" />
 
             <CheckedTextView
                 android:id="@+id/sintoma_olhos_inchados"
@@ -101,8 +102,8 @@
                 android:checkMark="?android:attr/listChoiceIndicatorMultiple"
                 android:checked="false"
                 android:clickable="true"
-                android:gravity="left|center_vertical"
-                android:hint="Olhos inchados" />
+                android:gravity="start|center_vertical"
+                android:hint="@string/olhos_inchados" />
         </LinearLayout>
 
     </ScrollView>
@@ -115,7 +116,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
-        android:text="Nome do paciente"
+        android:text="@string/nome_do_paciente"
         android:textColor="@android:color/black"
 
 
@@ -140,35 +141,19 @@
         app:layout_constraintTop_toBottomOf="@+id/textViewNomePacSint" />
 
     <TextView
-        android:id="@+id/textViewSintomas"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:text="@string/textSintomas"
-        android:textColor="@android:color/black"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="@+id/textSubMarc"
-        app:layout_constraintStart_toStartOf="@+id/textSubMarc"
-        app:layout_constraintTop_toBottomOf="@+id/textSubMarc"
-
-        />
-
-    <TextView
         android:id="@+id/textViewMarq"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
         android:text="@string/textMarcarSint"
         android:textColor="@android:color/black"
-        android:textSize="16sp"
-        tools:layout_editor_absoluteY="121dp"
-        app:layout_constraintEnd_toEndOf="@+id/textViewSintomas"
-        app:layout_constraintStart_toStartOf="@+id/textViewSintomas"
-        app:layout_constraintTop_toBottomOf="@+id/textViewSintomas"
 
-        />
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/textSubMarc"
+        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintStart_toStartOf="@+id/textSubMarc"
+        app:layout_constraintTop_toBottomOf="@+id/textSubMarc" />
 
     <TextView
         android:id="@+id/textViewOutrosSint"
@@ -176,13 +161,13 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="204dp"
+        android:layout_marginTop="8dp"
         android:text="@string/texto_outros_sint"
         android:textColor="@android:color/black"
         android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewSintomas" />
+        app:layout_constraintTop_toBottomOf="@+id/scrollView2" />
 
     <EditText
         android:id="@+id/editTextOutrosSint"
@@ -195,11 +180,11 @@
         android:ems="10"
         android:inputType="textMultiLine"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.508"
-        app:layout_constraintVertical_bias="0.0"
         app:layout_constraintEnd_toEndOf="@+id/textViewOutrosSint"
+        app:layout_constraintHorizontal_bias="0.371"
         app:layout_constraintStart_toStartOf="@+id/textViewOutrosSint"
-        app:layout_constraintTop_toBottomOf="@+id/textViewOutrosSint"/>
+        app:layout_constraintTop_toBottomOf="@+id/textViewOutrosSint"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/buttonVoltarMenu"

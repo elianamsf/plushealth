@@ -137,5 +137,14 @@
     <string name="text_view_prog_cons_esc">Diagnóstico</string>
     <string name="text_view_trat_cons_esc">Tratamento</string>
     <string name="text_view_dia_cons_esc">Dia 01/01/2018</string>
+    <string name="nome_do_paciente">Nome do paciente</string>
+    <string name="olhos_inchados">Olhos inchados</string>
+    <string name="febre">Febre</string>
+    <string name="dor_abdominal">Dor abdominal</string>
+    <string name="bolhas">Bolhas</string>
+    <string name="coceira">Coceira</string>
+    <string name="dores_de_cabeca">Dores de cabeça</string>
+    <string name="ardencia_nos_olhos">Ardência nos olhos</string>
+    <string name="enjoo">Enjoo</string>
 
 </resources>

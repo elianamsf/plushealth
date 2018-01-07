@@ -33,9 +33,6 @@
             android:name=".usuario.gui.MenuPaciente2"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".usuario.gui.MarcaConsultaActivity"
-            android:screenOrientation="portrait" />
-        <activity
             android:name=".usuario.gui.MeuHistoricoActivity"
             android:screenOrientation="portrait" />
         <activity android:name=".usuario.gui.ConsultasPendentesActivity" />
