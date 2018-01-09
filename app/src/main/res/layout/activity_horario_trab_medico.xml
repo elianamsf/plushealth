@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.maishealth.maishealth.HorarioTrabMedicoActivity">
+
+    <TextView
+        android:id="@+id/textViewHorarioMed"
+        android:layout_width="246dp"
+        android:layout_height="33dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="28dp"
+        android:text="@string/text_view_horario_montado_medico"
+        android:textAlignment="textStart"
+        android:textColor="@android:color/black"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.605"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextInicioHorMed"
+        android:layout_width="81dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="64dp"
+        android:ems="10"
+        android:inputType="time"
+        android:textColor="@android:color/black"
+        app:layout_constraintStart_toEndOf="@+id/textViewQtdVagasMed"
+        app:layout_constraintTop_toBottomOf="@+id/editTextQtdVagasMed" />
+
+    <TextView
+        android:id="@+id/textViewDataHorMed"
+        android:layout_width="119dp"
+        android:layout_height="26dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/text_view_data_hor_montado_medico"
+        android:textAlignment="textStart"
+        android:textColor="@android:color/black"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="@+id/textViewHorarioMed"
+        app:layout_constraintHorizontal_bias="0.639"
+        app:layout_constraintStart_toStartOf="@+id/textViewHorarioMed"
+        app:layout_constraintTop_toBottomOf="@+id/textViewHorarioMed" />
+
+    <TextView
+        android:id="@+id/textViewQtdVagasMed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/text_view_qtd_vagas_hor_med"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/editTextQtdVagasMed" />
+
+    <TextView
+        android:id="@+id/textViewHorMedico"
+        android:layout_width="58dp"
+        android:layout_height="26dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="84dp"
+        android:text="@string/text_view_hor_montado_med"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/editTextInicioHorMed"
+        app:layout_constraintHorizontal_bias="0.037"
+        app:layout_constraintStart_toStartOf="@+id/textViewQtdVagasMed"
+        app:layout_constraintTop_toBottomOf="@+id/textViewQtdVagasMed" />
+
+    <Button
+        android:id="@+id/bt_confirmar_hor_montado_med"
+        android:layout_width="93dp"
+        android:layout_height="47dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginTop="64dp"
+        android:background="@color/colorButoes"
+        android:text="@string/button_confirmar_hor_mont_med"
+        android:textColor="@color/colorTextoBut"
+        app:layout_constraintEnd_toEndOf="@+id/editTextFimHorMed"
+        app:layout_constraintTop_toBottomOf="@+id/editTextFimHorMed" />
+
+    <Button
+        android:id="@+id/buttonCancelar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="64dp"
+        android:background="@color/colorButoes"
+        android:text="@string/button_cancelar"
+        android:textColor="@color/colorTextoBut"
+        app:layout_constraintEnd_toStartOf="@+id/bt_confirmar_hor_montado_med"
+        app:layout_constraintHorizontal_bias="0.671"
+        app:layout_constraintStart_toStartOf="@+id/textViewHorMedico"
+        app:layout_constraintTop_toBottomOf="@+id/editTextInicioHorMed" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="27dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="80dp"
+        android:text="Às"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/textViewQtdVagasMed"
+        app:layout_constraintTop_toBottomOf="@+id/editTextQtdVagasMed" />
+
+    <EditText
+        android:id="@+id/editTextFimHorMed"
+        android:layout_width="82dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="68dp"
+        android:ems="10"
+        android:inputType="time"
+        android:textColor="@android:color/black"
+        app:layout_constraintEnd_toEndOf="@+id/editTextQtdVagasMed"
+        app:layout_constraintHorizontal_bias="0.857"
+        app:layout_constraintStart_toEndOf="@+id/textView12"
+        app:layout_constraintTop_toBottomOf="@+id/editTextQtdVagasMed" />
+
+    <EditText
+        android:id="@+id/editTextQtdVagasMed"
+        android:layout_width="193dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="28dp"
+        android:ems="10"
+        android:inputType="numberSigned"
+        android:textColor="@android:color/black"
+        app:layout_constraintEnd_toEndOf="@+id/textViewDataHorMed"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/textViewQtdVagasMed"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDataHorMed" />
+
+</android.support.constraint.ConstraintLayout>

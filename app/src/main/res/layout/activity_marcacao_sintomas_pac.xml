@@ -29,9 +29,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:checkMark="?android:attr/listChoiceIndicatorMultiple"
-                android:checked="false"
                 android:clickable="true"
-                android:gravity="left|center_vertical"
+                android:focusable="false"
+                android:gravity="start|center_vertical"
                 android:hint="@string/febre" />
 
             <CheckedTextView
@@ -41,7 +41,7 @@
                 android:checkMark="?android:attr/listChoiceIndicatorMultiple"
                 android:checked="false"
                 android:clickable="true"
-                android:gravity="left|center_vertical"
+                android:gravity="start|center_vertical"
                 android:hint="@string/dores_de_cabeca"
                 android:textColor="@android:color/black" />
 
@@ -52,7 +52,7 @@
                 android:checkMark="?android:attr/listChoiceIndicatorMultiple"
                 android:checked="false"
                 android:clickable="true"
-                android:gravity="left|center_vertical"
+                android:gravity="start|center_vertical"
                 android:hint="@string/enjoo" />
 
             <CheckedTextView
@@ -62,7 +62,7 @@
                 android:checkMark="?android:attr/listChoiceIndicatorMultiple"
                 android:checked="false"
                 android:clickable="true"
-                android:gravity="left|center_vertical"
+                android:gravity="start|center_vertical"
                 android:hint="@string/coceira" />
 
             <CheckedTextView

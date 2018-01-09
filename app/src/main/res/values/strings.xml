@@ -147,4 +147,11 @@
     <string name="ardencia_nos_olhos">Ardência nos olhos</string>
     <string name="enjoo">Enjoo</string>
 
+    <string name="button_confirmar_hor_mont_med">Confirmar</string>
+    <string name="text_view_hor_montado_med">Horário</string>
+    <string name="text_view_qtd_vagas_hor_med">Qtd.Vagas</string>
+    <string name="text_view_data_hor_montado_medico">Data</string>
+    <string name="text_view_horario_montado_medico">Horário para consultas</string>
+
+
 </resources>

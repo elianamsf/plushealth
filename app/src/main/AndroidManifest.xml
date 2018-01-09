@@ -52,7 +52,9 @@
         <activity android:name=".usuario.gui.ConsultasAnterioresPacActivity" />
         <activity android:name=".usuario.gui.ConsultaAtualMedActivity" />
         <activity android:name=".ConsultaEscolhidaActivity" />
-        <activity android:name=".usuario.gui.CadastrarMedicamentoActivity"></activity>
+        <activity android:name=".usuario.gui.CadastrarMedicamentoActivity" />
+        <activity android:name=".HorarioTrabMedicoActivity"/>
+
     </application>
 
 </manifest>
