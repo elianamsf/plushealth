@@ -6,8 +6,9 @@ package com.maishealth.maishealth.usuario.dominio;
 
 public enum EnumStatusConsulta {
 
-    MARCADA("Marcada"),
-    CANCELADA ("Cancelada"),
+    REGISTRADA ("Registrada"),
+    DISPONIVEL("Disponivel"),
+    MARCADA ("Marcada"),
     REALIZADA("Realizada"),
     REAGENDADA ("Reagendada");
 
