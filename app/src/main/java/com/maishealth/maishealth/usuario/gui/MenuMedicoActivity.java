@@ -59,4 +59,8 @@ public class MenuMedicoActivity extends AppCompatActivity {
     public void TelaAtualizarPerfilMedico(View view){this.mudarTela(AtualizarPerfilMedicoActivity.class);
 
     }
+    public void TelaCadastrarMedicamento(View view) {
+        this.mudarTela(CadastrarMedicamentoActivity.class);
+    }
+
 }

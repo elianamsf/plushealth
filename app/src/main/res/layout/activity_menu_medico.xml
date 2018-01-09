@@ -30,7 +30,7 @@
         android:layout_height="69dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="168dp"
+        android:layout_marginTop="136dp"
         android:background="@color/colorButoes"
         android:text="@string/button_meu_calendario"
         android:textColor="@color/colorTextoBut"
@@ -41,8 +41,8 @@
 
     <Button
         android:id="@+id/bt_minhasconsultas"
-        android:layout_width="248dp"
-        android:layout_height="68dp"
+        android:layout_width="254dp"
+        android:layout_height="69dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
@@ -55,7 +55,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/bt_meucalend"
-        app:layout_constraintVertical_bias="0.168" />
+        app:layout_constraintVertical_bias="0.085" />
 
     <Button
         android:id="@+id/bt_sair_pac2"
@@ -73,7 +73,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bt_minhasconsultas" />
+        app:layout_constraintTop_toBottomOf="@+id/bt_minhasconsultas"
+        app:layout_constraintVertical_bias="0.76" />
 
     <ImageButton
         android:id="@+id/icAtualizarPerfilMed"
@@ -88,4 +89,23 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_person_24dp" />
+
+    <Button
+        android:id="@+id/button11"
+        android:layout_width="254dp"
+        android:layout_height="69dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/colorButoes"
+        android:text="Cadastrar Medicamentos"
+        android:textColor="@color/colorTextoBut"
+        android:textSize="16sp"
+        android:onClick="TelaCadastrarMedicamento"
+        app:layout_constraintBottom_toTopOf="@+id/bt_sair_pac2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bt_minhasconsultas" />
 </android.support.constraint.ConstraintLayout>
