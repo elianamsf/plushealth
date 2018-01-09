@@ -16,6 +16,7 @@
         android:background="@color/colorButoes"
         android:text="@string/button_confirma_consulta"
         android:textColor="@color/colorTextoBut"
+        android:gravity="center"
         app:layout_constraintEnd_toEndOf="@+id/textEndPostoMarc"
         app:layout_constraintHorizontal_bias="0.955"
         app:layout_constraintStart_toEndOf="@+id/textEndPostoMarc"
