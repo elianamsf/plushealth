@@ -7,6 +7,7 @@ import android.database.sqlite.SQLiteDatabase;
 
 import com.maishealth.maishealth.infra.DataBase;
 import com.maishealth.maishealth.usuario.dominio.Consulta;
+import com.maishealth.maishealth.usuario.dominio.EnumStatusConsulta;
 
 public class ConsultaDAO {
     private SQLiteDatabase liteDatabase;
@@ -138,7 +139,7 @@ public class ConsultaDAO {
                         " WHERE " + DataBase.CONSULTA_DATA + " LIKE ?" +
                         " AND " + DataBase.ID_EST_PACIENTE_CON  + " LIKE ?" +
                     " AND " + DataBase.ID_EST_MEDICO_CON  + " LIKE ?" +
-                    " AND " + DataBase.ID_CONSULTA;
+                    " AND " + DataBase.ID_CONSULTA + " LIKE ?";
 
         String idPacienteString = Long.toString(idPaciente);
         String idMedicoString = Long.toString(idMedico);
@@ -148,4 +149,17 @@ public class ConsultaDAO {
 
         return this.getConsulta(query, argumentos);
     }
+
+    public Consulta getConsultaByData(String data){
+        String query = "SELECT * FROM " + DataBase.TABELA_CONSULTA +
+                " WHERE " + DataBase.CONSULTA_DATA + " LIKE ?" +
+                " AND " + DataBase.CONSULTA_STATUS + " LIKE ?";
+
+        String status = EnumStatusConsulta.DISPONIVEL.toString();
+
+        String[] argumentos  = {data, status };
+
+        return this.getConsulta(query, argumentos);
+    }
+
 }
