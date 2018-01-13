@@ -1,9 +1,15 @@
 package com.maishealth.maishealth.usuario.dominio;
 
 public class Sintoma {
-    private String sintoma;
+    private long id;
+    private String nomeSintoma;
 
-    public String getSintoma() { return sintoma;}
 
-    public void setSintoma(String sintoma) {this.sintoma = sintoma;}
+    public long getId() { return id;  }
+
+    public void setId(long id) { this.id = id;}
+
+    public String getSintoma() { return nomeSintoma;}
+
+    public void setSintoma(String sintoma) {this.nomeSintoma = sintoma;}
 }

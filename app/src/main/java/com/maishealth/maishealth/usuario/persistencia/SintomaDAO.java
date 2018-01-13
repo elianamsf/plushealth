@@ -17,7 +17,7 @@ public class SintomaDAO {
         dataBaseHelper = new DataBase(context);
     }
 
-    public void InserirSintoma (Sintoma sintoma){
+    public long inserirSintoma (Sintoma sintoma){
         liteDatabase = dataBaseHelper.getWritableDatabase();
         ContentValues values = new ContentValues();
 
@@ -27,9 +27,11 @@ public class SintomaDAO {
         String nomeSintoma = sintoma.getSintoma();
         values.put (colunaNomeSintoma, nomeSintoma);
 
-        liteDatabase.insert(tabela, null, values);
+        long id = liteDatabase.insert(tabela, null, values);
 
         liteDatabase.close();
+
+        return id;
     }
 
     private Sintoma criarSintoma (Cursor cursor){

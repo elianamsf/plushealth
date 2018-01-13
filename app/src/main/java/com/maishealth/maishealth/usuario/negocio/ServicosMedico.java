@@ -4,17 +4,26 @@ import android.content.Context;
 
 import com.maishealth.maishealth.usuario.dominio.Consulta;
 import com.maishealth.maishealth.usuario.dominio.EnumStatusConsulta;
+import com.maishealth.maishealth.usuario.dominio.Medicamento;
 import com.maishealth.maishealth.usuario.dominio.Medico;
+import com.maishealth.maishealth.usuario.dominio.Sintoma;
 import com.maishealth.maishealth.usuario.persistencia.ConsultaDAO;
+import com.maishealth.maishealth.usuario.persistencia.MedicamentoDAO;
 import com.maishealth.maishealth.usuario.persistencia.MedicoDAO;
+import com.maishealth.maishealth.usuario.persistencia.SintomaDAO;
+
+import java.security.PrivateKey;
 
 public class ServicosMedico {
     private MedicoDAO medicoDAO;
     private ConsultaDAO consultaDAO;
+    private MedicamentoDAO medicamentoDAO;
+
 
     public ServicosMedico(Context context) {
         medicoDAO = new MedicoDAO(context);
         consultaDAO = new ConsultaDAO(context);
+        medicamentoDAO = new MedicamentoDAO(context);
     }
 
     private long cadastrarMedico(Medico medico){
@@ -42,4 +51,12 @@ public class ServicosMedico {
         return criarConsulta(consulta);
     }
 
+    private long criarMedicamento(Medicamento medicamento) {return medicamentoDAO.inserirMedicamento(medicamento);}
+
+    public long criarMedicamento (String nomeMedicamento){
+        Medicamento medicamento = new Medicamento();
+        medicamento.setNome(nomeMedicamento);
+
+        return criarMedicamento(medicamento);
+    }
 }

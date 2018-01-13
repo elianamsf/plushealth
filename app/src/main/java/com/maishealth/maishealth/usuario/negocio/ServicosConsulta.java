@@ -35,7 +35,7 @@ public class ServicosConsulta {
     }
 
     private void cadastrarSintoma (Sintoma sintoma){
-        sintomaDAO.InserirSintoma(sintoma);
+        sintomaDAO.inserirSintoma(sintoma);
     }
 
     public void cadastrarSintoma (String nomeSintoma){
