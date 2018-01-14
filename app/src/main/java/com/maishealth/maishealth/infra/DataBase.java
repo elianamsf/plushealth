@@ -166,8 +166,8 @@ public class DataBase extends SQLiteOpenHelper {
                 SINTOMA_NOME + " TEXT NOT NULL UNIQUE" +" );");
 
         db.execSQL("CREATE TABLE " + TABELA_CONSULTA_SINTOMA + "(" +
-                ID_EST_SINTOMA_CON_SIN + "INTEGER, " +
-                NOME_EST_SINTOMA_CON_SIN + "TEXT NOT NULL);");
+                ID_EST_SINTOMA_CON_SIN + " INTEGER, " +
+                NOME_EST_SINTOMA_CON_SIN + " TEXT NOT NULL);");
 
 
 
