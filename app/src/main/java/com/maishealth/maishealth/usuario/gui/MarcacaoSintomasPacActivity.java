@@ -6,11 +6,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import com.maishealth.maishealth.R;
 import com.maishealth.maishealth.infra.GuiUtil;
 import com.maishealth.maishealth.usuario.dominio.Pessoa;
+import com.maishealth.maishealth.usuario.negocio.ServicosPaciente;
 import com.maishealth.maishealth.usuario.negocio.ServicosPessoa;
 
 import static com.maishealth.maishealth.infra.ConstanteSharedPreferences.DEFAULT_ID_USER_PREFERENCES;
@@ -19,7 +22,8 @@ import static com.maishealth.maishealth.infra.ConstanteSharedPreferences.TITLE_P
 
 public class MarcacaoSintomasPacActivity extends AppCompatActivity {
     private SharedPreferences sharedPreferences;
-
+    private EditText edtSintoma;
+    private Button btnConfirmaSintoma;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,7 +49,11 @@ public class MarcacaoSintomasPacActivity extends AppCompatActivity {
         finish();
     }
     public void marcarEnviarSintomas(View view){
-        GuiUtil.myToast(this,"Em construção");
+        edtSintoma = findViewById(R.id.editTextOutrosSint);
+        String edtSintomaString = edtSintoma.getText().toString();
+        ServicosPaciente servicosPaciente = new ServicosPaciente(getApplicationContext());
+        servicosPaciente.inserirSintoma(edtSintomaString);
+        GuiUtil.myToast(this,"Sintoma Inserido com sucesso!");
 
     }
 
