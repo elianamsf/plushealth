@@ -6,12 +6,16 @@ import android.content.SharedPreferences;
 
 import com.maishealth.maishealth.infra.FormataData;
 import com.maishealth.maishealth.usuario.dominio.Medico;
+import com.maishealth.maishealth.usuario.dominio.Paciente;
 import com.maishealth.maishealth.usuario.dominio.Pessoa;
 import com.maishealth.maishealth.usuario.dominio.Usuario;
 import com.maishealth.maishealth.usuario.persistencia.MedicoDAO;
+import com.maishealth.maishealth.usuario.persistencia.PacienteDAO;
 import com.maishealth.maishealth.usuario.persistencia.PessoaDAO;
 import com.maishealth.maishealth.usuario.persistencia.UsuarioDAO;
 
+import static com.maishealth.maishealth.infra.ConstanteSharedPreferences.ID_MEDICO_PREFERENCES;
+import static com.maishealth.maishealth.infra.ConstanteSharedPreferences.ID_PACIENTE_PREFERENCES;
 import static com.maishealth.maishealth.infra.ConstanteSharedPreferences.ID_USER_PREFERENCES;
 import static com.maishealth.maishealth.infra.ConstanteSharedPreferences.IS_MEDICO_PREFERENCES;
 import static com.maishealth.maishealth.infra.ConstanteSharedPreferences.LOGIN_PREFERENCES;
@@ -27,6 +31,7 @@ public class Servicos {
     private ServicosMedico servicosMedico;
     private PessoaDAO pessoaDAO;
     private MedicoDAO medicoDAO;
+    private PacienteDAO pacienteDAO;
     private SharedPreferences sharedPreferences;
 
     public Servicos(Context context) {
@@ -34,6 +39,7 @@ public class Servicos {
         usuarioDAO = new UsuarioDAO(context);
         pessoaDAO = new PessoaDAO(context);
         medicoDAO = new MedicoDAO(context);
+        pacienteDAO = new PacienteDAO(context);
         servicosPessoa = new ServicosPessoa(context);
         servicosUsuario = new ServicosUsuario(context);
         servicosPaciente = new ServicosPaciente(context);
@@ -86,12 +92,19 @@ public class Servicos {
             throw new Exception("E-mail ou Senha incorretos");
         }
         Medico medico = medicoDAO.getMedicoByIdUsuario(usuario.getId());
+        Paciente paciente = pacienteDAO.getPacienteByIdUsuario(usuario.getId());
         SharedPreferences.Editor editor = sharedPreferences.edit();
 
         editor.putLong(ID_USER_PREFERENCES, usuario.getId());
         editor.putString(LOGIN_PREFERENCES, usuario.getEmail());
         editor.putString(PASSWORD_PREFERENCES, usuario.getSenha());
         editor.putBoolean(IS_MEDICO_PREFERENCES, medico != null);
+        if ( medico != null){
+            editor.putLong(ID_MEDICO_PREFERENCES, medico.getId()); // armazena o id do médico para  recuperar na criação das consultas.
+        }
+        else {
+            editor.putLong(ID_PACIENTE_PREFERENCES, paciente.getId());  // armazena o id do paciênte para  recuperar na marcação das consultas.
+        }
 
         editor.commit();
     }

@@ -110,4 +110,14 @@ public class PacienteDAO {
 
         return this.getPaciente(query, argumentos);
     }
+
+    public Paciente getPacienteByIdUsuario(long idUsuario){
+        String query = "SELECT * FROM " + DataBase.TABELA_PACIENTE +
+                " WHERE " + DataBase.ID_EST_USUARIO_PA + " LIKE ?";
+
+        String idString = Long.toString(idUsuario);
+        String[] argumentos = {idString};
+
+        return this.getPaciente(query, argumentos);
+    }
 }

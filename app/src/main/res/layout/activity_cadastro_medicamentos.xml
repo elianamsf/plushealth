@@ -24,7 +24,7 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/nomeMedicamento"
         android:layout_width="wrap_content"
         android:layout_height="46dp"
         android:layout_marginBottom="8dp"
@@ -56,7 +56,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText2"
+        app:layout_constraintTop_toBottomOf="@+id/nomeMedicamento"
         app:layout_constraintVertical_bias="0.144" />
 
     <EditText
