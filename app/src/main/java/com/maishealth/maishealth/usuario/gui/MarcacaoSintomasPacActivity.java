@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 import com.maishealth.maishealth.R;
 import com.maishealth.maishealth.infra.GuiUtil;
+import com.maishealth.maishealth.infra.Mask;
 import com.maishealth.maishealth.usuario.dominio.Pessoa;
 import com.maishealth.maishealth.usuario.negocio.ServicosPaciente;
 import com.maishealth.maishealth.usuario.negocio.ServicosPessoa;
@@ -51,10 +52,14 @@ public class MarcacaoSintomasPacActivity extends AppCompatActivity {
     public void marcarEnviarSintomas(View view){
         edtSintoma = findViewById(R.id.editTextOutrosSint);
         String edtSintomaString = edtSintoma.getText().toString();
-        ServicosPaciente servicosPaciente = new ServicosPaciente(getApplicationContext());
-        servicosPaciente.inserirSintoma(edtSintomaString);
-        GuiUtil.myToast(this,"Sintoma Inserido com sucesso!");
+        String listaSintomas[]= Mask.split(edtSintomaString, ",");
 
+        for (String sintoma: listaSintomas){
+        ServicosPaciente servicosPaciente = new ServicosPaciente(getApplicationContext());
+        servicosPaciente.inserirSintoma(sintoma);
+        }
+
+        GuiUtil.myToast(this,"Sintoma(s) Inserido(s) com sucesso!");
     }
 
 }
