@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.maishealth.maishealth.EscolherDiaDaConsultaActivity;
 import com.maishealth.maishealth.R;
 import com.maishealth.maishealth.infra.GuiUtil;
 import com.maishealth.maishealth.infra.Mask;
@@ -47,6 +48,8 @@ public class MarcacaoSintomasPacActivity extends AppCompatActivity {
         startActivity(intent);
         finish();
     }
+
+    //**olhar comentário na Activity de EscolherDiaDaConsulta
     public void marcarEnviarSintomas(View view){
         EditText edtSintoma = findViewById(R.id.editTextOutrosSint);
         String edtSintomaString = edtSintoma.getText().toString();
@@ -58,6 +61,10 @@ public class MarcacaoSintomasPacActivity extends AppCompatActivity {
         }
 
         GuiUtil.myToast(this,"Sintoma(s) Inserido(s) com sucesso!");
+
+        Intent intent=new Intent(MarcacaoSintomasPacActivity.this, EscolherDiaDaConsultaActivity.class);
+        startActivity(intent);
+        finish();
     }
 
 }

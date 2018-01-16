@@ -46,15 +46,14 @@
         <activity
             android:name=".usuario.gui.MarcacaoSintomasPacActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".EscolherEspecialidade" />
         <activity android:name=".EscolherDia" />
-        <activity android:name=".EscolherHora" />
         <activity android:name=".usuario.gui.ConfirmarConsulta" />
         <activity android:name=".usuario.gui.ConsultasAnterioresPacActivity" />
         <activity android:name=".usuario.gui.ConsultaAtualMedActivity" />
         <activity android:name=".ConsultaEscolhidaActivity" />
         <activity android:name=".usuario.gui.CadastrarMedicamentoActivity" />
-        <activity android:name=".HorarioTrabMedicoActivity"/>
+        <activity android:name=".HorarioTrabMedicoActivity" />
+        <activity android:name=".EscolherDiaDaConsultaActivity"/>
 
     </application>
 
