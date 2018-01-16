@@ -12,14 +12,13 @@ import com.maishealth.maishealth.usuario.negocio.ServicosMedico;
 
 public class CadastrarMedicamentoActivity extends AppCompatActivity {
     private EditText nomeMedicamento;
-    private Button   btnCadastrar;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastro_medicamentos);
-        btnCadastrar = findViewById(R.id.button4);
+        Button btnCadastrar = findViewById(R.id.button4);
 
         btnCadastrar.setOnClickListener(new View.OnClickListener() {
             @Override

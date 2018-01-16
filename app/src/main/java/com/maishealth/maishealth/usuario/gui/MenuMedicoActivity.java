@@ -48,7 +48,7 @@ public class MenuMedicoActivity extends AppCompatActivity {
         editor.clear();
         editor.commit();
 
-        this.mudarTela(Login1Activity.class);
+        this.mudarTela(LoginActivity.class);
     }
 
     private void mudarTela(Class tela){

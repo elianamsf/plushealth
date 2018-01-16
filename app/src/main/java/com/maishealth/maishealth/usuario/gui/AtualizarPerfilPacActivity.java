@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.maishealth.maishealth.R;
-import com.maishealth.maishealth.usuario.gui.MenuPaciente2;
 
 public class AtualizarPerfilPacActivity extends AppCompatActivity {
 
@@ -17,7 +16,7 @@ public class AtualizarPerfilPacActivity extends AppCompatActivity {
         setContentView(R.layout.activity_atualizar_perfil_pac);
     }
     public void telaRetornoMenuPac(View view){
-        Intent intent=new Intent(AtualizarPerfilPacActivity.this, MenuPaciente2.class);
+        Intent intent=new Intent(AtualizarPerfilPacActivity.this, MenuPaciente.class);
         startActivity(intent);
         finish();
     }

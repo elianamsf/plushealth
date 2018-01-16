@@ -13,9 +13,10 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_health_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        android:fullBackupContent="@xml/backup_descriptor">
         <activity
-            android:name=".usuario.gui.Login1Activity"
+            android:name=".usuario.gui.LoginActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
@@ -30,7 +31,7 @@
             android:name=".usuario.gui.SignUpActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".usuario.gui.MenuPaciente2"
+            android:name=".usuario.gui.MenuPaciente"
             android:screenOrientation="portrait" />
         <activity
             android:name=".usuario.gui.MeuHistoricoActivity"

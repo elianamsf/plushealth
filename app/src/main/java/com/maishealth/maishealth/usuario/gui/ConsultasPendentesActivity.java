@@ -15,7 +15,7 @@ public class ConsultasPendentesActivity extends AppCompatActivity {
         setContentView(R.layout.activity_consultas_pendentes);
     }
     public void voltarMenuPac(View view){
-        Intent intent= new Intent(ConsultasPendentesActivity.this, MenuPaciente2.class);
+        Intent intent= new Intent(ConsultasPendentesActivity.this, MenuPaciente.class);
         startActivity(intent);
         finish();
     }

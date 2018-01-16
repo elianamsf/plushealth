@@ -1,9 +1,5 @@
 package com.maishealth.maishealth.usuario.dominio;
 
-/**
- * Created by Wenderson on 11/01/2018.
- */
-
 public enum EnumEspecialidade {
     CARDIOLOGIA("Cardiologia"),CLINICOGERAL("Clinico Geral"),DERMATOLOGIA("Dermatologia"),GASTROENTEROLOGIA("Gastroenterologia"),
     GENICOLOGIA("Genicologia"),HEMATOLOGIA("Hematologia"),INFECTOLOGIA("Infectologia"),NEUROLOGIA("Neurologia"),

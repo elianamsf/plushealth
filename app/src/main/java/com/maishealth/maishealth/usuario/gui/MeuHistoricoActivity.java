@@ -2,10 +2,7 @@ package com.maishealth.maishealth.usuario.gui;
 //import android.support.v4.app....
 
 //import android.app.Fragment;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
 
-import android.support.v4.app.FragmentTransaction;
 //app.FragmentTransaction;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -14,9 +11,8 @@ import android.view.View;
 
 import com.maishealth.maishealth.Historico;
 import com.maishealth.maishealth.R;
-import com.maishealth.maishealth.HistoricoFragment;
 
-import java.util.ArrayList;
+        import java.util.ArrayList;
 import java.util.List;
 
 public class MeuHistoricoActivity extends AppCompatActivity {
@@ -39,7 +35,7 @@ public class MeuHistoricoActivity extends AppCompatActivity {
     //}
     //mudança de tela - retornando para a tela de paciente
     public void voltarMenuPacI(View view){
-        Intent intent= new Intent(MeuHistoricoActivity.this, MenuPaciente2.class);
+        Intent intent= new Intent(MeuHistoricoActivity.this, MenuPaciente.class);
         startActivity(intent);
         finish();
 

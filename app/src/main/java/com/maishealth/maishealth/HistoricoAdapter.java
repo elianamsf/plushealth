@@ -6,7 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import org.w3c.dom.Text;
+// import org.w3c.dom.Text;
 
 
 import java.util.List;
@@ -37,9 +37,9 @@ public class HistoricoAdapter extends RecyclerView.Adapter<HistoricoAdapter.MyVi
         public MyViewHolder(View itemView){
             super(itemView);
 
-            tvNomeMed=(TextView) itemView.findViewById(R.id.tvNomeMed);
-            tvDataConsHist=(TextView) itemView.findViewById(R.id.tvDataConsHist);
-            tvEspecMed=(TextView) itemView.findViewById(R.id.tvEspecMed);
+            tvNomeMed= itemView.findViewById(R.id.tvNomeMed);
+            tvDataConsHist= itemView.findViewById(R.id.tvDataConsHist);
+            tvEspecMed= itemView.findViewById(R.id.tvEspecMed);
 
             itemView.setOnClickListener(this);
         }
@@ -69,9 +69,8 @@ public class HistoricoAdapter extends RecyclerView.Adapter<HistoricoAdapter.MyVi
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
         View view =mLayoutInflate.inflate(R.layout.item_consulta_historico,parent,false);
-        MyViewHolder myViewHolder =new MyViewHolder(view);
 
-        return myViewHolder;
+        return new MyViewHolder(view);
     }
 
     @Override

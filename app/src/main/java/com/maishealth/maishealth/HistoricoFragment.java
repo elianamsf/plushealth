@@ -1,5 +1,6 @@
 package com.maishealth.maishealth;
 
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 //import android.app.Fragment;
@@ -24,15 +25,14 @@ public class HistoricoFragment extends Fragment implements RecycleViewOnClickLis
     //private RecyclerView mRecycleView;
     //private List<Historico> mListHistorico;
     protected RecyclerView mRecycleView;
-    private HistoricoAdapter adapter;
 
     @Nullable
     @Override
     //A Classe LayoutInflater nesse context serve para transformar o xml do nosso fragment em uma view.
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view =inflater.inflate(R.layout.fragment_historicos,container,false);
 
-        mRecycleView=(RecyclerView) view.findViewById(R.id.rv_list_historico);
+        mRecycleView= view.findViewById(R.id.rv_list_historico);
         //setHasFixedSize. Estamos avisando que o tamanho do recycleView não vai mudar
         mRecycleView.setHasFixedSize(true);
 
@@ -42,8 +42,9 @@ public class HistoricoFragment extends Fragment implements RecycleViewOnClickLis
         mRecycleView.setLayoutManager(llm);
 
         //mListHistorico =((MeuHistoricoActivity) getActivity()).getListHistorico();
+        assert ((MeuHistoricoActivity) getActivity()) != null;
         List<Historico> mListHistorico = ((MeuHistoricoActivity) getActivity()).getListHistorico();
-        adapter =new HistoricoAdapter(mListHistorico,getActivity());
+        HistoricoAdapter adapter = new HistoricoAdapter(mListHistorico, getActivity());
         adapter.setRecycleViewOnClickListenerHack(this);
         mRecycleView.setAdapter(adapter);
 

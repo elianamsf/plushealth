@@ -14,7 +14,6 @@ import static com.maishealth.maishealth.infra.ConstanteSharedPreferences.ID_USER
 import static com.maishealth.maishealth.infra.ConstanteSharedPreferences.TITLE_PREFERENCES;
 
 public class ConsultaEscolhidaActivity extends AppCompatActivity {
-    private SharedPreferences sharedPreferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,7 +23,7 @@ public class ConsultaEscolhidaActivity extends AppCompatActivity {
         TextView lblNomePacienteCons = findViewById(R.id.textViewNomePacConsEsc);
 
         ServicosPessoa servicosPessoa = new ServicosPessoa(getApplicationContext());
-        sharedPreferences = getSharedPreferences(TITLE_PREFERENCES, MODE_PRIVATE);
+        SharedPreferences sharedPreferences = getSharedPreferences(TITLE_PREFERENCES, MODE_PRIVATE);
         long idUsuario = sharedPreferences.getLong(ID_USER_PREFERENCES, DEFAULT_ID_USER_PREFERENCES);
 
         if (idUsuario != DEFAULT_ID_USER_PREFERENCES) {

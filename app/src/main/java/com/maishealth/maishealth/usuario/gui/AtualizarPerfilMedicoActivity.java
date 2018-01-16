@@ -17,7 +17,6 @@ import static com.maishealth.maishealth.infra.ConstanteSharedPreferences.IS_MEDI
 import static com.maishealth.maishealth.infra.ConstanteSharedPreferences.TITLE_PREFERENCES;
 
 public class AtualizarPerfilMedicoActivity extends AppCompatActivity {
-    private SharedPreferences sharedPreferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,11 +31,11 @@ public class AtualizarPerfilMedicoActivity extends AppCompatActivity {
     }
 
     private void retornoMenuPrincipal(){
-        sharedPreferences = getSharedPreferences(TITLE_PREFERENCES, MODE_PRIVATE);
+        SharedPreferences sharedPreferences = getSharedPreferences(TITLE_PREFERENCES, MODE_PRIVATE);
         if(sharedPreferences.getBoolean(IS_MEDICO_PREFERENCES, DEFAULT_IS_MEDICO_PREFERENCES)){
             this.mudarTela(MenuMedicoActivity.class);
         } else {
-            this.mudarTela(MenuPaciente2.class);
+            this.mudarTela(MenuPaciente.class);
         }
     }
 

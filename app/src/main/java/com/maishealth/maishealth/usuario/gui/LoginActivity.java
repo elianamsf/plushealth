@@ -20,14 +20,14 @@ import static com.maishealth.maishealth.infra.ConstanteSharedPreferences.LOGIN_P
 import static com.maishealth.maishealth.infra.ConstanteSharedPreferences.PASSWORD_PREFERENCES;
 import static com.maishealth.maishealth.infra.ConstanteSharedPreferences.TITLE_PREFERENCES;
 
-public class Login1Activity extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity {
     private EditText edtEmailLogin, edtSenhaLogin;
     private SharedPreferences sharedPreferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login1);
+        setContentView(R.layout.activity_login);
 
         sharedPreferences = getSharedPreferences(TITLE_PREFERENCES, MODE_PRIVATE);
         edtEmailLogin = findViewById(R.id.emailx);
@@ -74,7 +74,7 @@ public class Login1Activity extends AppCompatActivity {
             if(isMedico){
                 this.mudarTela(MenuMedicoActivity.class);
             } else{
-                this.mudarTela(MenuPaciente2.class);
+                this.mudarTela(MenuPaciente.class);
             }
         } catch (Exception e) {
             GuiUtil.myToast(this, e);
@@ -90,7 +90,7 @@ public class Login1Activity extends AppCompatActivity {
     }
 
     private void mudarTela(Class proximaTela){
-        Intent intent = new Intent( Login1Activity.this, proximaTela);
+        Intent intent = new Intent( LoginActivity.this, proximaTela);
         startActivity(intent);
         finish();
     }

@@ -15,7 +15,7 @@ public class AcharPostoActivity extends AppCompatActivity {
         setContentView(R.layout.activity_achar_posto);
     }
     public void voltarParaMenuPac(View view){
-        Intent intent= new Intent(AcharPostoActivity.this, MenuPaciente2.class);
+        Intent intent= new Intent(AcharPostoActivity.this, MenuPaciente.class);
         startActivity(intent);
         finish();
     }

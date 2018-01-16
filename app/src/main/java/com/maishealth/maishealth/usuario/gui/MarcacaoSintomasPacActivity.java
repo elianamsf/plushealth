@@ -22,8 +22,6 @@ import static com.maishealth.maishealth.infra.ConstanteSharedPreferences.ID_USER
 import static com.maishealth.maishealth.infra.ConstanteSharedPreferences.TITLE_PREFERENCES;
 
 public class MarcacaoSintomasPacActivity extends AppCompatActivity {
-    private SharedPreferences sharedPreferences;
-    private EditText edtSintoma;
     private Button btnConfirmaSintoma;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +30,7 @@ public class MarcacaoSintomasPacActivity extends AppCompatActivity {
         TextView lblNomePaciente = findViewById(R.id.textViewNomePacSint);
 
         ServicosPessoa servicosPessoa = new ServicosPessoa(getApplicationContext());
-        sharedPreferences = getSharedPreferences(TITLE_PREFERENCES, MODE_PRIVATE);
+        SharedPreferences sharedPreferences = getSharedPreferences(TITLE_PREFERENCES, MODE_PRIVATE);
         long idUsuario = sharedPreferences.getLong(ID_USER_PREFERENCES, DEFAULT_ID_USER_PREFERENCES);
 
         if(idUsuario != DEFAULT_ID_USER_PREFERENCES){
@@ -45,12 +43,12 @@ public class MarcacaoSintomasPacActivity extends AppCompatActivity {
         }
     }
     public void voltarMarcParaMenuPac(View view){
-        Intent intent= new Intent(MarcacaoSintomasPacActivity.this, MenuPaciente2.class);
+        Intent intent= new Intent(MarcacaoSintomasPacActivity.this, MenuPaciente.class);
         startActivity(intent);
         finish();
     }
     public void marcarEnviarSintomas(View view){
-        edtSintoma = findViewById(R.id.editTextOutrosSint);
+        EditText edtSintoma = findViewById(R.id.editTextOutrosSint);
         String edtSintomaString = edtSintoma.getText().toString();
         String listaSintomas[]= Mask.split(edtSintomaString, ",");
 

@@ -13,12 +13,11 @@ import java.util.ArrayList;
 public class PacienteDoencaDAO {
     private SQLiteDatabase liteDatabase;
     private DataBase dataBaseHelper;
-    private PacienteDAO pacienteDAO;
     private DoencaCronicaDAO doencaCronicaDAO;
 
     public PacienteDoencaDAO(Context context) {
         dataBaseHelper = new DataBase(context);
-        pacienteDAO = new PacienteDAO(context);
+        PacienteDAO pacienteDAO = new PacienteDAO(context);
         doencaCronicaDAO = new DoencaCronicaDAO(context);
     }
 

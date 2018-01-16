@@ -30,7 +30,7 @@
                 android:layout_height="wrap_content"
                 android:checkMark="?android:attr/listChoiceIndicatorMultiple"
                 android:clickable="true"
-                android:focusable="false"
+                android:focusable="true"
                 android:gravity="start|center_vertical"
                 android:hint="@string/febre" />
 
@@ -43,7 +43,8 @@
                 android:clickable="true"
                 android:gravity="start|center_vertical"
                 android:hint="@string/dores_de_cabeca"
-                android:textColor="@android:color/black" />
+                android:textColor="@android:color/black"
+                android:focusable="true" />
 
             <CheckedTextView
                 android:id="@+id/sintoma_enjoo"
@@ -53,7 +54,8 @@
                 android:checked="false"
                 android:clickable="true"
                 android:gravity="start|center_vertical"
-                android:hint="@string/enjoo" />
+                android:hint="@string/enjoo"
+                android:focusable="true" />
 
             <CheckedTextView
                 android:id="@+id/sintoma_coceira"
@@ -63,7 +65,8 @@
                 android:checked="false"
                 android:clickable="true"
                 android:gravity="start|center_vertical"
-                android:hint="@string/coceira" />
+                android:hint="@string/coceira"
+                android:focusable="true" />
 
             <CheckedTextView
                 android:id="@+id/sintoma_bolhas"
@@ -73,7 +76,8 @@
                 android:checked="false"
                 android:clickable="true"
                 android:gravity="start|center_vertical"
-                android:hint="@string/bolhas" />
+                android:hint="@string/bolhas"
+                android:focusable="true" />
 
             <CheckedTextView
                 android:id="@+id/sintoma_dor_abdominal"
@@ -83,7 +87,8 @@
                 android:checked="false"
                 android:clickable="true"
                 android:gravity="start|center_vertical"
-                android:hint="@string/dor_abdominal" />
+                android:hint="@string/dor_abdominal"
+                android:focusable="true" />
 
             <CheckedTextView
                 android:id="@+id/sintoma_ardencia_olho"
@@ -93,7 +98,8 @@
                 android:checked="false"
                 android:clickable="true"
                 android:gravity="start|center_vertical"
-                android:hint="@string/ardencia_nos_olhos" />
+                android:hint="@string/ardencia_nos_olhos"
+                android:focusable="true" />
 
             <CheckedTextView
                 android:id="@+id/sintoma_olhos_inchados"
@@ -103,7 +109,8 @@
                 android:checked="false"
                 android:clickable="true"
                 android:gravity="start|center_vertical"
-                android:hint="@string/olhos_inchados" />
+                android:hint="@string/olhos_inchados"
+                android:focusable="true" />
         </LinearLayout>
 
     </ScrollView>

@@ -172,7 +172,7 @@ public class SignUpActivity extends AppCompatActivity {
             Servicos servicos = new Servicos(getApplicationContext());
             try{
                 servicos.cadastrarPaciente(email, senha, nome, sexo, dataNasc, cpf, tipoSangue);
-                Intent intent = new Intent(this, Login1Activity.class);
+                Intent intent = new Intent(this, LoginActivity.class);
                 startActivity(intent);
                 finish();
                 GuiUtil.myToast(this, getString(R.string.prompt_paciente_cadastrado_sucesso));
@@ -183,7 +183,7 @@ public class SignUpActivity extends AppCompatActivity {
             Servicos servicos = new Servicos(getApplicationContext());
             try{
                 servicos.cadastrarMedico(email, senha, nome, sexo, dataNasc, cpf, tipoSangue, crm, estado, especialidade);
-                Intent intent = new Intent(this, Login1Activity.class);
+                Intent intent = new Intent(this, LoginActivity.class);
                 startActivity(intent);
                 finish();
                 GuiUtil.myToast(this, getString(R.string.prompt_medico_cadastrado_sucesso));
@@ -195,11 +195,11 @@ public class SignUpActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        this.mudarTela(Login1Activity.class);
+        this.mudarTela(LoginActivity.class);
     }
 
     public void voltarTelaLogin(View view){
-        this.mudarTela(Login1Activity.class);
+        this.mudarTela(LoginActivity.class);
     }
 
     public void mudarTela(Class tela){

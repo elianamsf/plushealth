@@ -15,7 +15,6 @@ import java.util.GregorianCalendar;
 public class HorarioTrabMedicoActivity extends AppCompatActivity {
     private DatePicker datePicker;
     private EditText editTextQtdVagasMed;
-    private Button  btnConfirmarConsultas; //bt_confirmar_hor_montado_med
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,7 +23,7 @@ public class HorarioTrabMedicoActivity extends AppCompatActivity {
 
         datePicker = findViewById(R.id.datePicker);
         editTextQtdVagasMed = findViewById(R.id.editTextQtdVagasMed);
-        btnConfirmarConsultas = findViewById(R.id.bt_confirmar_hor_montado_med);
+        Button btnConfirmarConsultas = findViewById(R.id.bt_confirmar_hor_montado_med);
 
         btnConfirmarConsultas.setOnClickListener(new View.OnClickListener() {
             @Override

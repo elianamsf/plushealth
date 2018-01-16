@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorFundo"
-    tools:context="com.maishealth.maishealth.usuario.gui.MenuPaciente2">
+    tools:context="com.maishealth.maishealth.usuario.gui.MenuPaciente">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -15,7 +15,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/colorFundo"
-            tools:context="com.maishealth.maishealth.usuario.gui.MenuPaciente2">
+            tools:context="com.maishealth.maishealth.usuario.gui.MenuPaciente">
 
             <TextView
                 android:id="@+id/lblNomePaciente"

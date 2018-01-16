@@ -62,7 +62,7 @@ public abstract class Mask {
     }
 
     public static String[] split(String text, String delimiter) {
-        java.util.List<String> parts = new java.util.ArrayList<String>();
+        java.util.List<String> parts = new java.util.ArrayList<>();
 
         text += delimiter;
 
