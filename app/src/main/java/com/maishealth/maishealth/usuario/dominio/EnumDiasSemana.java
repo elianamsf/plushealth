@@ -5,7 +5,7 @@ package com.maishealth.maishealth.usuario.dominio;
  */
 
 public enum EnumDiasSemana {
-    SEGUNDA("Segunda-Feira"),TERCA("Terca-Feira"),QUARTA("Quarta-Feira"),QUINTA("Quinta-Feira"),SEXTA("Sexta-Feira")
+    SEGUNDA("Segunda-Feira"),TERCA("Terca-Feira"),QUARTA("Quarta-Feira"),QUINTA("Quinta-Feira"),SEXTA("Sexta-Feira");
 
     private final String valor;
 
