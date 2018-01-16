@@ -28,7 +28,7 @@
                 android:id="@+id/sintoma_febre"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+                android:checkMark="?android:attr/listChoiceIndicatorSingle"
                 android:clickable="true"
                 android:focusable="true"
                 android:gravity="start|center_vertical"

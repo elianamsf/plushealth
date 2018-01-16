@@ -42,7 +42,7 @@ public class HistoricoFragment extends Fragment implements RecycleViewOnClickLis
         mRecycleView.setLayoutManager(llm);
 
         //mListHistorico =((MeuHistoricoActivity) getActivity()).getListHistorico();
-        assert ((MeuHistoricoActivity) getActivity()) != null;
+        assert getActivity() != null;
         List<Historico> mListHistorico = ((MeuHistoricoActivity) getActivity()).getListHistorico();
         HistoricoAdapter adapter = new HistoricoAdapter(mListHistorico, getActivity());
         adapter.setRecycleViewOnClickListenerHack(this);
