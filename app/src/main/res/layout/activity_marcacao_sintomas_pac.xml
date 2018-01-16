@@ -28,9 +28,9 @@
                 android:id="@+id/sintoma_febre"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:checkMark="?android:attr/listChoiceIndicatorSingle"
+                android:checkMark="?android:attr/listChoiceIndicatorMultiple"
                 android:clickable="true"
-                android:focusable="true"
+                android:checked="true"
                 android:gravity="start|center_vertical"
                 android:hint="@string/febre" />
 
@@ -43,8 +43,7 @@
                 android:clickable="true"
                 android:gravity="start|center_vertical"
                 android:hint="@string/dores_de_cabeca"
-                android:textColor="@android:color/black"
-                android:focusable="true" />
+                android:textColor="@android:color/black" />
 
             <CheckedTextView
                 android:id="@+id/sintoma_enjoo"
@@ -54,8 +53,7 @@
                 android:checked="false"
                 android:clickable="true"
                 android:gravity="start|center_vertical"
-                android:hint="@string/enjoo"
-                android:focusable="true" />
+                android:hint="@string/enjoo" />
 
             <CheckedTextView
                 android:id="@+id/sintoma_coceira"

@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckedTextView;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -24,11 +25,22 @@ import static com.maishealth.maishealth.infra.ConstanteSharedPreferences.TITLE_P
 
 public class MarcacaoSintomasPacActivity extends AppCompatActivity {
     private Button btnConfirmaSintoma;
+    CheckedTextView teste;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_marcacao_sintomas_pac);
         TextView lblNomePaciente = findViewById(R.id.textViewNomePacSint);
+        teste=(CheckedTextView)findViewById(R.id.sintoma_febre);
+        teste.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (teste.isChecked() ){
+                    teste.setChecked(false);
+            }
+                else teste.setChecked(true);  }
+        });
 
         ServicosPessoa servicosPessoa = new ServicosPessoa(getApplicationContext());
         SharedPreferences sharedPreferences = getSharedPreferences(TITLE_PREFERENCES, MODE_PRIVATE);
