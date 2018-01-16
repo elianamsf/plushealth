@@ -1,46 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_meu_historico"
+
+    android:id="@+id/activity_escolher_dia_da_consulta"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="16dp"
-    android:paddingLeft="16dp"
-    android:paddingRight="16dp"
-    android:paddingTop="16dp"
-    tools:context="com.maishealth.maishealth.usuario.gui.MeuHistoricoActivity">
+    android:orientation="vertical"
+    tools:context="com.maishealth.maishealth.EscolherDiaDaConsultaActivity">
 
-    <RelativeLayout
-        android:id="@+id/rl_fragment_historico"
+    <ListView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"></RelativeLayout>
+        android:layout_height="match_parent"
+        android:id="@+id/listView">
+    </ListView>
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/rl_fragment_historico"
-        android:layout_centerHorizontal="true"
-        android:text="@string/label_meu_historico"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        android:textSize="25sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/btVoltarHist"
-        android:layout_width="wrap_content"
-        android:layout_height="41dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="28dp"
-        android:onClick="voltarMenuPacI"
-        android:text="@string/button_voltar"
-        app:layout_constraintEnd_toEndOf="@+id/textView4"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/textView4"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+</LinearLayout>
 
-</RelativeLayout>
+
+
