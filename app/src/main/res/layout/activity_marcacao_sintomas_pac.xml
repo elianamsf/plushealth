@@ -28,87 +28,87 @@
                 android:id="@+id/sintoma_febre"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:checkMark="?android:attr/listChoiceIndicatorMultiple"
-                android:clickable="true"
-                android:checked="true"
+                android:checked="false"
                 android:gravity="start|center_vertical"
-                android:hint="@string/febre" />
+                android:hint="@string/febre"
+                android:checkMark="?android:attr/listChoiceIndicatorSingle"
+                android:onClick="onCheckboxClicked"/>
 
             <CheckedTextView
                 android:id="@+id/sintoma_dor_de_cabeca"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:checkMark="?android:attr/listChoiceIndicatorMultiple"
                 android:checked="false"
-                android:clickable="true"
                 android:gravity="start|center_vertical"
                 android:hint="@string/dores_de_cabeca"
-                android:textColor="@android:color/black" />
+                android:textColor="@android:color/black"
+                android:checkMark="?android:attr/listChoiceIndicatorSingle"
+                android:onClick="onCheckboxClicked"/>
 
             <CheckedTextView
                 android:id="@+id/sintoma_enjoo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:checkMark="?android:attr/listChoiceIndicatorMultiple"
                 android:checked="false"
-                android:clickable="true"
                 android:gravity="start|center_vertical"
-                android:hint="@string/enjoo" />
+                android:hint="@string/enjoo"
+                android:checkMark="?android:attr/listChoiceIndicatorSingle"
+                android:onClick="onCheckboxClicked"/>
 
             <CheckedTextView
                 android:id="@+id/sintoma_coceira"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:checkMark="?android:attr/listChoiceIndicatorMultiple"
                 android:checked="false"
-                android:clickable="true"
                 android:gravity="start|center_vertical"
                 android:hint="@string/coceira"
-                android:focusable="true" />
+                android:focusable="true"
+                android:checkMark="?android:attr/listChoiceIndicatorSingle"
+                android:onClick="onCheckboxClicked"/>
 
             <CheckedTextView
                 android:id="@+id/sintoma_bolhas"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:checkMark="?android:attr/listChoiceIndicatorMultiple"
                 android:checked="false"
-                android:clickable="true"
                 android:gravity="start|center_vertical"
                 android:hint="@string/bolhas"
-                android:focusable="true" />
+                android:focusable="true"
+                android:checkMark="?android:attr/listChoiceIndicatorSingle"
+                android:onClick="onCheckboxClicked"/>
 
             <CheckedTextView
                 android:id="@+id/sintoma_dor_abdominal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:checkMark="?android:attr/listChoiceIndicatorMultiple"
                 android:checked="false"
-                android:clickable="true"
                 android:gravity="start|center_vertical"
                 android:hint="@string/dor_abdominal"
-                android:focusable="true" />
+                android:focusable="true"
+                android:checkMark="?android:attr/listChoiceIndicatorSingle"
+                android:onClick="onCheckboxClicked"/>
 
             <CheckedTextView
                 android:id="@+id/sintoma_ardencia_olho"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:checkMark="?android:attr/listChoiceIndicatorMultiple"
                 android:checked="false"
-                android:clickable="true"
                 android:gravity="start|center_vertical"
                 android:hint="@string/ardencia_nos_olhos"
-                android:focusable="true" />
+                android:checkMark="?android:attr/listChoiceIndicatorSingle"
+                android:focusable="true"
+                android:onClick="onCheckboxClicked"/>
 
             <CheckedTextView
                 android:id="@+id/sintoma_olhos_inchados"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:checkMark="?android:attr/listChoiceIndicatorMultiple"
                 android:checked="false"
-                android:clickable="true"
                 android:gravity="start|center_vertical"
                 android:hint="@string/olhos_inchados"
-                android:focusable="true" />
+                android:focusable="true"
+                android:checkMark="?android:attr/listChoiceIndicatorSingle"
+                android:onClick="onCheckboxClicked"/>
         </LinearLayout>
 
     </ScrollView>

@@ -25,22 +25,28 @@ import static com.maishealth.maishealth.infra.ConstanteSharedPreferences.TITLE_P
 
 public class MarcacaoSintomasPacActivity extends AppCompatActivity {
     private Button btnConfirmaSintoma;
-    CheckedTextView teste;
+    CheckedTextView febre;
+    CheckedTextView ardenciaOlho;
+    CheckedTextView dorCabeca;
+    CheckedTextView dorAbdominal;
+    CheckedTextView enjoo;
+    CheckedTextView coceira;
+    CheckedTextView bolhas;
+    CheckedTextView olhoInchado;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_marcacao_sintomas_pac);
         TextView lblNomePaciente = findViewById(R.id.textViewNomePacSint);
-        teste=(CheckedTextView)findViewById(R.id.sintoma_febre);
-        teste.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (teste.isChecked() ){
-                    teste.setChecked(false);
-            }
-                else teste.setChecked(true);  }
-        });
+        febre=(CheckedTextView)findViewById(R.id.sintoma_febre);
+        ardenciaOlho=(CheckedTextView)findViewById(R.id.sintoma_ardencia_olho);
+        dorCabeca=(CheckedTextView)findViewById(R.id.sintoma_dor_de_cabeca);
+        dorAbdominal=(CheckedTextView)findViewById(R.id.sintoma_dor_abdominal);
+        enjoo=(CheckedTextView)findViewById(R.id.sintoma_enjoo);
+        coceira=(CheckedTextView)findViewById(R.id.sintoma_coceira);
+        bolhas=(CheckedTextView)findViewById(R.id.sintoma_bolhas);
+        olhoInchado=(CheckedTextView)findViewById(R.id.sintoma_olhos_inchados);
 
         ServicosPessoa servicosPessoa = new ServicosPessoa(getApplicationContext());
         SharedPreferences sharedPreferences = getSharedPreferences(TITLE_PREFERENCES, MODE_PRIVATE);
@@ -77,6 +83,71 @@ public class MarcacaoSintomasPacActivity extends AppCompatActivity {
         Intent intent=new Intent(MarcacaoSintomasPacActivity.this, EscolherDiaDaConsultaActivity.class);
         startActivity(intent);
         finish();
+    }
+
+    public void onCheckboxClicked(View view) {
+
+        boolean checked = ((CheckedTextView) view).isChecked();
+        switch (view.getId()) {
+            case R.id.sintoma_ardencia_olho:
+                if (checked)
+                    { ardenciaOlho.setChecked(false);}
+                else { ardenciaOlho.setChecked(true); }
+
+                break;
+
+            case R.id.sintoma_febre:
+                if (checked)
+                    { febre.setChecked(false); }
+                else { febre.setChecked(true); }
+
+                break;
+
+            case R.id.sintoma_dor_abdominal:
+                if (checked)
+                    { dorAbdominal.setChecked(false); }
+                else { dorAbdominal.setChecked(true); }
+
+                break;
+
+            case R.id.sintoma_dor_de_cabeca:
+                if (checked)
+                    { dorCabeca.setChecked(false); }
+                else { dorCabeca.setChecked(true); }
+
+                break;
+
+            case R.id.sintoma_bolhas:
+                if (checked)
+                    { bolhas.setChecked(false); }
+                else { bolhas.setChecked(true); }
+
+                break;
+
+            case R.id.sintoma_olhos_inchados:
+                if (checked)
+                    { olhoInchado.setChecked(false); }
+                else { olhoInchado.setChecked(true); }
+
+                break;
+
+            case R.id.sintoma_enjoo:
+                if (checked)
+                    { enjoo.setChecked(false); }
+                else { enjoo.setChecked(true); }
+
+                break;
+
+            case R.id.sintoma_coceira:
+                if (checked)
+                    { coceira.setChecked(false); }
+                else { coceira.setChecked(true); }
+
+                break;
+
+        }
+
+
     }
 
 }
