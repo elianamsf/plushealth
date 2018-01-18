@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.maishealth.maishealth.EscolherDia">
+    tools:context="com.maishealth.maishealth.usuario.gui.EscolherDia">
 
     <DatePicker
         android:id="@+id/datePicker"

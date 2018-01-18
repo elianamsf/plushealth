@@ -1,7 +1,9 @@
-package com.maishealth.maishealth;
+package com.maishealth.maishealth.usuario.gui;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.maishealth.maishealth.R;
 
 public class EscolherDia extends AppCompatActivity {
 

@@ -1,4 +1,4 @@
-package com.maishealth.maishealth;
+package com.maishealth.maishealth.usuario.gui;
 
 //import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -11,8 +11,7 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.maishealth.maishealth.usuario.gui.ConfirmarConsulta;
-import com.maishealth.maishealth.usuario.gui.MarcacaoSintomasPacActivity;
+import com.maishealth.maishealth.R;
 
 public class EscolherDiaDaConsultaActivity extends AppCompatActivity {
 

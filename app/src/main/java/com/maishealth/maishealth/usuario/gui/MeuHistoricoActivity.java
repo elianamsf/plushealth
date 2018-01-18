@@ -72,6 +72,7 @@ public class MeuHistoricoActivity extends AppCompatActivity {
             return view;
         }
     }
+
     //mudança de tela - retornando para a tela de paciente
     public void voltarMenuPacI(View view) {
         Intent intent = new Intent(MeuHistoricoActivity.this, MenuPaciente.class);
@@ -79,14 +80,4 @@ public class MeuHistoricoActivity extends AppCompatActivity {
         finish();
 
     }
-
-    //metodo que vai retornar uma lista de historico(consultas no caso) - isso foi do fragment...
-    public List<Historico> getListHistorico() {
-        List<Historico> mlist = new ArrayList<>();
-        for (int i = 0; i < 20; i++) {
-            Historico historico = new Historico("Data" + i, "Clinico geral", "Pessoa de nome" + i);
-            mlist.add(historico);
-        }
-        return mlist;
-        }
-    }
+}

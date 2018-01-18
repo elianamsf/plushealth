@@ -10,7 +10,6 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.maishealth.maishealth.EscolherDiaDaConsultaActivity;
 import com.maishealth.maishealth.R;
 
 public class ConsultasPendentesActivity extends AppCompatActivity {
