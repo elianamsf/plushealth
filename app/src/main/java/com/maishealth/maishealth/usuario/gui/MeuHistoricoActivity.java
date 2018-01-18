@@ -14,7 +14,6 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.maishealth.maishealth.Historico;
 import com.maishealth.maishealth.R;
 
 import java.util.ArrayList;

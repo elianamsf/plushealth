@@ -48,7 +48,6 @@
             android:screenOrientation="portrait" />
         <activity android:name=".EscolherDia" />
         <activity android:name=".usuario.gui.ConfirmarConsulta" />
-        <activity android:name=".usuario.gui.ConsultasAnterioresPacActivity" />
         <activity android:name=".usuario.gui.ConsultaAtualMedActivity" />
         <activity android:name=".ConsultaEscolhidaActivity" />
         <activity android:name=".usuario.gui.CadastrarMedicamentoActivity" />
