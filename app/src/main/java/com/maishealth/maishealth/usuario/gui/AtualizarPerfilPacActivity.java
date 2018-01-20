@@ -15,9 +15,17 @@ public class AtualizarPerfilPacActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_atualizar_perfil_pac);
     }
-    public void telaRetornoMenuPac(View view){
-        Intent intent=new Intent(AtualizarPerfilPacActivity.this, MenuPaciente.class);
+    public void mudarTela(Class tela){
+        Intent intent = new Intent(this, tela);
         startActivity(intent);
         finish();
+    }
+    
+    public void onBackPressed() {
+        this.mudarTela(MenuPaciente.class);
+    }
+    
+    public void telaRetornoMenuPac(View view){
+        this.mudarTela(MenuPaciente.class);
     }
 }
