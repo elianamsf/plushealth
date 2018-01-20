@@ -21,6 +21,7 @@ public class AcharPostoActivity extends AppCompatActivity {
         finish();
     }
     
+    @Override
     public void onBackPressed() {
         this.mudarTela(MenuPaciente.class);
     }
