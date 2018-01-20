@@ -11,7 +11,6 @@ import android.widget.CheckedTextView;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.maishealth.maishealth.EscolherDiaDaConsultaActivity;
 import com.maishealth.maishealth.R;
 import com.maishealth.maishealth.infra.GuiUtil;
 import com.maishealth.maishealth.infra.Mask;

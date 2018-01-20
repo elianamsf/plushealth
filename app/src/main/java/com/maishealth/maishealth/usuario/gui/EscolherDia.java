@@ -7,23 +7,26 @@ import android.view.View;
 
 import com.maishealth.maishealth.R;
 
-public class ConsultaAtualMedActivity extends AppCompatActivity {
+public class EscolherDia extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_consulta_atual_med);
+        setContentView(R.layout.activity_escolher_dia);
+
     }
     private void mudarTela(Class tela){
         Intent intent=new Intent(this, tela);
         startActivity(intent);
         finish();
     }
-    public void voltarListaPacientes(View view){this.mudarTela(ListaDeConsultasParaMedicoActivity.class);
-
+    public void voltarParaTelaMenuMedico(View view) {
+        this.mudarTela(MenuMedicoActivity.class);
     }
-    //falta atualizar real
-    public void atualizarConsultaPaciente(View view) {
+    //aq embaixo falta pegar o dia clicado na tela do calendário
+    public void selecionarDiaDoCalendario(View view){
 
-        this.mudarTela(MenuMedicoActivity.class);}
+        this.mudarTela(HorarioTrabMedicoActivity.class);
+    }
+
 }

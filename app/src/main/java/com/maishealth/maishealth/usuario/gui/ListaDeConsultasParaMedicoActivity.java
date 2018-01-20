@@ -12,22 +12,21 @@ import android.widget.TextView;
 
 import com.maishealth.maishealth.R;
 
-public class ConsultasPendentesActivity extends AppCompatActivity {
+public class ListaDeConsultasParaMedicoActivity extends AppCompatActivity {
 
     //isso aq dos nomes e descricoes foram feitas para os testes, mas vcs q tem q adptar para na vdd
-    //vir os nomes dos medicos
+    //vir os nomes dos PACIENTES
     int[] IMAGES2 ={R.drawable.ic_event_38dp};
-    String[] NAMES2 = {"Doutora Kimbelly-Pediatra kkk","GANDHI","CopiChand"};
-    String[] DESCRIPTION2={"Data 16/03/2018","Data 17/08/2019","Data 23/05/2021"};
-
+    String[] NAMES2 = {"Paciente João","Paciente Guilherme","CopiChand"};
+    String[] DESCRIPTION2={"NÃO SEI OQ COLOCO AQ HM"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_consultas_pendentes);
+        setContentView(R.layout.activity_lista_de_consultas_para_medico);
 
-        ListView listView= findViewById(R.id.listView);
-            ConsultasPendentesActivity.CustomAdapter customAdapter=new ConsultasPendentesActivity.CustomAdapter();
+        ListView listView=(ListView) findViewById(R.id.listView);
+        ListaDeConsultasParaMedicoActivity.CustomAdapter customAdapter=new ListaDeConsultasParaMedicoActivity.CustomAdapter();
 
         listView.setAdapter(customAdapter);
     }
@@ -54,9 +53,9 @@ public class ConsultasPendentesActivity extends AppCompatActivity {
         public View getView(int i, View view, ViewGroup viewGroup) {
             view = getLayoutInflater().inflate(R.layout.customlayout, null);
 
-            ImageView imageView = view.findViewById(R.id.imageView);
-            TextView textView_name = view.findViewById(R.id.textView_name);
-            TextView textView_description = view.findViewById(R.id.textView_descriptions);
+            ImageView imageView = (ImageView) view.findViewById(R.id.imageView);
+            TextView textView_name = (TextView) view.findViewById(R.id.textView_name);
+            TextView textView_description = (TextView) view.findViewById(R.id.textView_descriptions);
 
 
             //imageView.setImageResource(IMAGES2[i]);
@@ -66,11 +65,11 @@ public class ConsultasPendentesActivity extends AppCompatActivity {
             return view;
         }
     }
-    //falta metodo para mostrar detalhes da consulta pendente(pegar o cliq da pessoa e mostrar)
-
-    public void voltarMenuPac(View view){
-        Intent intent= new Intent(ConsultasPendentesActivity.this, MenuPaciente.class);
+    private void mudarTela(Class tela){
+        Intent intent=new Intent(this, tela);
         startActivity(intent);
         finish();
     }
+    //falta metodo para mostrar detalhes da consulta atual do medico(pegar o cliq da pessoa e mostrar essa tela)
+    public void telaConsultaAtualMedico(View view){this.mudarTela(ConsultaAtualMedActivity.class);}
 }

@@ -1,4 +1,4 @@
-package com.maishealth.maishealth;
+package com.maishealth.maishealth.usuario.gui;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -7,6 +7,7 @@ import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 
+import com.maishealth.maishealth.R;
 import com.maishealth.maishealth.usuario.negocio.ServicosMedico;
 
 import java.text.SimpleDateFormat;

@@ -4,28 +4,40 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.maishealth.maishealth.EscolherDia">
+    tools:context="com.maishealth.maishealth.usuario.gui.EscolherDia">
 
     <DatePicker
         android:id="@+id/datePicker"
         android:layout_width="348dp"
         android:layout_height="389dp"
-        tools:layout_editor_absoluteX="6dp"
-        tools:layout_editor_absoluteY="16dp" />
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button7"
+        android:id="@+id/buttonSelecionarDiaNoCalendario"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="36dp"
+        android:layout_marginTop="20dp"
+        android:onClick="selecionarDiaDoCalendario"
         android:text="SELECIONAR"
-        tools:layout_editor_absoluteX="246dp"
-        tools:layout_editor_absoluteY="426dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/datePicker" />
 
     <Button
-        android:id="@+id/button8"
+        android:id="@+id/buttonVoltarMenuMedico"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:onClick="voltarParaTelaMenuMedico"
         android:text="VOLTAR"
-        tools:layout_editor_absoluteX="60dp"
-        tools:layout_editor_absoluteY="426dp" />
+        app:layout_constraintEnd_toStartOf="@+id/buttonSelecionarDiaNoCalendario"
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/datePicker" />
 </android.support.constraint.ConstraintLayout>

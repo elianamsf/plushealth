@@ -105,6 +105,7 @@
         android:layout_marginTop="36dp"
         android:background="@color/colorButoes"
         android:text="@string/voltar_da_cons_atual"
+        android:onClick="voltarListaPacientes"
         android:textColor="@color/colorTextoBut"
         app:layout_constraintStart_toStartOf="@+id/TextViewTratConsEsc"
         app:layout_constraintTop_toBottomOf="@+id/TextViewTratConsEsc" />
@@ -117,7 +118,7 @@
         android:layout_marginTop="36dp"
         android:background="@color/colorButoes"
         android:text="@string/button_atualizar_cons"
-
+        android:onClick="atualizarConsultaPaciente"
         android:textColor="@color/colorTextoBut"
         app:layout_constraintStart_toStartOf="@+id/TextViewTratConsEsc"
         app:layout_constraintTop_toBottomOf="@+id/TextViewTratConsEsc" />

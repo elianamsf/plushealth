@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.maishealth.maishealth.HorarioTrabMedicoActivity">
+    tools:context="com.maishealth.maishealth.usuario.gui.HorarioTrabMedicoActivity">
 
     <TextView
         android:id="@+id/textViewHorarioMed"
@@ -23,9 +23,9 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
+    <Spinner
         android:id="@+id/editTextInicioHorMed"
-        android:layout_width="81dp"
+        android:layout_width="210dp"
         android:layout_height="39dp"
         android:layout_marginTop="64dp"
         android:ems="10"
@@ -80,13 +80,13 @@
         android:id="@+id/bt_confirmar_hor_montado_med"
         android:layout_width="93dp"
         android:layout_height="47dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginEnd="24dp"
         android:layout_marginTop="64dp"
         android:background="@color/colorButoes"
         android:text="@string/button_confirmar_hor_mont_med"
         android:textColor="@color/colorTextoBut"
-        app:layout_constraintEnd_toEndOf="@+id/editTextFimHorMed"
-        app:layout_constraintTop_toBottomOf="@+id/editTextFimHorMed" />
+        app:layout_constraintEnd_toEndOf="@+id/editTextInicioHorMed"
+        app:layout_constraintTop_toBottomOf="@+id/editTextInicioHorMed" />
 
     <Button
         android:id="@+id/buttonCancelar"
@@ -102,32 +102,6 @@
         app:layout_constraintHorizontal_bias="0.671"
         app:layout_constraintStart_toStartOf="@+id/textViewHorMedico"
         app:layout_constraintTop_toBottomOf="@+id/editTextInicioHorMed" />
-
-    <TextView
-        android:id="@+id/textView12"
-        android:layout_width="27dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="96dp"
-        android:layout_marginTop="80dp"
-        android:text="Às"
-        android:textColor="@android:color/black"
-        android:textSize="16sp"
-        app:layout_constraintStart_toEndOf="@+id/textViewQtdVagasMed"
-        app:layout_constraintTop_toBottomOf="@+id/editTextQtdVagasMed" />
-
-    <EditText
-        android:id="@+id/editTextFimHorMed"
-        android:layout_width="82dp"
-        android:layout_height="33dp"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="68dp"
-        android:ems="10"
-        android:inputType="time"
-        android:textColor="@android:color/black"
-        app:layout_constraintEnd_toEndOf="@+id/editTextQtdVagasMed"
-        app:layout_constraintHorizontal_bias="0.857"
-        app:layout_constraintStart_toEndOf="@+id/textView12"
-        app:layout_constraintTop_toBottomOf="@+id/editTextQtdVagasMed" />
 
     <EditText
         android:id="@+id/editTextQtdVagasMed"

@@ -9,12 +9,12 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/icon_launcher_new_plus_health"
+        android:fullBackupContent="@xml/backup_descriptor"
+        android:icon="@mipmap/icon_launcher_new_logo_round"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_health_launcher_round"
+        android:roundIcon="@mipmap/icon_launcher_new_logo_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme"
-        android:fullBackupContent="@xml/backup_descriptor">
+        android:theme="@style/AppTheme">
         <activity
             android:name=".usuario.gui.LoginActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
@@ -46,14 +46,13 @@
         <activity
             android:name=".usuario.gui.MarcacaoSintomasPacActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".EscolherDia" />
+        <activity android:name=".usuario.gui.EscolherDia" />
         <activity android:name=".usuario.gui.ConfirmarConsulta" />
         <activity android:name=".usuario.gui.ConsultaAtualMedActivity" />
-        <activity android:name=".ConsultaEscolhidaActivity" />
-        <activity android:name=".usuario.gui.CadastrarMedicamentoActivity" />
-        <activity android:name=".HorarioTrabMedicoActivity" />
-        <activity android:name=".EscolherDiaDaConsultaActivity"/>
-
+        <activity android:name=".usuario.gui.ConsultaEscolhidaActivity" />
+        <activity android:name=".usuario.gui.HorarioTrabMedicoActivity" />
+        <activity android:name=".usuario.gui.EscolherDiaDaConsultaActivity" />
+        <activity android:name=".usuario.gui.ListaDeConsultasParaMedicoActivity"></activity>
     </application>
 
 </manifest>
