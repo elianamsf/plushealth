@@ -115,7 +115,7 @@ public class Servicos {
         if(verificarEmail != null) {
             throw new Exception("Email já cadastrado");
         } else {
-            servicosUsuario.modificarUsuário(email, senha);
+            servicosUsuario.modificarUsuario(email, senha);
         }
 
 

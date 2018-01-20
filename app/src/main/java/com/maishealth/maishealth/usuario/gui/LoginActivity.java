@@ -21,6 +21,7 @@ import static com.maishealth.maishealth.infra.ConstanteSharedPreferences.PASSWOR
 import static com.maishealth.maishealth.infra.ConstanteSharedPreferences.TITLE_PREFERENCES;
 
 public class LoginActivity extends AppCompatActivity {
+    public static final String EM_CONSTRUÇÃO = "Em construção";
     private EditText edtEmailLogin, edtSenhaLogin;
     private SharedPreferences sharedPreferences;
 
@@ -86,7 +87,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public void acionarEmergencia(View view){
-        GuiUtil.myToast(this,"Em construção");
+        GuiUtil.myToast(this, EM_CONSTRUÇÃO);
     }
 
     private void mudarTela(Class proximaTela){
@@ -94,7 +95,7 @@ public class LoginActivity extends AppCompatActivity {
         startActivity(intent);
         finish();
     }
-    public void fecharApp(View view){
-        finish();
-    }
+    //public void fecharApp(View view){
+      //  finish();
+    //}
 }

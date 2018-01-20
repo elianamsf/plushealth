@@ -35,7 +35,7 @@ public class ServicosUsuario {
     }
 
     @SuppressLint("ApplySharedPref")
-    public void modificarUsuário(String email, String senha){
+    public void modificarUsuario(String email, String senha){
         Long idUsuario = sharedPreferences.getLong(ID_USER_PREFERENCES, DEFAULT_ID_USER_PREFERENCES);
         SharedPreferences.Editor editor = sharedPreferences.edit();
         Usuario usuario = usuarioDAO.getUsuario(idUsuario);

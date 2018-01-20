@@ -10,6 +10,10 @@ import com.maishealth.maishealth.usuario.dominio.Consulta;
 import com.maishealth.maishealth.usuario.dominio.EnumStatusConsulta;
 
 public class ConsultaDAO {
+    public static final String LIKE = " LIKE ?";
+    public static final String SELECT_FROM = "SELECT * FROM ";
+    public static final String AND = " AND ";
+    public static final String WHERE = " WHERE ";
     private SQLiteDatabase liteDatabase;
     private DataBase dataBaseHelper;
 
@@ -135,11 +139,11 @@ public class ConsultaDAO {
     }
 
     public Consulta getConsulta(String data, long idPaciente, long idMedico, long idConsulta){
-        String query = "SELECT * FROM " + DataBase.TABELA_CONSULTA +
-                        " WHERE " + DataBase.CONSULTA_DATA + " LIKE ?" +
-                        " AND " + DataBase.ID_EST_PACIENTE_CON  + " LIKE ?" +
-                    " AND " + DataBase.ID_EST_MEDICO_CON  + " LIKE ?" +
-                    " AND " + DataBase.ID_CONSULTA + " LIKE ?";
+        String query = SELECT_FROM + DataBase.TABELA_CONSULTA +
+                WHERE + DataBase.CONSULTA_DATA + LIKE +
+                AND + DataBase.ID_EST_PACIENTE_CON  + LIKE +
+                AND + DataBase.ID_EST_MEDICO_CON  + LIKE +
+                AND + DataBase.ID_CONSULTA + LIKE;
 
         String idPacienteString = Long.toString(idPaciente);
         String idMedicoString = Long.toString(idMedico);
@@ -151,9 +155,9 @@ public class ConsultaDAO {
     }
 
     public Consulta getConsultaByData(String data){
-        String query = "SELECT * FROM " + DataBase.TABELA_CONSULTA +
-                " WHERE " + DataBase.CONSULTA_DATA + " LIKE ?" +
-                " AND " + DataBase.CONSULTA_STATUS + " LIKE ?";
+        String query = SELECT_FROM + DataBase.TABELA_CONSULTA +
+                WHERE + DataBase.CONSULTA_DATA + LIKE +
+                AND + DataBase.CONSULTA_STATUS + LIKE;
 
         String status = EnumStatusConsulta.DISPONIVEL.toString();
 

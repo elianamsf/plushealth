@@ -61,18 +61,18 @@ public abstract class Mask {
         };
     }
 
-    public static String[] split(String text, String delimiter) {
+    public static String[] split(String text) {
         java.util.List<String> parts = new java.util.ArrayList<>();
 
-        text += delimiter;
+        text += ",";
 
-        for (int i = text.indexOf(delimiter), j=0; i != -1;) {
+        for (int i = text.indexOf(","), j = 0; i != -1;) {
             String temp = text.substring(j,i);
             if(temp.trim().length() != 0) {
                 parts.add(temp);
             }
-            j = i + delimiter.length();
-            i = text.indexOf(delimiter,j);
+            j = i + ",".length();
+            i = text.indexOf(",",j);
         }
 
         return parts.toArray(new String[0]);

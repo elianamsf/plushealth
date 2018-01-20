@@ -1,9 +1,5 @@
 package com.maishealth.maishealth.usuario.dominio;
 
-/**
- * Created by Carol and Wenderson on 16/01/2018.
- */
-
 public enum EnumDiasSemana {
     SEGUNDA("Segunda-Feira"),TERCA("Terca-Feira"),QUARTA("Quarta-Feira"),QUINTA("Quinta-Feira"),SEXTA("Sexta-Feira");
 

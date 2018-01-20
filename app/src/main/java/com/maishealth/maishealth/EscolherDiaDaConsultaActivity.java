@@ -27,7 +27,7 @@ public class EscolherDiaDaConsultaActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_escolher_dia_da_consulta);
 
-        ListView listView=(ListView) findViewById(R.id.listView);
+        ListView listView= findViewById(R.id.listView);
         CustomAdapter customAdapter=new CustomAdapter();
 
         listView.setAdapter(customAdapter);
@@ -55,9 +55,9 @@ public class EscolherDiaDaConsultaActivity extends AppCompatActivity {
         public View getView(int i, View view, ViewGroup viewGroup) {
             view= getLayoutInflater().inflate(R.layout.customlayout,null);
 
-            ImageView imageView =(ImageView)view.findViewById(R.id.imageView);
-            TextView textView_name=(TextView)view.findViewById(R.id.textView_name);
-            TextView textView_description=(TextView)view.findViewById(R.id.textView_descriptions);
+            ImageView imageView = view.findViewById(R.id.imageView);
+            TextView textView_name= view.findViewById(R.id.textView_name);
+            TextView textView_description= view.findViewById(R.id.textView_descriptions);
 
             textView_name.setText(NAMES[i]);
             textView_description.setText(DESCRIPTION[i]);

@@ -10,7 +10,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:paddingTop="20dp"
-        android:paddingLeft="26dp">
+        android:paddingStart="26dp">
 
         <TextView
             android:id="@+id/textViewNomeMedMenuHist"
@@ -33,7 +33,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:paddingLeft="26dp">
+        android:paddingStart="26dp">
 
         <TextView
             android:id="@+id/TextViewEspecHist"

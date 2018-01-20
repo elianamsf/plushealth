@@ -24,6 +24,7 @@ import static com.maishealth.maishealth.infra.ConstanteSharedPreferences.ID_USER
 import static com.maishealth.maishealth.infra.ConstanteSharedPreferences.TITLE_PREFERENCES;
 
 public class MarcacaoSintomasPacActivity extends AppCompatActivity {
+    public static final String SINTOMA_S_INSERIDO_S_COM_SUCESSO = "Sintoma(s) Inserido(s) com sucesso!";
     private Button btnConfirmaSintoma;
     CheckedTextView febre;
     CheckedTextView ardenciaOlho;
@@ -39,14 +40,14 @@ public class MarcacaoSintomasPacActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_marcacao_sintomas_pac);
         TextView lblNomePaciente = findViewById(R.id.textViewNomePacSint);
-        febre=(CheckedTextView)findViewById(R.id.sintoma_febre);
-        ardenciaOlho=(CheckedTextView)findViewById(R.id.sintoma_ardencia_olho);
-        dorCabeca=(CheckedTextView)findViewById(R.id.sintoma_dor_de_cabeca);
-        dorAbdominal=(CheckedTextView)findViewById(R.id.sintoma_dor_abdominal);
-        enjoo=(CheckedTextView)findViewById(R.id.sintoma_enjoo);
-        coceira=(CheckedTextView)findViewById(R.id.sintoma_coceira);
-        bolhas=(CheckedTextView)findViewById(R.id.sintoma_bolhas);
-        olhoInchado=(CheckedTextView)findViewById(R.id.sintoma_olhos_inchados);
+        febre= findViewById(R.id.sintoma_febre);
+        ardenciaOlho= findViewById(R.id.sintoma_ardencia_olho);
+        dorCabeca= findViewById(R.id.sintoma_dor_de_cabeca);
+        dorAbdominal= findViewById(R.id.sintoma_dor_abdominal);
+        enjoo= findViewById(R.id.sintoma_enjoo);
+        coceira= findViewById(R.id.sintoma_coceira);
+        bolhas= findViewById(R.id.sintoma_bolhas);
+        olhoInchado= findViewById(R.id.sintoma_olhos_inchados);
 
         ServicosPessoa servicosPessoa = new ServicosPessoa(getApplicationContext());
         SharedPreferences sharedPreferences = getSharedPreferences(TITLE_PREFERENCES, MODE_PRIVATE);
@@ -71,14 +72,14 @@ public class MarcacaoSintomasPacActivity extends AppCompatActivity {
     public void marcarEnviarSintomas(View view){
         EditText edtSintoma = findViewById(R.id.editTextOutrosSint);
         String edtSintomaString = edtSintoma.getText().toString();
-        String listaSintomas[]= Mask.split(edtSintomaString, ",");
+        String listaSintomas[]= Mask.split(edtSintomaString);
 
         for (String sintoma: listaSintomas){
         ServicosPaciente servicosPaciente = new ServicosPaciente(getApplicationContext());
         servicosPaciente.inserirSintoma(sintoma);
         }
 
-        GuiUtil.myToast(this,"Sintoma(s) Inserido(s) com sucesso!");
+        GuiUtil.myToast(this, SINTOMA_S_INSERIDO_S_COM_SUCESSO);
 
         Intent intent=new Intent(MarcacaoSintomasPacActivity.this, EscolherDiaDaConsultaActivity.class);
         startActivity(intent);

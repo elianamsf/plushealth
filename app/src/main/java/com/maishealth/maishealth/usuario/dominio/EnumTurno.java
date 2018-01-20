@@ -1,9 +1,5 @@
 package com.maishealth.maishealth.usuario.dominio;
 
-/**
- * Created by carol and wenderson on 16/01/2018.
- */
-
 public enum EnumTurno {
     MANHA("Manhã"), TARDE("Tarde");
 
