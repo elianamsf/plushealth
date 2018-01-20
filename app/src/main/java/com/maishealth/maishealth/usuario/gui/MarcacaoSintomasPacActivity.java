@@ -18,21 +18,26 @@ import com.maishealth.maishealth.usuario.dominio.Pessoa;
 import com.maishealth.maishealth.usuario.negocio.ServicosPaciente;
 import com.maishealth.maishealth.usuario.negocio.ServicosPessoa;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import static com.maishealth.maishealth.infra.ConstanteSharedPreferences.DEFAULT_ID_USER_PREFERENCES;
 import static com.maishealth.maishealth.infra.ConstanteSharedPreferences.ID_USER_PREFERENCES;
 import static com.maishealth.maishealth.infra.ConstanteSharedPreferences.TITLE_PREFERENCES;
 
 public class MarcacaoSintomasPacActivity extends AppCompatActivity {
-    public static final String SINTOMA_S_INSERIDO_S_COM_SUCESSO = "Sintoma(s) Inserido(s) com sucesso!";
+    private static final String SINTOMA_S_INSERIDO_S_COM_SUCESSO = "Sintoma(s) Inserido(s) com sucesso!";
     private Button btnConfirmaSintoma;
-    CheckedTextView febre;
-    CheckedTextView ardenciaOlho;
-    CheckedTextView dorCabeca;
-    CheckedTextView dorAbdominal;
-    CheckedTextView enjoo;
-    CheckedTextView coceira;
-    CheckedTextView bolhas;
-    CheckedTextView olhoInchado;
+    private CheckedTextView febre;
+    private CheckedTextView ardenciaOlho;
+    private CheckedTextView dorCabeca;
+    private CheckedTextView dorAbdominal;
+    private CheckedTextView enjoo;
+    private CheckedTextView coceira;
+    private CheckedTextView bolhas;
+    private CheckedTextView olhoInchado;
+    private List listaCheckbox = new ArrayList(8);
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -88,6 +93,8 @@ public class MarcacaoSintomasPacActivity extends AppCompatActivity {
         servicosPaciente.inserirSintoma(sintoma);
         }
 
+
+        
         GuiUtil.myToast(this, SINTOMA_S_INSERIDO_S_COM_SUCESSO);
 
         this.mudarTela(EscolherDiaDaConsultaActivity.class);
@@ -100,63 +107,82 @@ public class MarcacaoSintomasPacActivity extends AppCompatActivity {
         switch (view.getId()) {
             case R.id.sintoma_ardencia_olho:
                 if (checked)
-                    { ardenciaOlho.setChecked(false);}
-                else { ardenciaOlho.setChecked(true); }
+                    { ardenciaOlho.setChecked(false);
+                    listaCheckbox.remove(ardenciaOlho.getText());
+                    }
+                else {
+                    ardenciaOlho.setChecked(true);
+                    listaCheckbox.add(ardenciaOlho.getText());
+                }
 
                 break;
 
             case R.id.sintoma_febre:
                 if (checked)
-                    { febre.setChecked(false); }
-                else { febre.setChecked(true); }
+                    { febre.setChecked(false);
+                    listaCheckbox.remove(febre.getText());
+                    }
+                else { febre.setChecked(true);
+                    listaCheckbox.add(febre.getText());
+                    }
 
                 break;
 
             case R.id.sintoma_dor_abdominal:
                 if (checked)
-                    { dorAbdominal.setChecked(false); }
-                else { dorAbdominal.setChecked(true); }
+                    { dorAbdominal.setChecked(false);
+                    listaCheckbox.remove(dorAbdominal.getText());}
+                else { dorAbdominal.setChecked(true);
+                    listaCheckbox.add(dorAbdominal.getText());}
 
                 break;
 
             case R.id.sintoma_dor_de_cabeca:
                 if (checked)
-                    { dorCabeca.setChecked(false); }
-                else { dorCabeca.setChecked(true); }
+                    { dorCabeca.setChecked(false);
+                    listaCheckbox.remove(dorCabeca.getText());}
+                else { dorCabeca.setChecked(true);
+                    listaCheckbox.add(dorCabeca.getText());}
 
                 break;
 
             case R.id.sintoma_bolhas:
                 if (checked)
-                    { bolhas.setChecked(false); }
-                else { bolhas.setChecked(true); }
+                    { bolhas.setChecked(false);
+                    listaCheckbox.remove(bolhas.getText());}
+                else { bolhas.setChecked(true);
+                    listaCheckbox.add(bolhas.getText());}
 
                 break;
 
             case R.id.sintoma_olhos_inchados:
                 if (checked)
-                    { olhoInchado.setChecked(false); }
-                else { olhoInchado.setChecked(true); }
+                    { olhoInchado.setChecked(false);
+                    listaCheckbox.remove(olhoInchado.getText());}
+                else { olhoInchado.setChecked(true);
+                    listaCheckbox.add(olhoInchado.getText());}
 
                 break;
 
             case R.id.sintoma_enjoo:
                 if (checked)
-                    { enjoo.setChecked(false); }
-                else { enjoo.setChecked(true); }
+                    { enjoo.setChecked(false);
+                    listaCheckbox.remove(enjoo.getText());}
+                else { enjoo.setChecked(true);
+                    listaCheckbox.add(enjoo.getText());}
 
                 break;
 
             case R.id.sintoma_coceira:
                 if (checked)
-                    { coceira.setChecked(false); }
-                else { coceira.setChecked(true); }
+                    { coceira.setChecked(false);
+                    listaCheckbox.remove(coceira.getText());}
+                else { coceira.setChecked(true);
+                    listaCheckbox.add(coceira.getText());}
 
                 break;
 
         }
 
-
     }
-
 }
