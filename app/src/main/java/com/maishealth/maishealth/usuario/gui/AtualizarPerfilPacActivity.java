@@ -20,7 +20,7 @@ public class AtualizarPerfilPacActivity extends AppCompatActivity {
         startActivity(intent);
         finish();
     }
-    
+    @Override
     public void onBackPressed() {
         this.mudarTela(MenuPaciente.class);
     }
