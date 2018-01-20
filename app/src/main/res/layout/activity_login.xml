@@ -20,15 +20,15 @@
 
             <ImageView
                 android:id="@+id/imageView"
-                android:layout_marginTop="14dp"
                 android:layout_width="wrap_content"
                 android:layout_height="0dp"
                 android:layout_gravity="center_horizontal"
-                android:contentDescription="@string/image_logo"
+                android:layout_marginTop="14dp"
+                android:contentDescription="@string/image_logo_2"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/logo_health" />
+                app:srcCompat="@drawable/logo_health_2" />
 
             <EditText
                 android:id="@+id/emailx"
@@ -82,7 +82,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/bt_entrar" />
 
             <ImageButton
-                android:id="@+id/bt_emerg"
+                android:id="@+id/bt_emerg_2"
                 android:layout_width="wrap_content"
                 android:layout_height="108dp"
                 android:layout_marginBottom="@dimen/margin_bottom"
@@ -94,7 +94,7 @@
                 app:layout_constraintStart_toStartOf="@+id/bt_cadastro"
                 app:layout_constraintTop_toBottomOf="@+id/bt_cadastro"
                 app:layout_constraintVertical_bias="1.0"
-                app:srcCompat="@drawable/bt_emerg" />
+                app:srcCompat="@drawable/bt_emerg_2" />
 
         </android.support.constraint.ConstraintLayout>
 
