@@ -68,9 +68,18 @@ public class ConsultasPendentesActivity extends AppCompatActivity {
     }
     //falta metodo para mostrar detalhes da consulta pendente(pegar o cliq da pessoa e mostrar)
 
-    public void voltarMenuPac(View view){
-        Intent intent= new Intent(ConsultasPendentesActivity.this, MenuPaciente.class);
+    public void mudarTela(Class tela){
+        Intent intent = new Intent(this, tela);
         startActivity(intent);
         finish();
+    }
+    
+    @Override
+    public void onBackPressed() {
+        this.mudarTela(MenuPaciente.class);
+    }
+    
+    public void voltarMenuPac(View view){
+        this.mudarTela(MenuPaciente.class);
     }
 }
