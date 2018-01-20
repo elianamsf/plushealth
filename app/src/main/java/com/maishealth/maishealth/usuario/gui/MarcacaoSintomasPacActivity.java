@@ -60,10 +60,20 @@ public class MarcacaoSintomasPacActivity extends AppCompatActivity {
             }
         }
     }
-    public void voltarMarcParaMenuPac(View view){
-        Intent intent= new Intent(MarcacaoSintomasPacActivity.this, MenuPaciente.class);
+    
+    public void mudarTela(Class tela){
+        Intent intent = new Intent(this, tela);
         startActivity(intent);
         finish();
+    }
+    
+    @Override
+    public void onBackPressed() {
+        this.mudarTela(MenuPaciente.class);
+    }
+    
+    public void voltarMarcParaMenuPac(View view){
+        this.mudarTela(MenuPaciente.class);
     }
 
     //**olhar comentário na Activity de EscolherDiaDaConsulta
@@ -79,9 +89,8 @@ public class MarcacaoSintomasPacActivity extends AppCompatActivity {
 
         GuiUtil.myToast(this,"Sintoma(s) Inserido(s) com sucesso!");
 
-        Intent intent=new Intent(MarcacaoSintomasPacActivity.this, EscolherDiaDaConsultaActivity.class);
-        startActivity(intent);
-        finish();
+        this.mudarTela(EscolherDiaDaConsultaActivity.class);
+        
     }
 
     public void onCheckboxClicked(View view) {
