@@ -14,10 +14,20 @@ public class AcharPostoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_achar_posto);
     }
-    public void voltarParaMenuPac(View view){
-        Intent intent= new Intent(AcharPostoActivity.this, MenuPaciente.class);
+    
+    public void mudarTela(Class tela){
+        Intent intent = new Intent(this, tela);
         startActivity(intent);
         finish();
+    }
+    
+    @Override
+    public void onBackPressed() {
+        this.mudarTela(MenuPaciente.class);
+    }
+    
+    public void voltarParaMenuPac(View view){
+        this.mudarTela(MenuPaciente.class);
     }
     public void testeLogin(View view){
         Intent intent=new Intent(AcharPostoActivity.this,MarcacaoSintomasPacActivity.class);

@@ -19,6 +19,11 @@ public class ConsultaAtualMedActivity extends AppCompatActivity {
         startActivity(intent);
         finish();
     }
+    @Override
+    public void onBackPressed() {
+        this.mudarTela(ListaDeConsultasParaMedicoActivity.class);
+    }
+    
     public void voltarListaPacientes(View view){this.mudarTela(ListaDeConsultasParaMedicoActivity.class);
 
     }

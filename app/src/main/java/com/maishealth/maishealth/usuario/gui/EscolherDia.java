@@ -20,6 +20,11 @@ public class EscolherDia extends AppCompatActivity {
         startActivity(intent);
         finish();
     }
+    @Override
+    public void onBackPressed() {
+        this.mudarTela(MenuMedicoActivity.class);
+    }
+    
     public void voltarParaTelaMenuMedico(View view) {
         this.mudarTela(MenuMedicoActivity.class);
     }

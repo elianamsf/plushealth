@@ -73,11 +73,20 @@ public class MeuHistoricoActivity extends AppCompatActivity {
         }
     }
 
-    //mudança de tela - retornando para a tela de paciente
-    public void voltarMenuPacI(View view) {
-        Intent intent = new Intent(MeuHistoricoActivity.this, MenuPaciente.class);
+    public void mudarTela(Class tela){
+        Intent intent = new Intent(this, tela);
         startActivity(intent);
         finish();
+    }
+    
+    @Override
+    public void onBackPressed() {
+        this.mudarTela(MenuPaciente.class);
+    }
+    
+    //mudança de tela - retornando para a tela de paciente
+    public void voltarMenuPacI(View view) {
+        this.mudarTela(MenuPaciente.class);
 
     }
 }

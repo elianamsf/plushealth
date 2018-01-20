@@ -14,9 +14,18 @@ public class ConfirmarConsulta extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_confirmar_consulta);
     }
-    public void voltarParaMenu(View view){
-        Intent intent= new Intent(ConfirmarConsulta.this,MenuPaciente.class);
+    
+    public void mudarTela(Class tela){
+        Intent intent = new Intent(this, tela);
         startActivity(intent);
         finish();
+    }
+    @Override
+    public void onBackPressed() {
+        this.mudarTela(MenuPaciente.class);
+    }
+    
+    public void voltarParaMenu(View view){
+        this.mudarTela(MenuPaciente.class);
     }
 }

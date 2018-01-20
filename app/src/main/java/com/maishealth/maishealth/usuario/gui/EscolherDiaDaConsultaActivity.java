@@ -64,19 +64,28 @@ public class EscolherDiaDaConsultaActivity extends AppCompatActivity {
             return view;
         }
     }
+    
+    public void mudarTela(Class tela){
+        Intent intent = new Intent(this, tela);
+        startActivity(intent);
+        finish();
+    }
+    
+    @Override
+    public void onBackPressed() {
+        this.mudarTela(MarcacaoSintomasPacActivity.class);
+    }
+    
     //nessa classe abaixo era bom vcs olharem o ciclo de activitys para qnd voltar para a tela de Marcar sintoma ela ficar com oq
     //ja foi colocado anteriormente- talvez tenham que mexer na Activity Marcacao de sintoma para fazer isso tbm
     public void voltarParaSintomasCheckbox(View view){
-        Intent intent= new Intent(EscolherDiaDaConsultaActivity.this, MarcacaoSintomasPacActivity.class);
-        startActivity(intent);
-        finish();
+        this.mudarTela(MarcacaoSintomasPacActivity.class);
     }
     //Falta um método ou adptar o de baixo para pegar o dia escolhido do listView para dps ir para tela de info para consulta/confirmacao
     //Falta usar o on click(?!) hm
     public void telaConfirmarConsulta(View view){
-        Intent intent =new Intent(EscolherDiaDaConsultaActivity.this, ConfirmarConsulta.class);
-        startActivity(intent);
-        finish();
+        this.mudarTela(ConfirmarConsulta.class);
+        
     }
 
 }
