@@ -36,7 +36,7 @@ public class ConsultasPendentesActivity extends AppCompatActivity {
         @Override
         public int getCount() {
             //return 0;
-            return IMAGES2.length;
+            return NAMES2.length;
         }
 
         @Override
@@ -62,6 +62,7 @@ public class ConsultasPendentesActivity extends AppCompatActivity {
             //imageView.setImageResource(IMAGES2[i]);
             textView_name.setText(NAMES2[i]);
             textView_description.setText(DESCRIPTION2[i]);
+
 
             return view;
         }

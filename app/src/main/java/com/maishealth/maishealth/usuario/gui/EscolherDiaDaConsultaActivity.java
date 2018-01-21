@@ -36,7 +36,7 @@ public class EscolherDiaDaConsultaActivity extends AppCompatActivity {
         @Override
         public int getCount() {
             //return 0;
-            return IMAGES.length;
+            return NAMES.length;
         }
 
         @Override
@@ -58,6 +58,7 @@ public class EscolherDiaDaConsultaActivity extends AppCompatActivity {
             TextView textView_name= view.findViewById(R.id.textView_name);
             TextView textView_description= view.findViewById(R.id.textView_descriptions);
 
+            //imageView.setImageResource(IMAGES[i]);
             textView_name.setText(NAMES[i]);
             textView_description.setText(DESCRIPTION[i]);
 

@@ -57,7 +57,17 @@
     <string name="label_nome_do_paciente">Nome do paciente</string>
     <string name="label_meu_historico">Meu historico</string>
     <string name="label_regiao">Região:</string>
+    <string name="label_marcar_sintomas">Marcar sintomas</string>
+    <string name="label_atualizar_perfil">Atualizar Perfil</string>
+    <string name="label_escolher_dia">Escolher dia</string>
+    <string name="label_confirmar_consulta">Confirmar consulta</string>
+    <string name="label_consulta_atual">Consulta atual</string>
+    <string name="label_consulta_escolhida">Consulta escolhida</string>
+    <string name="label_horario_trab">Horário de trabalho</string>
+    <string name="label_escolher_dia_da_consulta">Escolher dia</string>
+    <string name="label_lista_consultas_medico">Lista de consultas</string>
     <string name="link_esqueceu_senha">Esqueceu a senha?</string>
+
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -153,5 +163,21 @@
     <string name="text_view_data_hor_montado_medico">Data</string>
     <string name="text_view_horario_montado_medico">Horário para consultas</string>
 
+    <string name="example_title">This is an awesome title</string>
+    <string name="example_subtitle">I\'m a cool subtitle, larger than the title</string>
+    <string name="text_header">Text</string>
+    <string name="flexible_title">Flexible space</string>
+    <string name="header_about">About</string>
+    <string name="header_examples">Examples</string>
+    <string name="item_flexible_space_example">Flexible space example</string>
+    <string name="item_simple_coordinator_example">Simple coordinator example</string>
+    <string name="item_googleio_example">Google IO Detail example</string>
+    <string name="item_materialup_example">Material up profile example</string>
+    <string name="title_mup_name">Saúl Molinero</string>
+    <string name="ignore">"ignorar"</string>
+    <string name="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</string>
+    <string name="about">This example shows different CoordinatorLayout usage examples, like the use of \'anchor\' in views,</string>
+    <string name="swype.help">The \'Swipe to dismiss\' behavior allows you to easily add the \'Swipe to dismiss\' functionality in a View inside a CoordinatorLayout</string>
+    <string name="subtitle_mup">Here I am with a subtitle</string>
 
 </resources>

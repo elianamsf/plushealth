@@ -35,22 +35,33 @@
             android:name=".usuario.gui.MenuPaciente" />
         <activity
             android:name=".usuario.gui.MeuHistoricoActivity" />
-        <activity android:name=".usuario.gui.ConsultasPendentesActivity" />
-        <activity android:name=".usuario.gui.AcharPostoActivity" />
+        <activity
+            android:name=".usuario.gui.ConsultasPendentesActivity"
+            android:label="@string/label_consultas_pendentes"/>
+        <activity android:name=".usuario.gui.AcharPostoActivity"
+            android:label="@string/label_mapa_dos_postos" />
         <activity
             android:name=".usuario.gui.MenuMedicoActivity" />
-        <activity android:name=".usuario.gui.AtualizarPerfilPacActivity" />
-        <activity android:name=".usuario.gui.AtualizarPerfilMedicoActivity" />
+        <activity android:name=".usuario.gui.AtualizarPerfilMedicoActivity"
+            android:label="@string/label_atualizar_perfil"/>
         <activity
-            android:name=".usuario.gui.MarcacaoSintomasPacActivity" />
-        <activity android:name=".usuario.gui.EscolherDia" />
-        <activity android:name=".usuario.gui.ConfirmarConsulta" />
-        <activity android:name=".usuario.gui.ConsultaAtualMedActivity" />
-        <activity android:name=".usuario.gui.ConsultaEscolhidaActivity" />
-        <activity android:name=".usuario.gui.HorarioTrabMedicoActivity" />
-        <activity android:name=".usuario.gui.EscolherDiaDaConsultaActivity" />
-        <activity android:name=".usuario.gui.ListaDeConsultasParaMedicoActivity" />
-
+            android:name=".usuario.gui.MarcacaoSintomasPacActivity"
+            android:label="@string/label_marcar_sintomas"/>
+        <activity android:name=".usuario.gui.EscolherDia"
+            android:label="@string/label_escolher_dia"/>
+        <activity android:name=".usuario.gui.ConfirmarConsulta"
+            android:label="@string/label_confirmar_consulta"/>
+        <activity android:name=".usuario.gui.ConsultaAtualMedActivity"
+            android:label="@string/label_consulta_atual"/>
+        <activity android:name=".usuario.gui.ConsultaEscolhidaActivity"
+            android:label="@string/label_consulta_escolhida"/>
+        <activity android:name=".usuario.gui.HorarioTrabMedicoActivity"
+            android:label="@string/label_horario_trab"/>
+        <activity android:name=".usuario.gui.EscolherDiaDaConsultaActivity"
+            android:label="@string/label_escolher_dia_da_consulta"/>
+        <activity android:name=".usuario.gui.ListaDeConsultasParaMedicoActivity"
+            android:label="@string/label_lista_consultas_medico"/>
+        <activity android:name=".MaterialUpConceptActivity" />
     </application>
 
 </manifest>

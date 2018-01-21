@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorFundo"
     tools:context="com.maishealth.maishealth.usuario.gui.ConsultaAtualMedActivity">
 
     <android.support.design.widget.AppBarLayout

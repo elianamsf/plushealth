@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorFundo"
     tools:context="com.maishealth.maishealth.usuario.gui.HorarioTrabMedicoActivity">
 
     <android.support.design.widget.AppBarLayout
@@ -19,7 +20,9 @@
             android:layout_height="wrap_content"
             android:minHeight="?attr/actionBarSize"
             app:layout_scrollFlags="scroll|enterAlways|snap"
-            app:theme="@style/ThemeOverlay.AppCompat.Light" />
+            app:theme="@style/ThemeOverlay.AppCompat.Light"
+            app:title="@string/label_horario_trab"
+            app:titleTextColor="@color/colorFundo"/>
 
     </android.support.design.widget.AppBarLayout>
 
