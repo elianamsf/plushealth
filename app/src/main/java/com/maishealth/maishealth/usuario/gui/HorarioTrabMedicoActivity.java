@@ -61,6 +61,8 @@ public class HorarioTrabMedicoActivity extends AppCompatActivity {
                 int month = datePicker.getMonth();
                 int year = datePicker.getYear();
 
+                setContentView(R.layout.activity_horario_trab_medico);
+
                 SimpleDateFormat dateFormatter = new SimpleDateFormat("dd/MM/yyyy");
                 Date date = new Date(year - 1900, month, day);
                 String strDate = dateFormatter.format(date);
