@@ -31,6 +31,10 @@ public class ConsultaDAO {
         String data = consulta.getData();
         values.put(colunaData, data);
 
+        String colunaTurno = DataBase.CONSULTA_TURNO;
+        String turno = consulta.getTurno();
+        values.put(colunaTurno, turno);
+
         String colunaDesc = DataBase.CONSULTA_DESCRICAO;
         String descricao = consulta.getDescricao();
         values.put(colunaDesc, descricao);
@@ -89,6 +93,10 @@ public class ConsultaDAO {
         int indexColunaData = cursor.getColumnIndex(colunaData);
         String data = cursor.getString(indexColunaData);
 
+        String colunaTurno = DataBase.CONSULTA_TURNO;
+        int indexColunaTurno = cursor.getColumnIndex(colunaData);
+        String turno = cursor.getString(indexColunaTurno);
+
         String colunaDesc = DataBase.CONSULTA_DESCRICAO;
         int indexColunaDesc = cursor.getColumnIndex(colunaDesc);
         String descricao = cursor.getString(indexColunaDesc);
@@ -112,6 +120,7 @@ public class ConsultaDAO {
         Consulta consulta = new Consulta();
 
         consulta.setData(data);
+        consulta.setTurno(turno);
         consulta.setDescricao(descricao);
         consulta.setIdPaciente(idPaciente);
         consulta.setIdMedico(idMedico);
@@ -138,30 +147,47 @@ public class ConsultaDAO {
         return consulta;
     }
 
-    public Consulta getConsulta(String data, long idPaciente, long idMedico, long idConsulta){
-        String query = SELECT_FROM + DataBase.TABELA_CONSULTA +
-                WHERE + DataBase.CONSULTA_DATA + LIKE +
-                AND + DataBase.ID_EST_PACIENTE_CON  + LIKE +
-                AND + DataBase.ID_EST_MEDICO_CON  + LIKE +
-                AND + DataBase.ID_CONSULTA + LIKE;
+    public Consulta getConsulta(String data, String turno, long idPaciente, long idMedico, long idConsulta){
+        String query = "SELECT * FROM " + DataBase.TABELA_CONSULTA +
+                        " WHERE " + DataBase.CONSULTA_DATA + " LIKE ?" +
+                        " AND " + DataBase.CONSULTA_TURNO + " LIKE ?" +
+                        " AND " + DataBase.ID_EST_PACIENTE_CON  + " LIKE ?" +
+                    " AND " + DataBase.ID_EST_MEDICO_CON  + " LIKE ?" +
+                    " AND " + DataBase.ID_CONSULTA + " LIKE ?";
 
         String idPacienteString = Long.toString(idPaciente);
         String idMedicoString = Long.toString(idMedico);
         String idConsultaString   = Long.toString(idConsulta);
 
-        String[] argumentos  = {data, idPacienteString, idMedicoString, idConsultaString};
+        String[] argumentos  = {data, turno, idMedicoString, idPacienteString, idConsultaString};
 
         return this.getConsulta(query, argumentos);
     }
 
-    public Consulta getConsultaByData(String data){
-        String query = SELECT_FROM + DataBase.TABELA_CONSULTA +
-                WHERE + DataBase.CONSULTA_DATA + LIKE +
-                AND + DataBase.CONSULTA_STATUS + LIKE;
+    public Consulta getConsultaByData(String data, String turno){
+        String query = "SELECT * FROM " + DataBase.TABELA_CONSULTA +
+                " WHERE " + DataBase.CONSULTA_DATA + " LIKE ?" +
+                " AND " + DataBase.CONSULTA_TURNO + " LIKE ?" +
+                " AND " + DataBase.CONSULTA_STATUS + " LIKE ?";
 
         String status = EnumStatusConsulta.DISPONIVEL.toString();
 
-        String[] argumentos  = {data, status };
+        String[] argumentos  = {data, status, turno };
+
+        return this.getConsulta(query, argumentos);
+    }
+
+    public Consulta getConsultaByDataMedico(String data, String turno, long idMedico){
+        String query = "SELECT * FROM " + DataBase.TABELA_CONSULTA +
+                " WHERE " + DataBase.CONSULTA_DATA + " LIKE ?" +
+                " AND " + DataBase.CONSULTA_TURNO + " LIKE ?" +
+                " AND " + DataBase.CONSULTA_STATUS + " LIKE ?" +
+                " AND " + DataBase.ID_EST_MEDICO_CON + " LIKE ?";
+
+        String status = EnumStatusConsulta.DISPONIVEL.toString();
+        String idMedicoString = Long.toString(idMedico);
+
+        String[] argumentos  = {data, status, turno, idMedicoString };
 
         return this.getConsulta(query, argumentos);
     }

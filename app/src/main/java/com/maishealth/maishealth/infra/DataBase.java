@@ -51,6 +51,7 @@ public class DataBase extends SQLiteOpenHelper {
     public static final String TABELA_CONSULTA = "consulta";
     public static final String ID_CONSULTA    = "id_consulta";
     public static final String CONSULTA_DATA = "data";
+    public static final String CONSULTA_TURNO = "turno";
     public static final String CONSULTA_DESCRICAO = "descricao";
     public static final String ID_EST_PACIENTE_CON = "id_est_paciente";
     public static final String ID_EST_MEDICO_CON = "id_est_medico";
@@ -131,6 +132,7 @@ public class DataBase extends SQLiteOpenHelper {
         db.execSQL("CREATE TABLE " + TABELA_CONSULTA + " (" +
                 ID_CONSULTA  + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 CONSULTA_DATA + " TEXT NOT NULL, " +
+                CONSULTA_TURNO + " TEXT NOT NULL, " +
                 CONSULTA_DESCRICAO + " TEXT, " +
                 ID_EST_PACIENTE_CON + " INTEGER, " +
                 ID_EST_MEDICO_CON + " INTEGER, " +

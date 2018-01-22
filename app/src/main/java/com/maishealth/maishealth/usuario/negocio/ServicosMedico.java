@@ -17,7 +17,6 @@ import static com.maishealth.maishealth.infra.ConstanteSharedPreferences.TITLE_P
 public class ServicosMedico {
     private MedicoDAO medicoDAO;
     private ConsultaDAO consultaDAO;
-    private MedicamentoDAO medicamentoDAO;
     private SharedPreferences sharedPreferences;
 
 
@@ -25,7 +24,6 @@ public class ServicosMedico {
         sharedPreferences = context.getSharedPreferences(TITLE_PREFERENCES, Context.MODE_PRIVATE);
         medicoDAO = new MedicoDAO(context);
         consultaDAO = new ConsultaDAO(context);
-        medicamentoDAO = new MedicamentoDAO(context);
     }
 
 
@@ -45,30 +43,22 @@ public class ServicosMedico {
 
 
     private long criarConsulta (Consulta consulta){return consultaDAO.inserirConsulta(consulta); }
-    public long criarConsulta (Medico medico, String data){
+    public long criarConsulta (Medico medico, String data, String turno){
         Consulta consulta = new Consulta();
         consulta.setIdMedico(medico.getId());
         consulta.setData(data);
         consulta.setStatus(EnumStatusConsulta.DISPONIVEL.toString());
+        consulta.setTurno(turno);
 
         return criarConsulta(consulta);
     }
 
-    private long criarMedicamento(Medicamento medicamento) {return medicamentoDAO.inserirMedicamento(medicamento);}
-
-    public long criarMedicamento (String nomeMedicamento){
-        Medicamento medicamento = new Medicamento();
-        medicamento.setNome(nomeMedicamento);
-
-        return criarMedicamento(medicamento);
-    }
-
-    public void registrarConsultas(String data, int qtdVagas){
+    public void registrarConsultas(String data, int qtdVagas, String turno){
         long idMedico = 0;
         Medico medico = medicoDAO.getMedico(sharedPreferences.getLong(ID_MEDICO_PREFERENCES,idMedico));
         int contador;
         contador = 1;
-        while (contador <= qtdVagas){ criarConsulta(medico, data); contador++; }
+        while (contador <= qtdVagas){ criarConsulta(medico, data, turno); contador++; }
 
     }
 }

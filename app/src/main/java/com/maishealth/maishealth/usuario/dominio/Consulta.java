@@ -3,6 +3,7 @@ package com.maishealth.maishealth.usuario.dominio;
 
 public class Consulta {
     private String data;
+    private String turno;
     private String descricao;
     private long idPaciente;
     private long idMedico;
@@ -16,6 +17,10 @@ public class Consulta {
     public void setData(String data) {
         this.data = data;
     }
+
+    public String getTurno() { return turno; }
+
+    public void setTurno(String turno) {this.turno = turno;}
 
     public String getDescricao() {
         return descricao;

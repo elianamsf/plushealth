@@ -41,11 +41,11 @@ public class ServicosPaciente {
     private long marcarConsulta(Consulta consulta){ return consultaDAO.atualizarConsulta(consulta);
     }
 
-    public long marcarConsulta( String data){
+    public long marcarConsulta( String data, String turno){
         long idPaciente = 0;
         Paciente paciente = pacienteDAO.getPaciente(sharedPreferences.getLong(ID_PACIENTE_PREFERENCES,idPaciente));
 
-        Consulta consulta = consultaDAO.getConsultaByData(data);
+        Consulta consulta = consultaDAO.getConsultaByData(data, turno);
         consulta.setIdPaciente(paciente.getId());
         consulta.setStatus(EnumStatusConsulta.MARCADA.toString());
 
