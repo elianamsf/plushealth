@@ -86,15 +86,17 @@
                 android:layout_width="wrap_content"
                 android:layout_height="108dp"
                 android:layout_marginBottom="@dimen/margin_bottom"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="20dp"
+                android:background="@null"
                 android:contentDescription="@string/button_emergencia"
                 android:onClick="acionarEmergencia"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/bt_cadastro"
                 app:layout_constraintStart_toStartOf="@+id/bt_cadastro"
                 app:layout_constraintTop_toBottomOf="@+id/bt_cadastro"
-                app:layout_constraintVertical_bias="1.0"
-                app:srcCompat="@drawable/bt_emerg_2" />
+                app:layout_constraintVertical_bias="0.0"
+                app:srcCompat="@drawable/bt_emerg_3" />
+
 
         </android.support.constraint.ConstraintLayout>
 
