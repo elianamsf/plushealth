@@ -5,19 +5,17 @@ import android.os.Bundle;
 
 import android.content.Context;
 import android.content.Intent;
-import android.os.Bundle;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ImageView;
 
-import com.maishealth.maishealth.usuario.gui.AtualizarPerfilMedicoActivity;
+import com.maishealth.maishealth.usuario.gui.AtualizarPerfilActivity;
 import com.maishealth.maishealth.usuario.gui.MarcacaoSintomasPacActivity;
 
 public class MaterialUpConceptActivity extends AppCompatActivity
@@ -105,7 +103,7 @@ public class MaterialUpConceptActivity extends AppCompatActivity
         }
     }
     public void telaAtualizarPerfilA(View view){
-        Intent intent =new Intent(MaterialUpConceptActivity.this, AtualizarPerfilMedicoActivity.class);
+        Intent intent =new Intent(MaterialUpConceptActivity.this, AtualizarPerfilActivity.class);
         startActivity(intent);
         finish();
     }

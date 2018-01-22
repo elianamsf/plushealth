@@ -42,7 +42,7 @@
             android:label="@string/label_mapa_dos_postos" />
         <activity
             android:name=".usuario.gui.MenuMedicoActivity" />
-        <activity android:name=".usuario.gui.AtualizarPerfilMedicoActivity"
+        <activity android:name=".usuario.gui.AtualizarPerfilActivity"
             android:label="@string/label_atualizar_perfil"/>
         <activity
             android:name=".usuario.gui.MarcacaoSintomasPacActivity"

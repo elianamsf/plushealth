@@ -66,7 +66,7 @@ public class MenuPaciente extends AppCompatActivity {
         this.mudarTela(LoginActivity.class);
     }
     public void telaAtualizarPerfilPaciente(View view){
-        this.mudarTela(AtualizarPerfilMedicoActivity.class);
+        this.mudarTela(AtualizarPerfilActivity.class);
     }
 
     private void mudarTela(Class tela){

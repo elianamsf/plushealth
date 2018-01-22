@@ -56,7 +56,7 @@ public class MenuMedicoActivity extends AppCompatActivity {
         startActivity(intent);
         finish();
     }
-    public void TelaAtualizarPerfilMedico(View view){this.mudarTela(AtualizarPerfilMedicoActivity.class);
+    public void TelaAtualizarPerfilMedico(View view){this.mudarTela(AtualizarPerfilActivity.class);
 
     }
     public void TelaCalendario(View view){this.mudarTela(EscolherDia.class);}
