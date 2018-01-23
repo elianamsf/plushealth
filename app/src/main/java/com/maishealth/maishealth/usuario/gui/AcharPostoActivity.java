@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
-import com.maishealth.maishealth.MaterialUpConceptActivity;
 import com.maishealth.maishealth.R;
 
 public class AcharPostoActivity extends AppCompatActivity {
@@ -38,9 +37,5 @@ public class AcharPostoActivity extends AppCompatActivity {
     public void voltarParaMenuPac(View view){
         this.mudarTela(MenuPaciente.class);
     }
-    public void testeLogin(View view){
-        Intent intent=new Intent(AcharPostoActivity.this,MaterialUpConceptActivity.class);
-        startActivity(intent);
-        finish();
-    }
+
 }

@@ -61,7 +61,6 @@
             android:label="@string/label_escolher_dia_da_consulta"/>
         <activity android:name=".usuario.gui.ListaDeConsultasParaMedicoActivity"
             android:label="@string/label_lista_consultas_medico"/>
-        <activity android:name=".MaterialUpConceptActivity" />
     </application>
 
 </manifest>
