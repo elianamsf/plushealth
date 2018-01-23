@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
@@ -43,6 +44,12 @@ public class AtualizarPerfilActivity extends AppCompatActivity {
                 Log.i("MenuPaciente", e.getMessage());
             }
         }
+        Toolbar toolbar = (Toolbar) findViewById(R.id.materialup_toolbar);
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override public void onClick(View v) {
+                onBackPressed();
+            }
+        });
     }
 
     private void mudarTela(Class tela){

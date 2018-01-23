@@ -51,6 +51,7 @@
                 android:checked="false"
                 android:gravity="start|center_vertical"
                 android:hint="@string/febre"
+                android:textColor="@color/colorTextoNormal"
                 android:checkMark="?android:attr/listChoiceIndicatorSingle"
                 android:onClick="onCheckboxClicked"/>
 

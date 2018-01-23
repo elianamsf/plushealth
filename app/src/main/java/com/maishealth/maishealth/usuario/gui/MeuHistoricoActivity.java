@@ -42,7 +42,7 @@ public class MeuHistoricoActivity extends AppCompatActivity {
         @Override
         public int getCount() {
             //return 0;
-            return IMAGES2.length;
+            return NAMES2.length;
         }
 
         @Override
