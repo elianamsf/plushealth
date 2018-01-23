@@ -27,14 +27,14 @@
                 <android.support.v7.widget.Toolbar
                     android:id="@+id/materialup.toolbar"
                     style="@style/ToolBarWithNavigationBack"
-                    android:text="oi"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:minHeight="?attr/actionBarSize"
+                    android:text="oi"
                     app:layout_scrollFlags="scroll|enterAlways|snap"
                     app:theme="@style/ThemeOverlay.AppCompat.Light"
                     app:title="@string/label_atualizar_perfil"
-                    app:titleTextColor="@color/colorFundo"/>
+                    app:titleTextColor="@color/colorFundo" />
             </android.support.design.widget.AppBarLayout>
 
 
@@ -81,7 +81,7 @@
                 style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="52dp"
+                android:layout_marginTop="105dp"
                 android:orientation="horizontal">
 
                 <Button
