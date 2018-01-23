@@ -11,6 +11,25 @@
     android:background="@color/colorFundo"
     tools:context="com.maishealth.maishealth.usuario.gui.EscolherDiaDaConsultaActivity">
 
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/materialup.appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/materialup.toolbar"
+            style="@style/ToolBarWithNavigationBack"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="?attr/actionBarSize"
+            app:layout_scrollFlags="scroll|enterAlways|snap"
+            app:theme="@style/ThemeOverlay.AppCompat.Light"
+            app:titleTextColor="@color/colorFundo"
+            app:title="@string/label_escolher_dia_da_consulta"/>
+
+
+    </android.support.design.widget.AppBarLayout>
     <ListView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
