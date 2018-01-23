@@ -21,6 +21,9 @@ public class ListaDeConsultasParaMedicoActivity extends AppCompatActivity {
     String[] DESCRIPTION2={"NÃO SEI OQ COLOCO AQ HM"};
 
     @Override
+    public void onBackPressed(){this.retornoMenuMedico();}
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lista_de_consultas_para_medico);
@@ -30,6 +33,7 @@ public class ListaDeConsultasParaMedicoActivity extends AppCompatActivity {
 
         listView.setAdapter(customAdapter);
     }
+
     class CustomAdapter extends BaseAdapter {
 
         @Override
@@ -66,10 +70,12 @@ public class ListaDeConsultasParaMedicoActivity extends AppCompatActivity {
         }
     }
     private void mudarTela(Class tela){
-        Intent intent=new Intent(this, tela);
-        startActivity(intent);
-        finish();
+            Intent intent=new Intent(this, tela);
+            startActivity(intent);
+            finish();
     }
+    private  void retornoMenuMedico(){this.mudarTela(MenuMedicoActivity.class);}
+
     //falta metodo para mostrar detalhes da consulta atual do medico(pegar o cliq da pessoa e mostrar essa tela)
     public void telaConsultaAtualMedico(View view){this.mudarTela(ConsultaAtualMedActivity.class);}
 }

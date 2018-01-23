@@ -36,7 +36,7 @@ public class MarcacaoSintomasPacActivity extends AppCompatActivity {
     private CheckedTextView coceira;
     private CheckedTextView bolhas;
     private CheckedTextView olhoInchado;
-    private List listaCheckbox = new ArrayList(8);
+    private List listaCheckbox = new ArrayList( 8);
 
 
     @Override
@@ -93,6 +93,10 @@ public class MarcacaoSintomasPacActivity extends AppCompatActivity {
         servicosPaciente.inserirSintoma(sintoma);
         }
 
+        for (Object checkedSintoma: listaCheckbox){
+            ServicosPaciente servicosPaciente = new ServicosPaciente(getApplicationContext());
+            servicosPaciente.inserirSintoma(checkedSintoma.toString());
+        }
 
         
         GuiUtil.myToast(this, SINTOMA_S_INSERIDO_S_COM_SUCESSO);
@@ -108,11 +112,11 @@ public class MarcacaoSintomasPacActivity extends AppCompatActivity {
             case R.id.sintoma_ardencia_olho:
                 if (checked)
                     { ardenciaOlho.setChecked(false);
-                    listaCheckbox.remove(ardenciaOlho.getText());
+                    listaCheckbox.remove(ardenciaOlho.getText().toString());
                     }
                 else {
                     ardenciaOlho.setChecked(true);
-                    listaCheckbox.add(ardenciaOlho.getText());
+                    listaCheckbox.add(ardenciaOlho.getText().toString());
                 }
 
                 break;
@@ -120,10 +124,10 @@ public class MarcacaoSintomasPacActivity extends AppCompatActivity {
             case R.id.sintoma_febre:
                 if (checked)
                     { febre.setChecked(false);
-                    listaCheckbox.remove(febre.getText());
+                    listaCheckbox.remove(febre.getText().toString());
                     }
                 else { febre.setChecked(true);
-                    listaCheckbox.add(febre.getText());
+                    listaCheckbox.add(febre.getText().toString());
                     }
 
                 break;
@@ -131,54 +135,54 @@ public class MarcacaoSintomasPacActivity extends AppCompatActivity {
             case R.id.sintoma_dor_abdominal:
                 if (checked)
                     { dorAbdominal.setChecked(false);
-                    listaCheckbox.remove(dorAbdominal.getText());}
+                    listaCheckbox.remove(dorAbdominal.getText().toString());}
                 else { dorAbdominal.setChecked(true);
-                    listaCheckbox.add(dorAbdominal.getText());}
+                    listaCheckbox.add(dorAbdominal.getText().toString());}
 
                 break;
 
             case R.id.sintoma_dor_de_cabeca:
                 if (checked)
                     { dorCabeca.setChecked(false);
-                    listaCheckbox.remove(dorCabeca.getText());}
+                    listaCheckbox.remove(dorCabeca.getText().toString());}
                 else { dorCabeca.setChecked(true);
-                    listaCheckbox.add(dorCabeca.getText());}
+                    listaCheckbox.add(dorCabeca.getText().toString());}
 
                 break;
 
             case R.id.sintoma_bolhas:
                 if (checked)
                     { bolhas.setChecked(false);
-                    listaCheckbox.remove(bolhas.getText());}
+                    listaCheckbox.remove(bolhas.getText().toString());}
                 else { bolhas.setChecked(true);
-                    listaCheckbox.add(bolhas.getText());}
+                    listaCheckbox.add(bolhas.getText().toString());}
 
                 break;
 
             case R.id.sintoma_olhos_inchados:
                 if (checked)
                     { olhoInchado.setChecked(false);
-                    listaCheckbox.remove(olhoInchado.getText());}
+                    listaCheckbox.remove(olhoInchado.getText().toString());}
                 else { olhoInchado.setChecked(true);
-                    listaCheckbox.add(olhoInchado.getText());}
+                    listaCheckbox.add(olhoInchado.getText().toString());}
 
                 break;
 
             case R.id.sintoma_enjoo:
                 if (checked)
                     { enjoo.setChecked(false);
-                    listaCheckbox.remove(enjoo.getText());}
+                    listaCheckbox.remove(enjoo.getText().toString());}
                 else { enjoo.setChecked(true);
-                    listaCheckbox.add(enjoo.getText());}
+                    listaCheckbox.add(enjoo.getText().toString());}
 
                 break;
 
             case R.id.sintoma_coceira:
                 if (checked)
                     { coceira.setChecked(false);
-                    listaCheckbox.remove(coceira.getText());}
+                    listaCheckbox.remove(coceira.getText().toString());}
                 else { coceira.setChecked(true);
-                    listaCheckbox.add(coceira.getText());}
+                    listaCheckbox.add(coceira.getText().toString());}
 
                 break;
 

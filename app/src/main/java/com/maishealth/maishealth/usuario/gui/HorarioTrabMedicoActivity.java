@@ -25,6 +25,20 @@ public class HorarioTrabMedicoActivity extends AppCompatActivity {
     private DatePicker datePicker;
     private final String[] listaHorarioMedico = {"Manhã", "Tarde"};
 
+    private void mudarTela(Class tela){
+        Intent intent=new Intent(this, tela);
+        startActivity(intent);
+        finish();
+    }
+
+    public void retornoCalendarioBtn(View view){this.mudarTela(EscolherDia.class);}
+
+    private void retornoCalendario(){this.mudarTela(EscolherDia.class);}
+
+    @Override
+    public void onBackPressed(){this.retornoCalendario();}
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -73,8 +87,6 @@ public class HorarioTrabMedicoActivity extends AppCompatActivity {
 
             }
         });
-
-
 
 
     }

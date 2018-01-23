@@ -18,7 +18,7 @@ public class EscolherDiaDaConsultaActivity extends AppCompatActivity {
     //isso aq dos nomes e descricoes foram feitas para os testes, mas vcs q tem q adptar para na vdd
     //vir os nomes dos medicos
     int[] IMAGES ={R.drawable.ic_access_time_black_34dp};
-    String[] NAMES = {"Doutora Kimbelly(kkkkk)isso é teste -Pediatra kkk","GANDHI","CopiChand"};
+    String[] NAMES = {"Doutora Kimbelly Pediatra","GANDHI","CopiChand"};
     String[] DESCRIPTION={"Data 16/03/2018","Data 17/08/2019","Data 23/05/2021"};
 
     @Override
