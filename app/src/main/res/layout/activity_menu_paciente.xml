@@ -7,7 +7,23 @@
     android:background="@color/colorFundo"
     tools:context="com.maishealth.maishealth.usuario.gui.MenuPaciente">
 
+    <ImageButton
+        android:id="@+id/icAtualizarPerfil"
+        android:layout_width="246dp"
+        android:layout_height="182dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:background="@null"
+        android:onClick="telaAtualizarPerfilPaciente"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/user_avatar"
+        />
+
     <ScrollView
+        android:layout_marginTop="149dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -23,7 +39,7 @@
                 android:layout_height="45dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="36dp"
+                android:layout_marginTop="16dp"
                 android:text="@string/label_nome_do_paciente"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body2"
                 android:textSize="20sp"
@@ -105,18 +121,12 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/bt_posto_prox" />
+                app:layout_constraintTop_toBottomOf="@+id/bt_posto_prox"/>
 
-            <ImageButton
-                android:id="@+id/icAtualizarPerfil"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="432dp"
-                android:layout_marginStart="264dp"
-                android:onClick="telaAtualizarPerfilPaciente"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:srcCompat="@drawable/ic_person_24dp" />
+
+
+
+
 
         </android.support.constraint.ConstraintLayout>
 

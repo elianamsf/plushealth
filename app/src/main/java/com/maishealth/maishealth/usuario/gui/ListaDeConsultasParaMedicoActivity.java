@@ -18,8 +18,8 @@ public class ListaDeConsultasParaMedicoActivity extends AppCompatActivity {
     //isso aq dos nomes e descricoes foram feitas para os testes, mas vcs q tem q adptar para na vdd
     //vir os nomes dos PACIENTES
     int[] IMAGES2 ={R.drawable.ic_event_38dp};
-    String[] NAMES2 = {"Paciente João","Paciente Guilherme","CopiChand"};
-    String[] DESCRIPTION2={"NÃO SEI OQ COLOCO AQ HM"};
+    String[] NAMES2 = {"Paciente João","Paciente Guilherme","Copi"};
+    String[] DESCRIPTION2={"Pré","doente","marc"};
 
     @Override
     public void onBackPressed(){this.retornoMenuMedico();}
@@ -47,7 +47,7 @@ public class ListaDeConsultasParaMedicoActivity extends AppCompatActivity {
         @Override
         public int getCount() {
             //return 0;
-            return IMAGES2.length;
+            return NAMES2.length;
         }
 
         @Override

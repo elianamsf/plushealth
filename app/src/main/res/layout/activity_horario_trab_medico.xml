@@ -51,6 +51,7 @@
         android:ems="10"
         android:inputType="time"
         android:textColor="@android:color/black"
+        android:layout_gravity="center_horizontal"
         app:layout_constraintStart_toEndOf="@+id/textViewQtdVagasMed"
         app:layout_constraintTop_toBottomOf="@+id/editTextQtdVagasMed" />
 
@@ -74,12 +75,14 @@
         android:id="@+id/textViewQtdVagasMed"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_margin="28dp"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
         android:text="@string/text_view_qtd_vagas_hor_med"
         android:textColor="@android:color/black"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/editTextQtdVagasMed" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewDataHorMed" />
 
     <TextView
         android:id="@+id/textViewHorMedico"
@@ -100,36 +103,37 @@
         android:id="@+id/bt_confirmar_hor_montado_med"
         android:layout_width="93dp"
         android:layout_height="47dp"
-        android:layout_marginEnd="24dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="64dp"
         android:background="@color/colorButoes"
         android:text="@string/button_confirmar_hor_mont_med"
         android:textColor="@color/colorTextoBut"
-        app:layout_constraintEnd_toEndOf="@+id/editTextInicioHorMed"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.705"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextInicioHorMed" />
 
     <Button
         android:id="@+id/buttonCancelar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="40dp"
-        android:layout_marginStart="8dp"
         android:layout_marginTop="64dp"
         android:background="@color/colorButoes"
         android:onClick="retornoCalendarioBtn"
         android:text="@string/button_cancelar"
         android:textColor="@color/colorTextoBut"
         app:layout_constraintEnd_toStartOf="@+id/bt_confirmar_hor_montado_med"
-        app:layout_constraintHorizontal_bias="0.671"
+        app:layout_constraintHorizontal_bias="0.453"
         app:layout_constraintStart_toStartOf="@+id/textViewHorMedico"
         app:layout_constraintTop_toBottomOf="@+id/editTextInicioHorMed" />
 
     <EditText
         android:id="@+id/editTextQtdVagasMed"
-        android:layout_width="193dp"
+        android:layout_width="191dp"
         android:layout_height="47dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="28dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="56dp"
         android:ems="10"
         android:inputType="numberSigned"
         android:textColor="@android:color/black"

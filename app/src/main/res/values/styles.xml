@@ -16,7 +16,7 @@
     </style>
 
     <style name="ToolBarWithNavigationBack" >
-        <item name="navigationIcon">@drawable/abc_ic_ab_back_material</item>
+        <item name="navigationIcon">@drawable/ic_arrow_back_24dp</item>
     </style>
 
     <style name="CollapsingTextAppearance" parent="Base.TextAppearance.AppCompat.Widget.ActionBar.Title"/>
