@@ -23,7 +23,7 @@ public class HorarioTrabMedicoActivity extends AppCompatActivity {
     private EditText editTextQtdVagasMed;
     private Spinner spinnerHorarioMedico;
     private DatePicker datePicker;
-    private final String[] listaHorarioMedico = {"Manhã", "Tarde"};
+    private final String[] listaHorarioMedico = {"Manhã", "Tarde", "Noite"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
