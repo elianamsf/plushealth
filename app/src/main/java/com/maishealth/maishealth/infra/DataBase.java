@@ -93,7 +93,7 @@ public class DataBase extends SQLiteOpenHelper {
     public static final String TABELA_SINTOMA = "sintoma";
     public static final String SINTOMA_NOME = "nome";
 
-    //TABELE CONSULTA-SINTOMA
+    //TABELA CONSULTA-SINTOMA
     public static final String TABELA_CONSULTA_SINTOMA = "consulta_sintoma";
     public static final String ID_EST_SINTOMA_CON_SIN = "id_consulta";
     public static final String NOME_EST_SINTOMA_CON_SIN = "sintoma_nome";
