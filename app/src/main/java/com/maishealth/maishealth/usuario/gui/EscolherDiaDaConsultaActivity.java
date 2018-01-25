@@ -6,65 +6,46 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.maishealth.maishealth.R;
+import com.maishealth.maishealth.infra.Mask;
 
 public class EscolherDiaDaConsultaActivity extends AppCompatActivity {
 
-    //isso aq dos nomes e descricoes foram feitas para os testes, mas vcs q tem q adptar para na vdd
-    //vir os nomes dos medicos
-    int[] IMAGES ={R.drawable.ic_access_time_black_34dp};
-    String[] NAMES = {"Doutora Kimbelly(kkkkk)isso é teste -Pediatra kkk","GANDHI","CopiChand"};
-    String[] DESCRIPTION={"Data 16/03/2018","Data 17/08/2019","Data 23/05/2021"};
+    private EditText dataConsulta;
+    private Spinner spinnerTurno;
+    private final String[] listaTurno = {"Manhã", "Tarde", "Noite"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_escolher_dia_da_consulta);
+        dataConsulta = findViewById(R.id.dataConsulta);
+        dataConsulta.addTextChangedListener(Mask.insert("##/##/####", dataConsulta));
 
-        ListView listView= findViewById(R.id.listView);
-        CustomAdapter customAdapter=new CustomAdapter();
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, listaTurno);
 
-        listView.setAdapter(customAdapter);
+
+        spinnerTurno = findViewById(R.id.spinner);
+        spinnerTurno.setAdapter(adapter);
+        spinnerTurno.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener(){
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+            }
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+            }
+        });
     }
-    class CustomAdapter extends BaseAdapter{
 
-        @Override
-        public int getCount() {
-            //return 0;
-            return NAMES.length;
-        }
-
-        @Override
-        public Object getItem(int i) {
-            return null;
-        }
-
-        @Override
-        public long getItemId(int i) {
-            return 0;
-        }
-
-        //@SuppressLint("ViewHolder")
-        @Override
-        public View getView(int i, View view, ViewGroup viewGroup) {
-            view= getLayoutInflater().inflate(R.layout.customlayout,null);
-
-            ImageView imageView = view.findViewById(R.id.imageView);
-            TextView textView_name= view.findViewById(R.id.textView_name);
-            TextView textView_description= view.findViewById(R.id.textView_descriptions);
-
-            //imageView.setImageResource(IMAGES[i]);
-            textView_name.setText(NAMES[i]);
-            textView_description.setText(DESCRIPTION[i]);
-
-            return view;
-        }
-    }
     
     public void mudarTela(Class tela){
         Intent intent = new Intent(this, tela);
