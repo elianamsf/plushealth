@@ -134,115 +134,114 @@
     </ScrollView>
 
 
-    <TextView
-        android:id="@+id/textViewNomePacSint"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/nome_do_paciente"
+        <TextView
+            android:id="@+id/textViewNomePacSint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/nome_do_paciente"
 
 
-        android:textColor="@android:color/black"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/materialup.appbar" />
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.502"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/materialup.appbar" />
 
-    <TextView
-        android:id="@+id/textSubMarc"
-        android:layout_width="271dp"
-        android:layout_height="42dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="@string/texto_sub_marc"
-        android:textAlignment="center"
-        android:textColor="@android:color/black"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="@+id/textViewNomePacSint"
-        app:layout_constraintStart_toStartOf="@+id/textViewNomePacSint"
-        app:layout_constraintTop_toBottomOf="@+id/textViewNomePacSint" />
+        <TextView
+            android:id="@+id/textSubMarc"
+            android:layout_width="271dp"
+            android:layout_height="42dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/texto_sub_marc"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/textViewNomePacSint"
+            app:layout_constraintStart_toStartOf="@+id/textViewNomePacSint"
+            app:layout_constraintTop_toBottomOf="@+id/textViewNomePacSint" />
 
-    <TextView
-        android:id="@+id/textViewMarq"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginTop="24dp"
-        android:text="@string/textMarcarSint"
-        android:textColor="@android:color/black"
+        <TextView
+            android:id="@+id/textViewMarq"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="24dp"
+            android:text="@string/textMarcarSint"
+            android:textColor="@android:color/black"
 
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="@+id/textSubMarc"
-        app:layout_constraintHorizontal_bias="0.555"
-        app:layout_constraintStart_toStartOf="@+id/textSubMarc"
-        app:layout_constraintTop_toBottomOf="@+id/textSubMarc" />
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/textSubMarc"
+            app:layout_constraintHorizontal_bias="0.555"
+            app:layout_constraintStart_toStartOf="@+id/textSubMarc"
+            app:layout_constraintTop_toBottomOf="@+id/textSubMarc" />
 
-    <TextView
-        android:id="@+id/textViewOutrosSint"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="@string/texto_outros_sint"
-        android:textColor="@android:color/black"
-        android:textSize="15sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/scrollView2" />
+        <TextView
+            android:id="@+id/textViewOutrosSint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/texto_outros_sint"
+            android:textColor="@android:color/black"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/scrollView2" />
 
-    <EditText
-        android:id="@+id/editTextOutrosSint"
-        android:layout_width="247dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="12dp"
-        android:ems="10"
-        android:inputType="textMultiLine"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/textViewOutrosSint"
-        app:layout_constraintHorizontal_bias="0.371"
-        app:layout_constraintStart_toStartOf="@+id/textViewOutrosSint"
-        app:layout_constraintTop_toBottomOf="@+id/textViewOutrosSint"
-        app:layout_constraintVertical_bias="0.0" />
+        <EditText
+            android:id="@+id/editTextOutrosSint"
+            android:layout_width="247dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="12dp"
+            android:ems="10"
+            android:inputType="textMultiLine"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/textViewOutrosSint"
+            app:layout_constraintHorizontal_bias="0.371"
+            app:layout_constraintStart_toStartOf="@+id/textViewOutrosSint"
+            app:layout_constraintTop_toBottomOf="@+id/textViewOutrosSint"
+            app:layout_constraintVertical_bias="0.0" />
 
-    <Button
-        android:id="@+id/buttonVoltarMenu"
-        android:layout_width="95dp"
-        android:layout_height="41dp"
-        android:layout_marginEnd="140dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="20dp"
-        android:background="@color/colorButoes"
-        android:text="@string/button_marc_voltar_menu"
-        android:textColor="@color/colorTextoBut"
-        android:onClick="voltarMarcParaMenuPac"
-        app:layout_constraintEnd_toEndOf="@+id/editTextOutrosSint"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextOutrosSint" />
+        <Button
+            android:id="@+id/buttonVoltarMenu"
+            android:layout_width="95dp"
+            android:layout_height="41dp"
+            android:layout_marginEnd="140dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/colorButoes"
+            android:text="@string/button_marc_voltar_menu"
+            android:textColor="@color/colorTextoBut"
+            android:onClick="voltarMarcParaMenuPac"
+            app:layout_constraintEnd_toEndOf="@+id/editTextOutrosSint"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextOutrosSint" />
 
-    <Button
-        android:id="@+id/buttonMarcarCons"
-        android:layout_width="102dp"
-        android:layout_height="42dp"
-        android:layout_marginEnd="44dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="20dp"
-        android:background="@color/colorButoes"
-        android:text="@string/button_marcar_sint"
-        android:onClick="marcarEnviarSintomas"
-        android:textColor="@color/colorTextoBut"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.347"
-        app:layout_constraintStart_toEndOf="@+id/buttonVoltarMenu"
-        app:layout_constraintTop_toBottomOf="@+id/editTextOutrosSint" />
-
+        <Button
+            android:id="@+id/buttonMarcarCons"
+            android:layout_width="102dp"
+            android:layout_height="42dp"
+            android:layout_marginEnd="44dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/colorButoes"
+            android:text="@string/button_marcar_sint"
+            android:onClick="marcarEnviarSintomas"
+            android:textColor="@color/colorTextoBut"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.347"
+            app:layout_constraintStart_toEndOf="@+id/buttonVoltarMenu"
+            app:layout_constraintTop_toBottomOf="@+id/editTextOutrosSint" />
 
 </android.support.constraint.ConstraintLayout>
