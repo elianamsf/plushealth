@@ -4,6 +4,7 @@ package com.maishealth.maishealth.usuario.gui;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -15,7 +16,7 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toolbar;
+//import android.widget.Toolbar;
 
 import com.maishealth.maishealth.R;
 import com.maishealth.maishealth.infra.Mask;
@@ -76,14 +77,8 @@ public class EscolherDiaDaConsultaActivity extends AppCompatActivity {
     public void onBackPressed() {
         this.mudarTela(MarcacaoSintomasPacActivity.class);
     }
-    
-    //nessa classe abaixo era bom vcs olharem o ciclo de activitys para qnd voltar para a tela de Marcar sintoma ela ficar com oq
-    //ja foi colocado anteriormente- talvez tenham que mexer na Activity Marcacao de sintoma para fazer isso tbm
-    public void voltarParaSintomasCheckbox(View view){
-        this.mudarTela(MarcacaoSintomasPacActivity.class);
-    }
-    //Falta um método ou adptar o de baixo para pegar o dia escolhido do listView para dps ir para tela de info para consulta/confirmacao
-    //Falta usar o on click(?!) hm
+
+    // metodo atrelado aos objetos no listView responsavel por exibir os detalhes
     public void telaConfirmarConsulta(View view){
         this.mudarTela(ConfirmarConsulta.class);
         
