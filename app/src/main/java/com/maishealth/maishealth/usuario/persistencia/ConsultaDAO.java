@@ -8,6 +8,9 @@ import android.database.sqlite.SQLiteDatabase;
 import com.maishealth.maishealth.infra.DataBase;
 import com.maishealth.maishealth.usuario.dominio.Consulta;
 import com.maishealth.maishealth.usuario.dominio.EnumStatusConsulta;
+import com.maishealth.maishealth.usuario.dominio.Sintoma;
+
+import java.util.ArrayList;
 
 public class ConsultaDAO {
     public static final String LIKE = " LIKE ?";
@@ -191,5 +194,56 @@ public class ConsultaDAO {
 
         return this.getConsulta(query, argumentos);
     }
+
+    public ArrayList<Consulta> getConsultas(String data, String  turno) {
+        liteDatabase = dataBaseHelper.getReadableDatabase();
+        ArrayList<Consulta> listaConsulta = new ArrayList<>();
+
+        String query = "SELECT * FROM " + DataBase.TABELA_CONSULTA +
+                " WHERE " + DataBase.CONSULTA_DATA + " LIKE ?" +
+                " AND " + DataBase.CONSULTA_TURNO + " LIKE ?" +
+                " AND " + DataBase.CONSULTA_STATUS + " LIKE ? ";
+
+        String status = EnumStatusConsulta.DISPONIVEL.toString();
+        String[] argumentos = {data, turno, status};
+
+        Cursor cursor = liteDatabase.rawQuery(query, argumentos);
+
+        String colunaIdConsulta = DataBase.ID_CONSULTA;
+        int indexIdColuna = cursor.getColumnIndex(colunaIdConsulta);
+
+        String colunaData = DataBase.CONSULTA_DATA;
+        int indexData = cursor.getColumnIndex(colunaData);
+
+        String colunaTurno = DataBase.CONSULTA_TURNO;
+        int indexTurno = cursor.getColumnIndex(colunaTurno);
+
+        String colunaIdMedico = DataBase.ID_EST_MEDICO_CON;
+        int indexIdMedico = cursor.getColumnIndex(colunaIdMedico);
+
+
+        while (cursor.moveToNext()) {
+            String idConsulta = cursor.getString(indexIdColuna);
+            String dataDb = cursor.getString(indexData);
+            String turnoDB = cursor.getString(indexTurno);
+            String idMedico = cursor.getString(indexIdMedico);
+            Consulta consulta = new Consulta();
+
+            long idMedicoLong = Long.parseLong(idMedico);
+            long idConsultaLong = Long.parseLong(idConsulta);
+
+            consulta.setTurno(turnoDB);
+            consulta.setData(dataDb);
+            consulta.setIdMedico(idMedicoLong);
+            consulta.setId(idConsultaLong);
+
+            listaConsulta.add(consulta);
+        }
+        cursor.close();
+        liteDatabase.close();
+
+        return listaConsulta;
+    }
+
 
 }

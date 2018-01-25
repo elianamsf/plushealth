@@ -4,10 +4,12 @@ import android.content.Context;
 import android.content.SharedPreferences;
 
 import com.maishealth.maishealth.usuario.dominio.Consulta;
+import com.maishealth.maishealth.usuario.dominio.ConsultaSintoma;
 import com.maishealth.maishealth.usuario.dominio.EnumStatusConsulta;
 import com.maishealth.maishealth.usuario.dominio.Paciente;
 import com.maishealth.maishealth.usuario.dominio.Sintoma;
 import com.maishealth.maishealth.usuario.persistencia.ConsultaDAO;
+import com.maishealth.maishealth.usuario.persistencia.ConsultaSintomaDAO;
 import com.maishealth.maishealth.usuario.persistencia.PacienteDAO;
 import com.maishealth.maishealth.usuario.persistencia.SintomaDAO;
 
@@ -18,6 +20,7 @@ public class ServicosPaciente {
     private PacienteDAO pacienteDAO;
     private ConsultaDAO consultaDAO;
     private SintomaDAO sintomaDAO;
+    private ConsultaSintomaDAO consultaSintomaDAO;
     private SharedPreferences sharedPreferences;
 
     public ServicosPaciente(Context context) {
@@ -25,6 +28,7 @@ public class ServicosPaciente {
         pacienteDAO = new PacienteDAO(context);
         consultaDAO = new ConsultaDAO(context);
         sintomaDAO = new SintomaDAO(context);
+        consultaSintomaDAO = new ConsultaSintomaDAO(context);
     }
 
     private long cadastrarPaciente(Paciente paciente){ return pacienteDAO.inserirPaciente(paciente);
@@ -61,4 +65,13 @@ public class ServicosPaciente {
         return inserirSintoma(sintoma);
     }
 
+    public Consulta mostrarConsultas (String data, String turno){
+        // metodo para selecionar a consulta pela data e turno
+       return consultaDAO.getConsultaByData(data,turno);
+    }
+
+    public void consultaSintoma (Consulta consulta, ConsultaSintoma consultaSintoma){
+        // metodo para inserir os sintomas das consulta no banco.
+        consultaSintomaDAO.inserirConsultaSintoma(consulta.getId(),consultaSintoma.getNomeSintoma());
+    }
 }

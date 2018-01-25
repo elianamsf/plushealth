@@ -49,11 +49,17 @@ public class ServicosConsulta {
         return consultaSintomaDAO.getSintomasByConsulta(idConsulta);
     }
 
-    public void cadastarConstultaSintoma (long idConsultaComSintoma, String sintoma){
+    public void cadastrarConstultaSintoma (long idConsultaComSintoma, String sintoma){
         consultaSintomaDAO.inserirConsultaSintoma(idConsultaComSintoma, sintoma);
         cadastrarConsulta(idConsultaComSintoma);
         cadastrarSintoma(sintoma);
 
     }
+
+    public ArrayList<Consulta> getListConsulta (String data, String turno){
+        // metodo que retorna lista com consultas para montar o list view na marcação da consulta para o paciente
+        return consultaDAO.getConsultas(turno, data);
+    }
+
 
 }
